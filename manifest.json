@@ -1,0 +1,36 @@
+{
+  "name": "请和我交往吧",
+  "short_name": "请和我交往吧",
+  "lang": "zh-CN",
+  "start_url": ".",
+  "display": "fullscreen",
+  "description": "校园恋爱题材互动视觉小说。",
+  "dir": "auto",
+  "orientation": "landscape",
+  "background_color": "#fdfbfb",
+  "theme_color": "#f5edf0",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icons/icon-192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}

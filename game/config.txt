@@ -1,0 +1,8 @@
+Game_name:请和我交往吧;
+Game_key:cf74d9b274f4098;
+Title_img:请和我交往吧.png;
+Title_bgm:s_Title.mp3;
+Textbox_theme:imss;
+Default_Language:zh_CN;
+Package_name:;
+Game_Logo:;
