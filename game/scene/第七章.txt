@@ -3,27 +3,20 @@ label:第七章;
 changeBg:House.webp;
 
 旁白:星期三。
-
-旁白:最近的校园生活渐渐步入正轨。
-
+旁白:最近的校园生活，渐渐步入正轨。
 {Name}:今天放学之后……去哪里好呢？
 
 changeBg:Classroom.jpg;
-
-旁白:上午的课程很快结束。
-
-changeFigure:Ivan_Normal.png -position=right;
-
+旁白:上午的课很快结束。
+changeFigure:Ivan_Normal.png -position:right;
 Ivan:今天下午没有值日。
-
-Ivan:终于可以轻松一点了。
-
-{Name}:那挺不错的。
-
+Ivan:难得可以轻松一点。
+{Name}:那你准备做什么？
+Ivan:把下周活动的材料先整理出来。
+{Name}:这叫轻松？
+Ivan:这比上课轻松。
 changeFigure:none;
-
-旁白:放学铃声响起。
-
+旁白:放学铃响起。
 旁白:你决定……
 
 choose:去找Ivan:ivan_route|去吉他社:wanhim_route|去图书馆:yu_route;
@@ -31,149 +24,123 @@ choose:去找Ivan:ivan_route|去吉他社:wanhim_route|去图书馆:yu_route;
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-
-changeFigure:Ivan_Normal.png -position=center;
-
+changeFigure:Ivan_Normal.png -position:center;
 Ivan:我还以为你已经回家了。
-
 {Name}:今天想陪陪你。
-
-Ivan:那帮我把这些练习卷送去办公室吧。
-
-{Name}:没问题。
-
-旁白:你和Ivan一起把试卷送到了办公室。
-
+Ivan:那正好。帮我把这些练习卷送去办公室吧。
+{Name}:这就是"陪你"？
+Ivan:……这是我唯一想好该怎么开口的版本。
+旁白:他说得认真，你反而笑了。
+旁白:两个人一起把试卷送到办公室。走廊的灯一盏盏亮起来。
 Ivan:谢谢。
-
-Ivan:其实这些事情一个人做还挺无聊的。
-
+Ivan:其实这些事情，一个人做还挺无聊的。
 {Name}:以后可以叫我一起。
-
 Ivan:好。
-
+Ivan:……这句话我会记下来。
+{Name}:记在哪里？
+Ivan:不用记的地方。
 setVar:Ivan_Love=Ivan_Love+10;
-
 changeFigure:none;
-
 jumpLabel:chapter_end;
 
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-
-changeFigure:WanHim_Normal.png -position=center;
-
+changeFigure:WanHim_Normal.png -position:center;
 运谦:你来了。
-
 {Name}:今天练什么？
-
-运谦:准备尝试写一首新歌。
-
+运谦:准备写一首新歌。
+{Name}:不是还差一点的那首？
+运谦:那首是给活动写的。这首，是给我自己的。
 {Name}:已经有灵感了吗？
-
 运谦:还差一点。
-
-运谦:你觉得放学后的校园是什么感觉？
+{Name}:差什么？
+运谦:差一个"放学后的校园"是什么感觉。
+旁白:他停下拨弦的手，认真看着你。
 
 choose:很安静:quiet|很温暖:warm;
 
 label:quiet;
 
 {Name}:很安静。
-
-{Name}:很适合一个人思考。
-
+{Name}:安静到能听见自己翻书包的声音。
 运谦:和我想的一样。
-
+运谦:那你觉得，安静属于谁？
+{Name}:属于愿意留下来的人。
+旁白:他把这句话写进本子，字迹比平时大了一号。
 setVar:WanHim_Love=WanHim_Love+10;
-
 jumpLabel:wan_end;
 
 label:warm;
 
-{Name}:夕阳照进教室的时候。
-
-{Name}:总觉得特别温暖。
-
-运谦:……
-
-运谦:不错。
-
-运谦:我决定把这个感觉写进歌词。
-
+{Name}:夕阳照进教室的时候，总觉得特别温暖。
+运谦:……就是这种感觉。
+运谦:我一直在找一个词，原来这么简单。
+旁白:他把"温暖"两个字写进本子，笔尖停了一下，又添了一小笔。
 setVar:WanHim_Love=WanHim_Love+15;
-
 jumpLabel:wan_end;
 
 label:wan_end;
 
+旁白:临走时，他轻声弹了那句新旋律。很短，但已经有了体温。
 changeFigure:none;
-
 jumpLabel:chapter_end;
 
 label:yu_route;
 
 changeBg:Library.jpg;
-
 changeFigure:yu.jpg -position=center;
-
 小雨:今天也是来看书吗？
-
 {Name}:今天是来看你的。
-
 小雨:……
-
-小雨:这样说会让我不好意思。
-
+小雨:这样说，会让我不好意思。
 {Name}:真的吗？
-
 小雨:嗯。
-
-旁白:两人一起坐在窗边。
-
+旁白:她低头整理了一下书，没有把话题接下去，却也没有走开。
+旁白:两人一起坐在窗边，阳光在书页上慢慢移动。
 小雨:你平时喜欢看小说吗？
 
 choose:喜欢:novel|比较喜欢漫画:comic;
 
 label:novel;
 
-{Name}:喜欢。
-
-{Name}:特别是校园故事。
-
-小雨:那下次我推荐几本给你。
-
+{Name}:喜欢。特别是校园故事。
+小雨:为什么？
+{Name}:因为故事里的人，总能赶上把想说的话说完。
+小雨:……
+小雨:那现实里来不及说的话呢？
+{Name}:那就慢慢说。反正樱花不会跑。
+小雨:这句是我说的。
+{Name}:所以我记着。
 setVar:Yu_Love=Yu_Love+10;
-
 jumpLabel:yu_end;
 
 label:comic;
 
-{Name}:其实漫画比较多。
-
+{Name}:其实我看漫画比较多。
 小雨:图书馆也有漫画专区。
-
-小雨:下次带你去。
-
+小雨:下次带你去，在最里面那排。
+{Name}:最里面那排有什么特别的？
+小雨:特别安静，适合不想被人找到的人。
+{Name}:那你把我带过去，是打算让我被找到？
+小雨:……
+小雨:看情况。
 setVar:Yu_Love=Yu_Love+10;
-
 jumpLabel:yu_end;
 
 label:yu_end;
 
+旁白:闭馆铃响起，她把你送到门口，停了两秒才说"明天见"。
 changeFigure:none;
-
 jumpLabel:chapter_end;
 
 label:chapter_end;
 
 changeBg:SchoolGate.jpg;
-
-旁白:夕阳缓缓落下。
-
-旁白:今天也度过了充实的一天。
-
-旁白:与你重要的人，又拉近了一点距离。
+pixiPerform:cherryBlossoms;
+旁白:夕阳缓缓落下。樱花道上，越来越多人开始谈论下周的月考。
+旁白:今天也过了充实的一天。
+旁白:你和重要的人之间，又拉近了一点距离。
+pixiInit;
 
 changeScene:第八章.txt;

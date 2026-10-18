@@ -2,79 +2,56 @@ label:第十二章;
 
 changeBg:Classroom.jpg;
 
-旁白:星期二。
-
-旁白:月考成绩公布的日子。
-
+旁白:星期二。月考成绩公布的日子。
 {Name}:不知道成绩怎么样。
-
 旁白:教室里比平时更加热闹。
-
-changeFigure:Ivan_Normal.png -position=right;
-
+changeFigure:Ivan_Normal.png -position:right;
 Ivan:成绩出来了。
-
 {Name}:这么快？
-
 Ivan:嗯。
-
 {Name}:你考得怎么样？
-
 Ivan:还可以。
-
 {Name}:又是第一名吗？
-
 Ivan:……
-
 Ivan:差不多。
-
 {Name}:果然。
-
-旁白:Ivan看起来和平时一样平静。
-
-旁白:但你注意到，他似乎一直在看着成绩单。
-
+旁白:Ivan的表情和平时一样平静。
+旁白:但你注意到，他看成绩单的时间，比看任何一张通知都久。
 changeFigure:none;
 
 旁白:午休时间。
-
 changeBg:Cafeteria.jpg;
-
-旁白:三个人坐在一起吃午餐。
-
+旁白:三个人坐在一起吃午饭。
 changeFigure:Ivan_Normal.png -position=left;
 changeFigure:WanHim_Normal.png -position=center;
 changeFigure:yu.jpg -position=right;
-
 运谦:这次成绩怎么样？
-
-{Name}:还没有仔细看。
-
+{Name}:还没仔细看。
 小雨:我也差不多。
-
 Ivan:你们两个都不看的吗？
-
 运谦:成绩这种东西，知道结果就好了。
-
 {Name}:说得好。
-
 小雨:同意。
-
-Ivan:……
-
-Ivan:你们两个还真是。
-
-旁白:三个人同时笑了起来。
-
+Ivan:……你们两个还真是。
+旁白:三个人同时笑了起来。勺子碰到餐盘，叮的一声。
 changeFigure:none;
 
 旁白:下午放学。
-
+changeBg:Hallway.jpg;
+{Name}:这个学期，好像只剩下最后一件事没做。
+{Name}:有些话再不说，就会一直拖下去。
 旁白:你决定去哪里。
+
 choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent|去图书馆找小雨:YuEvent;
+
 label:IvanEvent;
+
 changeScene:i/第十二章_I.txt;
+
 label:WanHimEvent;
+
 changeScene:w/第十二章.txt;
+
 label:YuEvent;
+
 changeScene:y/第十二章.txt;

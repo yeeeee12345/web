@@ -2,206 +2,150 @@ label:第六章;
 
 changeBg:House.webp;
 
-旁白:迎新活动结束后的星期二。
-
-{Name}:总觉得校园恢复了平静。
-
-{Name}:不过，好像也开始习惯这里了。
+旁白:迎新结束后的星期二。
+{Name}:校园安静下来，日子开始有了节奏。
 
 changeBg:Classroom.jpg;
-
-旁白:刚坐下，Ivan便走了过来。
-
-changeFigure:Ivan_Normal.png -position=center;
-
-Ivan:昨天休息得怎么样？
-
+旁白:刚坐下，Ivan就走了过来。
+changeFigure:Ivan_Normal.png -position:center;
+Ivan:昨天休息好了吗？
 {Name}:睡得特别好。
-
-Ivan:看来迎新活动没有白忙。
-
-{Name}:大家都辛苦了。
-
-Ivan:不过……
-
+Ivan:看来前期准备没有白忙。
+Ivan:不过——
 Ivan:接下来就是月考了。
-
 {Name}:这么快？
-
-Ivan:嗯。
-
-Ivan:老师已经开始准备了。
-
+Ivan:老师说下周。复习范围已经定了。
+{Name}:你看起来一点都不慌。
+Ivan:慌没有用，计划有用。
+旁白:他从文件夹里抽出一张写满格子的复习表。格子几乎填满了。
 setVar:Ivan_Love=Ivan_Love+5;
 
 changeFigure:none;
-
-旁白:上午的课程结束。
+旁白:上午的课结束。
 
 changeBg:Hallway.jpg;
-
-老师:{Name}。
-
+changeFigure:Teacher.webp -position=center;
+老师:{Name}同学。
 {Name}:老师？
-
-老师:这份资料分别送去图书馆和音乐教室。
-
-老师:麻烦你了。
-
+老师:这份资料，分别送去图书馆和音乐教室。
+老师:两边都在催。
 {Name}:好的。
+changeFigure:none;
+{Name}:（先送哪一边呢。）
 
 choose:先去音乐教室:音乐教室|先去图书馆:图书馆;
 
 label:音乐教室;
 
 changeBg:MusicRoom.jpg;
-
-changeFigure:WanHim_Normal.png -position=center;
-
+changeFigure:WanHim_Normal.png -position:center;
 旁白:音乐教室里传来熟悉的旋律。
-
 运谦:来了？
-
 {Name}:老师让我送资料。
-
 运谦:放这里吧。
-
 {Name}:今天没有练新曲？
-
-运谦:今天在改编以前写的歌。
-
-{Name}:你自己写的吗？
-
-运谦:嗯。
-
-{Name}:真厉害。
-
-运谦:以后完成了，第一个给你听。
-
-{Name}:约好了。
-
+运谦:今天在改以前写的歌。
+{Name}:是你自己写的吗？
+运谦:嗯。写了一半的那种。
+{Name}:一共有几首？
+运谦:……七首。
+{Name}:全都写了一半？
+运谦:写完的，不敢给别人听。写一半的，反而敢。
+{Name}:那今天这首，给我听一半就好。
+运谦:好。
+旁白:他把一小段旋律弹完。停下来的地方，比往常都安定。
 setVar:WanHim_Love=WanHim_Love+10;
-
 changeFigure:none;
-
-jumpLabel:图书馆事件;
+jumpLabel:午餐事件;
 
 label:图书馆;
 
 changeBg:Library.jpg;
-
-changeFigure:yu.jpg -position=center;
-
+changeFigure:yu.jpg -position:center;
 小雨:欢迎。
-
 {Name}:老师让我送资料。
-
-小雨:谢谢。
-
+小雨:谢谢。放那边就好。
 {Name}:今天人好少。
-
-小雨:考试快到了。
-
-小雨:大家都去借参考书了。
-
-{Name}:你一直都在这里吗？
-
-小雨:差不多。
-
-小雨:我喜欢这里安静。
-
-{Name}:我也开始喜欢这里了。
-
-小雨:真的吗？
-
-{Name}:嗯。
-
-小雨:那以后常来。
-
+小雨:快考试了，大家都去借参考书了。
+{Name}:你一直在这里吗？
+小雨:差不多。我喜欢这里安静。
+{Name}:除了安静呢？
+小雨:安静的时候，能听见别人写字的声音。
+小雨:笔尖快的人，一般有点紧张。
+{Name}:那我写字的声音，是什么样？
+旁白:她低头听了听，笑了。
+小雨:你是那种写得很慢，但很少涂改的人。
 setVar:Yu_Love=Yu_Love+10;
-
 changeFigure:none;
+jumpLabel:午餐事件;
 
-jumpLabel:图书馆事件;
-
-label:图书馆事件;
+label:午餐事件;
 
 changeBg:Cafeteria.jpg;
-
-旁白:午休时间。
-
+旁白:午休时间，靠窗的桌子边坐着三个人。
 changeFigure:Ivan_Normal.png -position=left;
-
 changeFigure:WanHim_Normal.png -position=center;
-
 changeFigure:yu.jpg -position=right;
-
-Ivan:终于来了。
-
-运谦:我们还以为你迷路了。
-
-小雨:午餐一起吗？
+Ivan:复习计划你们看了吗？
+运谦:看了。然后合上了。
+小雨:我贴在了借书台后面，方便大家看。
+Ivan:至少有人认真对待。
+运谦:至少有人没有。
+旁白:你坐在中间，被两股视线夹着。
 
 choose:和Ivan坐:Ivan午餐|和运谦坐:运谦午餐|和小雨坐:小雨午餐;
 
 label:Ivan午餐;
 
-Ivan:昨天谢谢你帮忙。
-
-{Name}:举手之劳。
-
-Ivan:以后如果有不会的题……
-
-Ivan:可以来找我。
-
-{Name}:那我可不会客气。
-
+changeFigure:WanHim_Normal.png -position=center;
+changeFigure:yu.jpg -position=right;
+Ivan:昨天的数学笔记，我给你复印一份。
+{Name}:谢谢。你又提前看了后面的内容？
+Ivan:嗯。提前一点，比较安心。
+{Name}:你有不安心的时候吗？
+Ivan:……
+Ivan:复习表第十天那一格，我到现在还不知道填什么。
+{Name}:十天以后的事，谁都不知道。
+Ivan:所以我才想把它填满。
 setVar:Ivan_Love=Ivan_Love+10;
-
 jumpLabel:结尾;
 
 label:运谦午餐;
 
-运谦:放学来吉他社吗？
-
-{Name}:今天？
-
-运谦:嗯。
-
-运谦:想让你听完整版。
-
-{Name}:好。
-
+changeFigure:Ivan_Normal.png -position=left;
+changeFigure:yu.jpg -position=right;
+运谦:今天放学来音乐教室吗？
+{Name}:今天？有什么事吗？
+运谦:想让你听一下完整版。
+{Name}:那首写了一半的？
+运谦:嗯。昨天晚上，忽然知道后面该怎么写了。
+{Name}:去。一定去。
 setVar:WanHim_Love=WanHim_Love+10;
-
 jumpLabel:结尾;
 
 label:小雨午餐;
 
+changeFigure:Ivan_Normal.png -position=left;
+changeFigure:WanHim_Normal.png -position=center;
 小雨:这本小说借给你。
-
-{Name}:谢谢。
-
+{Name}:谢谢。怎么突然？
+小雨:因为你这几天看起来，像需要一点别人的故事。
+{Name}:我看起来很累吗？
+小雨:不是累。是心里装了很多事的那种安静。
+{Name}:……被你说中了。
 小雨:看完告诉我感想。
-
 {Name}:一定。
-
 setVar:Yu_Love=Yu_Love+10;
-
 jumpLabel:结尾;
 
 label:结尾;
 
 changeFigure:none;
-
 changeBg:SchoolGate.jpg;
-
-旁白:放学后。
-
-旁白:迎新活动已经结束。
-
-旁白:校园生活也逐渐回到日常。
-
-旁白:而你与三人的关系，也悄悄发生了变化。
+pixiPerform:cherryBlossoms;
+旁白:放学后，樱花道上的夕阳把影子拉得很长。
+旁白:迎新活动已经结束，校园生活渐渐回到日常。
+旁白:而你与三个人的距离，也在不知不觉间，变了形状。
+pixiInit;
 
 changeScene:第七章.txt;
