@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 小雨:你来了。
 {Name}:今天看起来很开心。

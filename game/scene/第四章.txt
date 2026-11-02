@@ -1,12 +1,12 @@
 label:第四章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:第五天。今天下午开始准备迎新活动。
 
 changeBg:Classroom.jpg;
 旁白:教室里的气氛比平时松，也比平时乱。
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:早。
 {Name}:早。今天是不是要忙一下午？
 Ivan:嗯。班主任说最后一节不上，大家自由分组。
@@ -22,7 +22,7 @@ changeFigure:none;
 旁白:上午的课结束。
 
 changeBg:Hallway.jpg;
-changeFigure:Teacher.webp -position:center;
+changeFigure:Teacher_Normal.png;
 老师:下午自由分组，可以去协助各个部门。
 老师:做得多的人，活动当天可以少站半小时。
 旁白:走廊里立刻有人欢呼。
@@ -35,7 +35,7 @@ choose:去吉他社帮忙:去吉他社|去图书馆帮忙:去图书馆|留在教
 label:去吉他社;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:来得正好。
 运谦:帮我搬一下音箱。礼堂那台太旧了，今天要试。
 {Name}:没问题。
@@ -55,7 +55,7 @@ jumpLabel:下午集合;
 label:去图书馆;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:今天图书馆很忙。
 {Name}:需要帮忙吗？
 小雨:需要。非常需要。
@@ -72,7 +72,7 @@ jumpLabel:下午集合;
 label:留在教室;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:来得正好。
 Ivan:帮我把这些海报贴到教学楼去。
 {Name}:交给我。
@@ -92,22 +92,24 @@ label:下午集合;
 
 changeBg:Auditorium.jpg;
 旁白:下午四点，各个组在礼堂前集合。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position:right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 Ivan:海报全部贴完了。
 运谦:音箱也调好了，明天再试一次。
 小雨:阅读角的书单，已经定了。
 {Name}:大家都很厉害。
-changeFigure:Teacher.webp -position:center;
+changeFigure:Teacher_Normal.png;
 老师:很好。今天是准备的第一天，进度已经比往年快了。
 老师:明天还有一天，活动就开始了。
 老师:希望一切顺利。
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 旁白:老师们散开后，礼堂里安静下来，只剩几个人还在收拾。
 
 changeBg:SchoolGate.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 旁白:你准备回家的时候，运谦追了上来。
 运谦:明天……能早点来吗？
 {Name}:当然。怎么了？
@@ -121,7 +123,7 @@ changeFigure:WanHim_Normal.png -position=center;
 setVar:WanHim_Love=WanHim_Love+5;
 
 changeFigure:none;
-changeBg:House.webp;
+changeBg:House.jpg;
 旁白:回到家，你在手账上写：明天七点半，音乐教室。
 旁白:写完才发现，"七点半"这三个字，你写得很用力。
 

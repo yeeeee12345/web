@@ -1,6 +1,6 @@
 changeBg:Auditorium.jpg;
 
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 
 旁白:校园文化周最后一天下午，礼堂里摆好了几排椅子。
 旁白:运谦站在侧台，手里握着那枚陪他写完这首曲子的拨片。

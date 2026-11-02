@@ -1,13 +1,13 @@
 label:第六章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:迎新结束后的星期二。
 {Name}:校园安静下来，日子开始有了节奏。
 
 changeBg:Classroom.jpg;
 旁白:刚坐下，Ivan就走了过来。
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:昨天休息好了吗？
 {Name}:睡得特别好。
 Ivan:看来前期准备没有白忙。
@@ -24,7 +24,7 @@ changeFigure:none;
 旁白:上午的课结束。
 
 changeBg:Hallway.jpg;
-changeFigure:Teacher.webp -position=center;
+changeFigure:Teacher_Normal.png;
 老师:{Name}同学。
 {Name}:老师？
 老师:这份资料，分别送去图书馆和音乐教室。
@@ -38,7 +38,7 @@ choose:先去音乐教室:音乐教室|先去图书馆:图书馆;
 label:音乐教室;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 旁白:音乐教室里传来熟悉的旋律。
 运谦:来了？
 {Name}:老师让我送资料。
@@ -61,7 +61,7 @@ jumpLabel:午餐事件;
 label:图书馆;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position:center;
+changeFigure:Yu_Normal.png;
 小雨:欢迎。
 {Name}:老师让我送资料。
 小雨:谢谢。放那边就好。
@@ -83,9 +83,9 @@ label:午餐事件;
 
 changeBg:Cafeteria.jpg;
 旁白:午休时间，靠窗的桌子边坐着三个人。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 Ivan:复习计划你们看了吗？
 运谦:看了。然后合上了。
 小雨:我贴在了借书台后面，方便大家看。
@@ -97,8 +97,8 @@ choose:和Ivan坐:Ivan午餐|和运谦坐:运谦午餐|和小雨坐:小雨午餐
 
 label:Ivan午餐;
 
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 Ivan:昨天的数学笔记，我给你复印一份。
 {Name}:谢谢。你又提前看了后面的内容？
 Ivan:嗯。提前一点，比较安心。
@@ -112,8 +112,8 @@ jumpLabel:结尾;
 
 label:运谦午餐;
 
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:yu.jpg -position=right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:Yu_Normal.png -right;
 运谦:今天放学来音乐教室吗？
 {Name}:今天？有什么事吗？
 运谦:想让你听一下完整版。
@@ -125,8 +125,8 @@ jumpLabel:结尾;
 
 label:小雨午餐;
 
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
 小雨:这本小说借给你。
 {Name}:谢谢。怎么突然？
 小雨:因为你这几天看起来，像需要一点别人的故事。
@@ -141,6 +141,8 @@ jumpLabel:结尾;
 label:结尾;
 
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:放学后，樱花道上的夕阳把影子拉得很长。

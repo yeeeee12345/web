@@ -4,7 +4,7 @@ changeBg:Classroom.jpg;
 
 旁白:星期一。周末结束后，校园又恢复了平常的节奏。
 {Name}:月考，好像一场很快就过去的雨。
-changeFigure:Ivan_Normal.png -position=right;
+changeFigure:Ivan_Normal.png -right;
 Ivan:感觉怎么样？
 {Name}:不知道。至少能写的，我都写了。
 Ivan:这句话倒是不错。
@@ -12,6 +12,7 @@ Ivan:这句话倒是不错。
 Ivan:还可以。等成绩出来就知道了。
 旁白:他说"还可以"的时候，指尖在课桌上轻轻敲了两下。
 changeFigure:none;
+changeFigure:none -right;
 
 旁白:放学铃响起。同学们陆续离开教室。
 旁白:公告栏上，"校园文化周"的海报换成了新的一版：两周后开始，这几天征集各班展位和节目。
@@ -23,7 +24,7 @@ choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent|去图书馆找小
 label:IvanEvent;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:你来了。
 {Name}:今天还要学习吗？
 Ivan:不是。
@@ -52,7 +53,7 @@ jumpLabel:chapter_end;
 label:WanHimEvent;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:你来了。
 {Name}:今天要练习吗？
 运谦:嗯。不过在那之前——
@@ -81,7 +82,7 @@ jumpLabel:chapter_end;
 label:YuEvent;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:今天来得很早。
 {Name}:你也是。
 小雨:我每天都差不多这个时间来。

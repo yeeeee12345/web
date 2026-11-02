@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:校园文化周的书页分享角，摆在图书馆靠窗的一侧。
 旁白:留言板上已经贴了十几张卡片。有些只写了书名，有些写了长长的句子。

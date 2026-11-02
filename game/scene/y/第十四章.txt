@@ -2,7 +2,7 @@ changeBg:BookStore.jpg;
 
 旁白:周六下午，你带着那本借来的书，来到约好的书店。
 旁白:小雨已经坐在靠窗的位置，桌上放着两杯热饮。
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:我猜你会把书带来。
 {Name}:我想把上次没说完的答案带来。
 小雨:我们说好交换。你想先听我的，还是先说你的？
@@ -42,6 +42,7 @@ label:交换答案;
 旁白:你们收好书和饮料，沿着街道慢慢走。
 旁白:小雨没有急着找话题。偶尔看见喜欢的店，就停下来多看一会儿。
 
+changeFigure:none;
 changeBg:Park_Evening.jpg;
 旁白:公园里有人在练习投篮，远处传来几声笑闹。你们在树荫下找了张长椅坐下。
 小雨:我以前觉得，两个人不说话的时候，会很尴尬。

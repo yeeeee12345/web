@@ -1,6 +1,6 @@
 label:第五章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:迎新活动当天。
 {Name}:终于到了。
@@ -14,7 +14,7 @@ pixiPerform:cherryBlossoms;
 
 pixiInit;
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:早。
 {Name}:今天会很忙吧？
 Ivan:嗯。不过大家准备了这么久。
@@ -35,7 +35,7 @@ choose:去礼堂帮忙:礼堂|去图书馆帮忙:图书馆|留在班级摊位:�
 label:礼堂;
 
 changeBg:Auditorium.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:你来了。
 {Name}:有没有我能帮忙的？
 运谦:帮我检查一下吉他线。
@@ -90,7 +90,7 @@ jumpLabel:下午;
 label:图书馆;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position:center;
+changeFigure:Yu_Normal.png;
 小雨:欢迎。
 {Name}:今天人好多。
 小雨:都是来看阅读角的。
@@ -114,8 +114,9 @@ jumpLabel:下午;
 
 label:班级摊位;
 
+changeFigure:none;
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:来得正好。
 Ivan:这里需要人登记。
 {Name}:交给我。
@@ -138,11 +139,12 @@ jumpLabel:下午;
 
 label:下午;
 
+changeFigure:none;
 changeBg:SchoolYard.jpg;
 旁白:下午，活动进入尾声。
-changeFigure:Ivan_Normal.png -position:left;
-changeFigure:WanHim_Normal.png -position:center;
-changeFigure:yu.jpg -position:right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 Ivan:终于结束了。
 运谦:虽然累，不过很值得。
 小雨:大家今天都很努力。
@@ -151,6 +153,8 @@ Ivan:终于结束了。
 旁白:三个人相视一笑。夕光照在他们身上，谁也没有急着回家。
 
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:学生们陆续离开校园。你站在樱花道上，脚步停了一下。
@@ -159,7 +163,7 @@ choose:和Ivan一起回家:回家Ivan|和运谦一起回家:回家运谦|和小�
 
 label:回家Ivan;
 
-changeFigure:Ivan_Happy.png -position:center;
+changeFigure:Ivan_Happy.png;
 Ivan:今天谢谢你。
 Ivan:以后也请多关照。
 {Name}:彼此彼此。
@@ -172,7 +176,7 @@ jumpLabel:结束;
 
 label:回家运谦;
 
-changeFigure:WanHim_Smile.png -position=center;
+changeFigure:WanHim_Smile.png;
 运谦:今天真的很开心。
 运谦:下次演出，希望你还能来。
 {Name}:下次一定。
@@ -185,7 +189,7 @@ jumpLabel:结束;
 
 label:回家小雨;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Smile.png;
 小雨:今天辛苦了。
 小雨:谢谢你一直陪着我。
 {Name}:不用客气。
@@ -203,7 +207,7 @@ label:结束;
 
 pixiInit;
 changeFigure:none;
-changeBg:House.webp;
+changeBg:House.jpg;
 旁白:迎新活动圆满结束。
 旁白:回到家后，你把书包放在椅子旁，手机屏幕亮了起来。
 

@@ -1,6 +1,6 @@
 changeBg:SchoolYard.jpg;
 
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 
 旁白:周三放学后，音乐社要为校园广播录一段"放学路上"的声音。
 旁白:运谦借来一台小录音机，叫你一起去找素材。

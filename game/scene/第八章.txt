@@ -7,12 +7,12 @@ changeBg:Bedroom_Morning.jpg;
 
 changeBg:Classroom.jpg;
 旁白:上午的课程结束。
-changeFigure:Teacher.webp -position:center;
+changeFigure:Teacher_Normal.png;
 老师:从明天开始月考复习。
 老师:希望大家提前准备。
 changeFigure:none;
 旁白:同学们纷纷讨论起来。
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:有不会的地方，可以来问我。
 {Name}:那我就放心了。
 Ivan:不过——
@@ -20,13 +20,14 @@ Ivan:还是要先自己努力。
 {Name}:知道啦。
 Ivan:知道和做到之间，隔着好几道错题。
 setVar:Ivan_Love=Ivan_Love+5;
+setVar:Yu_Love=Yu_Love+5;
 changeFigure:none;
 
 changeBg:Cafeteria.jpg;
 旁白:午餐时间，窗边那张桌子边坐着你们四个人。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 Ivan:刚才老师说的复习范围，你记下来了吗？
 {Name}:记了一半。第三章那几道题还是不明白。
 Ivan:吃完我讲给你听。
@@ -45,6 +46,8 @@ Ivan:现在呢？
 运谦:我会记住这句话。
 
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:Hallway.jpg;
 旁白:放学后，你站在楼梯口。
 旁白:今天准备去哪里？
@@ -54,7 +57,7 @@ choose:去找Ivan:ivan_route|去吉他社:wanhim_route|去图书馆:yu_route;
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:正准备回去。
 {Name}:一起整理教室吧。
 Ivan:好。
@@ -73,7 +76,7 @@ jumpLabel:night;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:来得正好。
 运谦:歌词终于写完了。
 {Name}:真的吗？
@@ -105,8 +108,9 @@ jumpLabel:night;
 
 label:yu_route;
 
+changeFigure:none;
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:欢迎。
 {Name}:今天有什么推荐吗？
 小雨:有。这是我最近看的一本。

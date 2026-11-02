@@ -1,6 +1,6 @@
 changeBg:Classroom.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:周五早读前，班主任在黑板上写下"午间读书分享"。
 旁白:每个人都可以带一段喜欢的文字来读，不超过一分钟。

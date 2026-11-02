@@ -3,13 +3,13 @@ changeBg:Classroom.jpg;
 旁白:周一午休，教室里只剩下几排没收好的课桌。
 旁白:你回来拿课本。推门的时候，发现三个人都在。
 
-changeFigure:Ivan_Normal.png -position=left;
+changeFigure:Ivan_Normal.png -left;
 Ivan:你是来拿作业本的吧？今天的课堂笔记，我顺便复印了一份。
 
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:我正要去音乐教室试一段新旋律。刚好缺一个听众。
 
-changeFigure:yu.jpg -position=right;
+changeFigure:Yu_Normal.png -right;
 小雨:我想去图书馆还书。靠窗的位置，留了一个。
 
 旁白:三个人说完，教室里安静了一秒。
@@ -47,8 +47,10 @@ label:一块放学;
 旁白:四个人一起走出教室。走廊里的阳光，一格一格地落在地上。
 旁白:往前走的时候，Ivan和运谦不知不觉走到了你的两侧。
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:CG_Both.jpg;
-unlockCg:CG_Both.jpg -name=谁也不先低头;
+unlockCg:CG_Both.jpg -name:谁也不先低头;
 旁白:两个人隔着一段距离，谁也没有先低头。
 Ivan:下次要去哪里，你可以先告诉我。
 运谦:或者，先告诉我。

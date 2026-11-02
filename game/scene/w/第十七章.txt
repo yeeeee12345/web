@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Smile.png -position:center;
+changeFigure:WanHim_Smile.png;
 
 旁白:午休铃响后，广播站播放了一段新的节目片头。吉他声只有十几秒，教室里却有人认出了旋律。
 运谦:有人来问，这是不是《窗边有人在听》的开头。

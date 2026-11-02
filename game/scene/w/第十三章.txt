@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 
 旁白:运谦没有收起吉他，记事本也摊在桌上。
 运谦:刚才说到名字，我好像想到一点了。
@@ -41,9 +41,10 @@ label:写下名字;
 {Name}:那你现在，知道了吗？
 运谦:知道一点。
 
+changeFigure:none;
 changeBg:Auditorium.jpg;
 旁白:离开音乐教室前，运谦带你绕到空着的礼堂。
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:迎新那天，我在这里弹过歌。
 {Name}:我记得。台下的掌声很大。
 运谦:那时候我只顾着数拍子，怕弹错一个音。
@@ -59,8 +60,9 @@ changeFigure:WanHim_Normal.png -position:center;
 {Name}:嗯？
 运谦:我喜欢你。不是因为你总来听我弹琴。
 运谦:是因为和你待在一起的时候，我不用先想好该说什么。
+changeFigure:none;
 changeBg:CG_WanHim.jpg;
-unlockCg:CG_WanHim.jpg -name=不用先想好;
+unlockCg:CG_WanHim.jpg -name:不用先想好;
 运谦:你愿意和我交往吗？
 {Name}:愿意。不过以后，不许只用新歌当借口约我。
 运谦:那我可以直接约你吗？

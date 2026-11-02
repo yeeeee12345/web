@@ -1,7 +1,7 @@
 changeBg:BookStore.jpg;
 
 旁白:星期六上午，你们约在那家书店见面。Ivan已经到了，手里拿着上次没看完的小说。
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:我没有带复习资料。
 {Name}:这是在向我证明什么？
 Ivan:证明我记得约定。
@@ -61,6 +61,7 @@ Ivan:我知道。只是以前不太相信，停下来也没关系。
 {Name}:今天感觉怎么样？
 Ivan:和你在一起的时候，停一会儿，也不会觉得是在浪费时间。
 
+changeFigure:none;
 changeBg:Park_Evening.jpg;
 旁白:离开书店后，你们沿着街边走了一段路。夕阳落在树叶上，Ivan把小说抱在手里，没有再看过一次时间。
 Ivan:今天和我想象的不太一样。

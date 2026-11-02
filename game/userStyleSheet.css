@@ -1,0 +1,85 @@
+/* ============================================================
+   请和我交往吧 —— 全局样式覆盖
+   WebGAL 4.6.1 / 在引擎默认样式之后加载
+   ============================================================ */
+
+/* ---------- 字体 ---------- */
+:root {
+  --ink: #3a3440;
+  --ink-soft: #6b6270;
+  --paper: #f7f1e8;
+  --sakura: #e796ac;
+  --sakura-soft: #f5c0ce;
+  --accent: #b85c74;
+}
+
+body {
+  font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- 选项按钮：柔化、去边框、加投影 ---------- */
+.Choose_item {
+  font-family: inherit !important;
+  color: #503b47 !important;
+  background: rgba(255, 253, 250, 0.82) !important;
+  border: 2px solid rgba(184, 92, 116, 0) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 22px rgba(80, 59, 71, 0.16) !important;
+  letter-spacing: 0.06em;
+  transition: background 0.28s ease, border-color 0.28s ease,
+              box-shadow 0.28s ease, transform 0.28s ease !important;
+}
+
+.Choose_item:hover {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(184, 92, 116, 0.55) !important;
+  box-shadow: 0 10px 30px rgba(80, 59, 71, 0.26) !important;
+  transform: translateY(-2px);
+}
+
+/* ---------- 对话框文字：提高可读性 ---------- */
+#textBoxMain {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+/* ---------- 标题界面按钮 ---------- */
+.Title_button_text {
+  letter-spacing: 0.18em !important;
+}
+
+.Title_button:hover {
+  background: linear-gradient(to right, rgba(184, 92, 116, 0.32), rgba(184, 92, 116, 0.12)) !important;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 92, 116, 0.42);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 92, 116, 0.62);
+}
+
+/* ---------- 减少动效偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .Choose_item,
+  .Title_button {
+    transition: none !important;
+  }
+
+  .Choose_item:hover {
+    transform: none;
+  }
+}

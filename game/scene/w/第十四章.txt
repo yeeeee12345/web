@@ -1,7 +1,7 @@
 changeBg:MusicShop.jpg;
 
 旁白:周六下午，你们在运谦常去的乐器店门口碰面。店里传出断断续续的试音声。
-changeFigure:WanHim_Smile.png -position=center;
+changeFigure:WanHim_Smile.png;
 运谦:欢迎来到我最熟悉的地方。
 {Name}:今天要买吉他吗？
 运谦:不一定。想带你看看，我平时为什么会在这里待这么久。
@@ -43,6 +43,7 @@ label:逛完乐器店;
 运谦:不用收得太好。之后还要拿来，听我弹琴。
 {Name}:那我就放在容易找到的地方。
 
+changeFigure:none;
 changeBg:Park_Evening.jpg;
 旁白:你们沿着公园的小路往前走。运谦没有带吉他，手指却在口袋里不自觉轻敲节拍。
 {Name}:没带琴，你还在打拍子。

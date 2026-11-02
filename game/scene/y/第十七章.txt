@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:图书馆每周三的午休阅读会开始了。
 旁白:小雨提前占好了靠窗的桌子，桌边放着几本适合新生读的短篇集。

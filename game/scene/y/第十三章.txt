@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:小雨把书放在桌上，却没有马上松开手。
 {Name}:第一页那行字，你知道是谁写的吗？
@@ -53,15 +53,17 @@ label:一起读书;
 小雨:是我想和你一起出去的约定。
 旁白:闭馆提示音响起时，小雨把书轻轻合上。
 
+changeFigure:none;
 changeBg:SchoolGate.jpg;
 旁白:你们一起走到校门口。晚风把她手里的书页吹开了一角。
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:我还有一句话，想当面告诉你。
 {Name}:我在听。
 小雨:我喜欢你。不只是因为你愿意陪我看书。
 小雨:我想和你交往。以后有开心的事，也想第一个告诉你。
+changeFigure:none;
 changeBg:CG_Yu.jpg;
-unlockCg:CG_Yu.jpg -name=第一个告诉你;
+unlockCg:CG_Yu.jpg -name:第一个告诉你;
 {Name}:我也喜欢你。
 小雨:那下周的书店，就算第一次约会，好吗？
 {Name}:好。书我会认真挑，时间也会记牢。

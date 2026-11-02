@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:阅读分享会结束后，图书馆的人渐渐散去。
 旁白:小雨留在靠窗的位置，把一张写满书名的卡片递给你。

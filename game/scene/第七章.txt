@@ -1,6 +1,6 @@
 label:第七章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:星期三。
 旁白:最近的校园生活，渐渐步入正轨。
@@ -8,7 +8,7 @@ changeBg:House.webp;
 
 changeBg:Classroom.jpg;
 旁白:上午的课很快结束。
-changeFigure:Ivan_Normal.png -position:right;
+changeFigure:Ivan_Normal.png -right;
 Ivan:今天下午没有值日。
 Ivan:难得可以轻松一点。
 {Name}:那你准备做什么？
@@ -16,6 +16,7 @@ Ivan:把下周活动的材料先整理出来。
 {Name}:这叫轻松？
 Ivan:这比上课轻松。
 changeFigure:none;
+changeFigure:none -right;
 旁白:放学铃响起。
 旁白:你决定……
 
@@ -24,7 +25,7 @@ choose:去找Ivan:ivan_route|去吉他社:wanhim_route|去图书馆:yu_route;
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:我还以为你已经回家了。
 {Name}:今天想陪陪你。
 Ivan:那正好。帮我把这些练习卷送去办公室吧。
@@ -46,7 +47,7 @@ jumpLabel:chapter_end;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:你来了。
 {Name}:今天练什么？
 运谦:准备写一首新歌。
@@ -89,7 +90,7 @@ jumpLabel:chapter_end;
 label:yu_route;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:今天也是来看书吗？
 {Name}:今天是来看你的。
 小雨:……

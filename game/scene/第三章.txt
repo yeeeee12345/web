@@ -1,6 +1,6 @@
 label:第三章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:第四天。
 {Name}:今天班会好像要宣布大事。
@@ -12,7 +12,7 @@ pixiInit;
 changeBg:Classroom.jpg;
 
 旁白:刚走进教室，就听见同学们在传什么。
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:来了。
 {Name}:怎么了？
 Ivan:下周，学校要办春季迎新活动。
@@ -34,7 +34,7 @@ choose:去图书馆:去图书馆|去音乐教室:去音乐教室|留在教室:�
 label:去图书馆;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:今天不借书，只是来看看？
 {Name}:嗯。顺便看看你。
 小雨:那算你运气好。我在整理旧书，正愁没人帮忙。
@@ -52,8 +52,9 @@ jumpLabel:班会准备;
 
 label:去音乐教室;
 
+changeFigure:none;
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:今天来得比昨天早。
 {Name}:想听你练琴。
 运谦:那你坐那边。窗帘会漏风。
@@ -69,8 +70,9 @@ jumpLabel:班会准备;
 
 label:留在教室;
 
+changeFigure:none;
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:没去吃饭？
 {Name}:待会儿再去。
 Ivan:那帮我看一下这份名单。
@@ -90,7 +92,7 @@ label:班会准备;
 changeFigure:none;
 changeBg:Classroom.jpg;
 旁白:下午最后一节课，班主任把迎新活动的报名表贴到了黑板上。
-changeFigure:Teacher.webp -position:left;
+changeFigure:Teacher_Normal.png;
 老师:迎新活动在下周。摊位、礼堂、图书馆，都需要人。
 老师:现在是报名时间。
 changeFigure:none;
@@ -99,7 +101,7 @@ choose:报名帮忙班级摊位:Ivan路线|报名布置图书馆展角:Yu路线|
 
 label:Ivan路线;
 
-changeFigure:Ivan_Happy.png -position=center;
+changeFigure:Ivan_Happy.png;
 Ivan:谢谢。
 Ivan:有你在，分组表至少不用改第四版了。
 {Name}:第四版多半还是要改的。
@@ -110,7 +112,7 @@ jumpLabel:放学;
 
 label:Yu路线;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Smile.png;
 小雨:图书馆也要出一个展角。
 小雨:以后请多指教，搭档。
 {Name}:搭档？
@@ -121,7 +123,7 @@ jumpLabel:放学;
 
 label:Wan路线;
 
-changeFigure:WanHim_Smile.png -position=center;
+changeFigure:WanHim_Smile.png;
 运谦:太好了。
 运谦:到时候要有人帮我调设备。台上看不到观众席，我总觉得不安。
 {Name}:交给我。我在台下第一排。
@@ -134,9 +136,9 @@ label:放学;
 changeFigure:none;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position:right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 旁白:放学的时候，三个人在校门口凑到了一起，像是约好了一样。
 Ivan:明天见。
 运谦:别忘了你答应我的事。
@@ -150,7 +152,9 @@ Ivan:没有。
 
 pixiInit;
 changeFigure:none;
-changeBg:House.webp;
+changeFigure:none -left;
+changeFigure:none -right;
+changeBg:House.jpg;
 
 旁白:回到家，你在手账上写下新的一行字：下周，迎新活动。
 旁白:不知道为什么，已经开始期待了。

@@ -5,7 +5,7 @@ changeBg:Classroom.jpg;
 旁白:星期二。月考成绩公布的日子。
 {Name}:不知道成绩怎么样。
 旁白:教室里比平时更加热闹。
-changeFigure:Ivan_Normal.png -position:right;
+changeFigure:Ivan_Normal.png -right;
 Ivan:成绩出来了。
 {Name}:这么快？
 Ivan:嗯。
@@ -18,13 +18,14 @@ Ivan:差不多。
 旁白:Ivan的表情和平时一样平静。
 旁白:但你注意到，他看成绩单的时间，比看任何一张通知都久。
 changeFigure:none;
+changeFigure:none -right;
 
 旁白:午休时间。
 changeBg:Cafeteria.jpg;
 旁白:三个人坐在一起吃午饭。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
+changeFigure:Yu_Normal.png -right;
 运谦:这次成绩怎么样？
 {Name}:还没仔细看。
 小雨:我也差不多。
@@ -35,6 +36,8 @@ Ivan:你们两个都不看的吗？
 Ivan:……你们两个还真是。
 旁白:三个人同时笑了起来。勺子碰到餐盘，叮的一声。
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 
 旁白:下午放学。
 changeBg:Hallway.jpg;

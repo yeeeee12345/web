@@ -1,6 +1,6 @@
 label:第二章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:第三天。
 {Name}:昨天说要降温，今天得多穿一件。
@@ -8,7 +8,7 @@ changeBg:House.webp;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:刚到校门口，就看见Ivan站在樱树下。
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:早。
 {Name}:早，你在等人吗？
 Ivan:嗯。
@@ -21,6 +21,7 @@ Ivan:所以我在等。
 setVar:Ivan_Love=Ivan_Love+5;
 
 pixiInit;
+changeFigure:none;
 changeBg:Classroom.jpg;
 changeFigure:none;
 
@@ -35,7 +36,7 @@ choose:进去看看:进去看看|先去食堂:去食堂;
 label:进去看看;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:来了？
 {Name}:今天好像比昨天长了一点。
 运谦:你怎么听出来的？
@@ -57,9 +58,10 @@ jumpLabel:午餐;
 
 label:午餐;
 
+changeFigure:none;
 changeBg:Cafeteria.jpg;
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png -right;
 Ivan:数学作业最后一道，你会吗？
 运谦:你一见到新同学就聊作业。
 Ivan:这周要交。
@@ -70,9 +72,9 @@ choose:和Ivan一起研究题目:和Ivan一起|和运谦聊聊音乐:和运谦�
 
 label:和Ivan一起;
 
-changeFigure:WanHim_Normal.png -position=right;
+changeFigure:WanHim_Normal.png -right;
 运谦:那我先去找吉他社的人。
-changeFigure:Ivan_Happy.png -position=left;
+changeFigure:Ivan_Happy.png -left;
 Ivan:最后一道是有点绕。吃完我给你画个图。
 {Name}:你随身带草稿纸？
 Ivan:教室里的用完就补。习惯了。
@@ -86,9 +88,9 @@ jumpLabel:放学;
 
 label:和运谦聊;
 
-changeFigure:Ivan_Normal.png -position=left;
+changeFigure:Ivan_Normal.png -left;
 Ivan:那我先回教室。
-changeFigure:WanHim_Smile.png -position=right;
+changeFigure:WanHim_Smile.png -right;
 运谦:他这人，一紧张就想讲题。
 {Name}:紧张？
 运谦:快到班级评比的时候就这样。他不说，但看得出来。
@@ -103,10 +105,14 @@ jumpLabel:放学;
 
 label:放学;
 
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:Library.jpg;
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 旁白:放学后，你打算借一本书。图书馆比想象中安静。
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:来还书？
 {Name}:来借书。第一次来。
 小雨:那我带你转一圈。

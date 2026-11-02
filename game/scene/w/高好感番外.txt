@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Smile.png -position:center;
+changeFigure:WanHim_Smile.png;
 
 旁白:礼堂的观众散去后，运谦回到音乐教室，把那枚拨片放在窗边的谱架上。
 运谦:刚才我在台上看见你，就不觉得礼堂那么大了。

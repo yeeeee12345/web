@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Smile.png -position:center;
+changeFigure:WanHim_Smile.png;
 
 旁白:校园文化周的节目表贴出来以后，运谦在放学后把你叫到音乐教室。
 旁白:窗边的桌上，放着一叠写满记号的纸。

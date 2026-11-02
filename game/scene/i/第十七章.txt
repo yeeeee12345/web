@@ -1,6 +1,6 @@
 changeBg:Classroom.jpg;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:文化周以后，日子又回到熟悉的课表里。早读、数学、午休，铃声把一天分成一段一段。
 旁白:班主任宣布下周要做小组报告。Ivan把分组名单递给你，你们刚好在同一组。

@@ -1,6 +1,6 @@
 changeBg:Library.jpg;
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 
 旁白:校园文化周快到了。小雨在图书馆找到你，面前放着一盒彩色卡片和几本准备交换的旧书。
 小雨:图书馆准备办一个小小的书页分享角。我想放一块留言板。

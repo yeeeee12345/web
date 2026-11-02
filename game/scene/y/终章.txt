@@ -3,7 +3,7 @@ changeBg:Library.jpg;
 旁白:初夏的傍晚，图书馆闭馆前的最后半小时。
 旁白:窗外的光斜斜地落在书架上，灰尘在光里慢慢飘。
 
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:今天，我想把那个答案写下来。
 {Name}:扉页问题的答案？
 小雨:嗯。

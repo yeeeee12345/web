@@ -1,7 +1,7 @@
 changeBg:BookStore.jpg;
 
 旁白:傍晚的书店人不多。空调开得很足，门外的阳光却还没有退去。
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:我本来只想买一本书。
 {Name}:那你为什么在参考书那一排站了十分钟？
 Ivan:习惯了先看"该买"的东西。
@@ -40,6 +40,7 @@ jumpLabel:书店之后;
 
 label:去附近走走;
 
+changeFigure:none;
 changeBg:Park_Evening.jpg;
 旁白:你们把书留在店里，沿着街边慢慢走。
 {Name}:这样没有计划地走，好像也不错。
@@ -54,7 +55,7 @@ jumpLabel:书店之后;
 label:书店之后;
 
 changeBg:Park_Evening.jpg;
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 旁白:天色渐渐暗下来，公园的路灯一盏盏亮起。
 Ivan:谢谢你今天没有劝我"振作"。
 {Name}:你不需要每次都表现得很可靠。
@@ -77,8 +78,9 @@ Ivan:还有一件事，我想认真问你。
 Ivan:我喜欢和你待在一起。不是因为你需要我帮忙，也不是因为我刚好有空。
 Ivan:我想以后，也把时间留给你。
 旁白:路灯的光落在他的肩上。他很少这样直接地看一个人。
+changeFigure:none;
 changeBg:CG_Ivan.jpg;
-unlockCg:CG_Ivan.jpg -name=把时间留给你;
+unlockCg:CG_Ivan.jpg -name:把时间留给你;
 Ivan:你愿意和我交往吗？
 {Name}:愿意。
 旁白:Ivan怔了一下，像是终于等到了一个不用再计算的答案。

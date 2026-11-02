@@ -1,6 +1,6 @@
 changeBg:Classroom.jpg;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:教室里的人已经散得差不多了。Ivan坐在最后一排，把成绩单对折，又展开。
 Ivan:你来了。
@@ -32,4 +32,5 @@ Ivan:现在？
 旁白:Ivan收拾好书包。这一次，他把计划表留在了课桌抽屉里。
 setVar:Ivan_Love=Ivan_Love+15;
 changeFigure:none;
+
 changeScene:i/第十三章.txt;

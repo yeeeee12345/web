@@ -1,7 +1,7 @@
 changeBg:Hallway.jpg;
 pixiPerform:rain;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:周四最后一节课刚结束，窗外忽然下起了大雨。
 旁白:教室里的同学一边收拾书包，一边互相问谁带了伞。

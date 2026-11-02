@@ -18,7 +18,7 @@ choose:去见Ivan:IvanRoute|去见运谦:WanHimRoute|去见小雨:YuRoute;
 label:IvanRoute;
 
 changeBg:BookStore.jpg;
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:你来了。
 {Name}:久等了吗？
 Ivan:没有。我刚到七分钟。
@@ -42,7 +42,7 @@ jumpLabel:DayEnd;
 label:WanHimRoute;
 
 changeBg:MusicShop.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:欢迎来到我最喜欢的地方。
 {Name}:乐器店比我想象的大。
 运谦:这里什么都有。有些琴，光是听它被弹响，就值了。
@@ -65,7 +65,7 @@ jumpLabel:DayEnd;
 label:YuRoute;
 
 changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
+changeFigure:Yu_Normal.png;
 小雨:谢谢你愿意来。
 {Name}:我很好奇读书分享会。
 小雨:今天会介绍好几本小说。有两位是别的班的同学。
@@ -90,11 +90,11 @@ changeBg:Sunset.jpg;
 {Name}:感觉和大家，越来越熟悉了。
 旁白:新的星期，也即将开始。
 
-setVar:Rival_Count=0;
-setVar:Rival_Count=Rival_Count+1 -when=Ivan_Love>44;
-setVar:Rival_Count=Rival_Count+1 -when=WanHim_Love>44;
-setVar:Rival_Count=Rival_Count+1 -when=Yu_Love>44;
+setVar:Ink_Count=0;
+setVar:Ink_Count=Ink_Count+1 -when=Ivan_Love>40;
+setVar:Ink_Count=Ink_Count+1 -when=WanHim_Love>40;
+setVar:Ink_Count=Ink_Count+1 -when=Yu_Love>40;
 
-changeScene:番外/三人暗中较劲.txt -when=Rival_Count>1;
+changeScene:番外/三人暗中较劲.txt -when=Ink_Count>2;
 
 changeScene:第十一章.txt;
