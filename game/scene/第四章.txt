@@ -1,8 +1,8 @@
-label:第四章;
+﻿label:第四章;
 
 changeBg:House.webp;
 
-旁白:第五天。今天下午开始准备迎新活动。
+旁白:第五天。樱花开始落第二茬，操场边的树荫比上周浓了一些。今天下午开始准备迎新活动。
 
 changeBg:Classroom.jpg;
 旁白:教室里的气氛比平时松，也比平时乱。
@@ -20,6 +20,8 @@ setVar:Ivan_Love=Ivan_Love+5;
 
 changeFigure:none;
 旁白:上午的课结束。
+{Name}:（今天我不想只是被安排。）
+{Name}:（我想自己决定，要站在谁旁边。）
 
 changeBg:Hallway.jpg;
 changeFigure:Teacher.webp -position:center;

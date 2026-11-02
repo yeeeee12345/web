@@ -1,4 +1,4 @@
-changeBg:Library.jpg;
+﻿changeBg:Library.jpg;
 
 changeFigure:yu.jpg -position=center;
 
@@ -53,6 +53,6 @@ label:分享角;
 旁白:你们并肩走出图书馆。小雨没有把那张卡片收回口袋，而是让它夹在你们约好要读的书里。
 changeFigure:none;
 
-changeScene:y/高好感番外.txt -when=Yu_Love>74;
+changeScene:y/高好感番外.txt -when=Yu_Love>130;
 
 changeScene:y/第十七章.txt;

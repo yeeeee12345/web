@@ -1,4 +1,4 @@
-changeBg:BookStore.jpg;
+﻿changeBg:BookStore.jpg;
 
 旁白:傍晚的书店人不多。空调开得很足，门外的阳光却还没有退去。
 changeFigure:Ivan_Normal.png -position=center;
@@ -23,6 +23,7 @@ Ivan:……
 Ivan:我一直觉得，只要准备得足够好，就不会让别人失望。
 {Name}:那你自己呢？
 Ivan:……我不知道。
+changeFigure:Ivan_Sad.png -position=center;
 旁白:他难得没有立刻给出答案。
 Ivan:你愿意陪我待一会儿吗？不聊考试也可以。
 

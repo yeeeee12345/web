@@ -1,8 +1,8 @@
-label:第十章;
+﻿label:第十章;
 
 changeBg:Bedroom_Morning.jpg;
 
-旁白:星期六。今天不用上课。
+旁白:星期六。今天不用上课。窗外已经很热，蝉声比樱花更早一步宣告了季节。
 {Name}:终于可以好好喘口气。
 
 changeBg:phone.jpg;
@@ -19,7 +19,7 @@ label:IvanRoute;
 
 changeBg:BookStore.jpg;
 changeFigure:Ivan_Normal.png -position=center;
-Ivan:你来了。
+Ivan:七分钟。不多不少。
 {Name}:久等了吗？
 Ivan:没有。我刚到七分钟。
 {Name}:……你把等待也计时了？
@@ -91,9 +91,9 @@ changeBg:Sunset.jpg;
 旁白:新的星期，也即将开始。
 
 setVar:Rival_Count=0;
-setVar:Rival_Count=Rival_Count+1 -when=Ivan_Love>44;
-setVar:Rival_Count=Rival_Count+1 -when=WanHim_Love>44;
-setVar:Rival_Count=Rival_Count+1 -when=Yu_Love>44;
+setVar:Rival_Count=Rival_Count+1 -when=Ivan_Love>60;
+setVar:Rival_Count=Rival_Count+1 -when=WanHim_Love>60;
+setVar:Rival_Count=Rival_Count+1 -when=Yu_Love>60;
 
 changeScene:番外/三人暗中较劲.txt -when=Rival_Count>1;
 

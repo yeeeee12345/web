@@ -1,9 +1,9 @@
-changeBg:Classroom.jpg;
+﻿changeBg:Classroom.jpg;
 
 changeFigure:Ivan_Normal.png -position:center;
 
 旁白:教室里的人已经散得差不多了。Ivan坐在最后一排，把成绩单对折，又展开。
-Ivan:你来了。
+Ivan:我还在想你会不会来。
 {Name}:我来看看你。
 Ivan:看我？
 {Name}:顺便问一下成绩。

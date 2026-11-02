@@ -1,4 +1,4 @@
-label:第五章;
+﻿label:第五章;
 
 changeBg:House.webp;
 
@@ -36,41 +36,88 @@ label:礼堂;
 
 changeBg:Auditorium.jpg;
 changeFigure:WanHim_Normal.png -position:center;
-运谦:你来了。
+运谦:来得刚好。
 {Name}:有没有我能帮忙的？
 运谦:帮我检查一下吉他线。
 {Name}:当然。
 旁白:你蹲在台边，顺着线一点点摸过去，把接口按到最紧。
-运谦:谢谢。这样我就放心了。
+
+choose:再多检查一遍所有接口:double_check|相信他，先到台下等:trust;
+
+label:double_check;
+
+旁白:你又从头摸了一遍。第三个接口有点松，你重新插紧，听见"咔"的一声。
+运谦:你还挺仔细。
+{Name}:因为你说过，只有你会蹲下来找。
+旁白:他笑了一下，把琴背带调整到合适的位置。
+setVar:CheckedCable=1;
+jumpLabel:演出;
+
+label:trust;
+
+{Name}:应该没问题。我在台下等你。
+运谦:好。
+旁白:他点点头。你走下台时，没有注意到第二个接口的线头，露出了一小截。
+jumpLabel:演出;
+
+label:演出;
+
 旁白:演出开始。灯亮起的时候，他握琴的手指紧了一下，又慢慢松开。
 旁白:旋律响起来，比彩排那天更稳。台下响起掌声。
-旁白:他回到后台，额角有一点汗。
-运谦:怎么样？
 
-choose:很好听:很好听|比昨天更稳:比昨天更稳;
+旁白:第二段进入之前，音箱里忽然传出一声短促的杂音。
+旁白:运谦的手指停在半空。那根线，还是松了。
+changeFigure:WanHim_Normal.png -position=center;
+旁白:他没有停下来。他闭了一下眼睛，把那一小节重新弹了一遍。
+旁白:杂音没有再出现。可他自己知道，刚才那里，断了半秒。
+旁白:掌声还是很响。但他下台的时候，没有抬头。
 
-label:很好听;
+changeBg:Auditorium.jpg;
+changeFigure:WanHim_Normal.png -position=center;
+运谦:你听见了吧。
+{Name}:听见了。
+运谦:……
 
-{Name}:真的很好听。
-运谦:谢谢。不过——
-运谦:算了。下一首再改进。
-{Name}:还有下一首？
-运谦:写歌的人，当然有下一首。
-setVar:WanHim_Love=WanHim_Love+10;
-jumpLabel:礼堂尾声;
+choose:告诉他那半秒不影响什么:reassure|陪他一起把问题找出来:fix|什么也不说，先递一瓶水:water;
 
-label:比昨天更稳;
+label:reassure;
 
-{Name}:今天发挥得比彩排更稳。
-运谦:因为台下有人在数拍子。
-{Name}:谁？
-运谦:第一排左边，第二个位置。
-旁白:他报出位置的时候，眼睛没有看你。
+{Name}:除了我，大概没人注意到。
+运谦:可我自己注意到了。
+运谦:我弹了六年琴，最怕的不是弹错，是弹错的时候装作没发生。
+{Name}:……
+运谦:对不起。我不是在怪你。
+setVar:WanHim_Love=WanHim_Love+5;
+jumpLabel:演出之后;
+
+label:fix;
+
+{Name}:我们去后台看看那根线。
+运谦:现在？
+{Name}:现在。你不想带着这个结束吧。
+旁白:你们蹲在音箱后面，把那根线拔出来重新接过。他的手一直在抖，但接得很稳。
+运谦:……是这里。我早该想到的。
+{Name}:下次我们一起检查。
+运谦:嗯。
+旁白:他抬起头的时候，眼睛有点红，但没有躲开你。
 setVar:WanHim_Love=WanHim_Love+15;
-jumpLabel:礼堂尾声;
+setVar:FixedFailure=1;
+jumpLabel:演出之后;
 
-label:礼堂尾声;
+label:water;
 
+旁白:你什么也没说，只是把一瓶水递过去。
+旁白:他接过来，握了很久，没有拧开。
+运谦:……谢谢。
+旁白:过了一会儿，他自己开口了。
+运谦:我以前觉得，被人看见失败，比失败本身更难受。
+运谦:但刚才你没有安慰我。这让我好受一点。
+setVar:WanHim_Love=WanHim_Love+10;
+jumpLabel:演出之后;
+
+label:演出之后;
+
+changeFigure:WanHim_Normal.png -position:center;
 旁白:演出结束后，一个背着新书包的学生在礼堂门口停了下来。
 新生:不好意思，请问报到登记的地方在哪里？
 {Name}:在校门口。我带你过去吧。
@@ -127,6 +174,7 @@ Ivan:不强制。可以先看看感兴趣的摊位，再决定要不要参加。
 旁白:新生在登记表上写下名字。Ivan把笔递给下一位同学。
 Ivan:你比我第一天会安慰人。
 {Name}:你第一天只提醒我小心。
+changeFigure:Ivan_Smirk.png -position=center;
 Ivan:至少我接住了你的课本。
 {Name}:这倒是。
 Ivan:辛苦了。

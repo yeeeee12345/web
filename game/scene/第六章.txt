@@ -1,8 +1,8 @@
-label:第六章;
+﻿label:第六章;
 
 changeBg:House.webp;
 
-旁白:迎新结束后的星期二。
+旁白:迎新结束后的星期二。樱花已经落了大半，校门口的树换成了更深的绿。
 {Name}:校园安静下来，日子开始有了节奏。
 
 changeBg:Classroom.jpg;

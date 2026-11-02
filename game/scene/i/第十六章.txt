@@ -1,4 +1,4 @@
-changeBg:SchoolYard.jpg;
+﻿changeBg:SchoolYard.jpg;
 
 changeFigure:Ivan_Normal.png -position:center;
 
@@ -57,6 +57,6 @@ Ivan:下次，我也想给你留一点没计划的时间。
 旁白:路灯把两个人的影子拉在一起，像一条安静的路。
 changeFigure:none;
 
-changeScene:i/高好感番外.txt -when=Ivan_Love>74;
+changeScene:i/高好感番外.txt -when=Ivan_Love>130;
 
 changeScene:i/第十七章.txt;

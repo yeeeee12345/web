@@ -1,4 +1,4 @@
-changeBg:Classroom.jpg;
+﻿changeBg:Classroom.jpg;
 
 旁白:周一午休，教室里只剩下几排没收好的课桌。
 旁白:你回来拿课本。推门的时候，发现三个人都在。
@@ -61,6 +61,101 @@ changeBg:SchoolGate.jpg;
 旁白:午休铃响起，三个人先后跑回教室，却都放慢脚步，等你走在中间。
 旁白:没有人承认自己在争什么。
 旁白:但你发现，他们记得的那些小事，都是你曾经认真告诉过他们的。
+
+changeFigure:none;
+changeBg:Classroom.jpg;
+旁白:下午的自习课上，你在笔记本里夹到一张折好的纸。
+旁白:是三张便条，被叠在一起。
+旁白:第一张写着："明天放学，我有话想说。——I"
+旁白:第二张写着："如果你愿意，音乐教室。——运谦"
+旁白:第三张只有一行："我找到了那本书的答案。"
+{Name}:……
+
+choose:分别去找他们，把话听完:listen_all|先去找最想见的那个人:pick_one;
+
+label:listen_all;
+
+旁白:放学后，你先去了教室。
+changeFigure:Ivan_Normal.png -position=center;
+Ivan:我以为你不会来。
+Ivan:我想说的其实很简单。我不想只做"帮你安排事情的人"。
+{Name}:那你想做什么？
+Ivan:……我还没想好措辞。
+Ivan:但我想先让你知道。
+changeFigure:none;
+setVar:Ivan_Love=Ivan_Love+10;
+
+changeBg:MusicRoom.jpg;
+changeFigure:WanHim_Smile.png -position=center;
+旁白:音乐教室里，运谦没有弹琴，只是把谱子推到你面前。
+运谦:这首写完了。
+运谦:但我不想第一个听的人是别人。
+changeFigure:none;
+setVar:WanHim_Love=WanHim_Love+10;
+
+changeBg:Library.jpg;
+changeFigure:yu.jpg -position=center;
+旁白:图书馆快闭馆了，小雨还在等你。
+小雨:扉页那个问题，我找到答案了。
+{Name}:是什么？
+小雨:我喜欢的不是哪一页。是有人愿意陪我，把整本书读完。
+changeFigure:none;
+setVar:Yu_Love=Yu_Love+10;
+
+旁白:三个人都说了真心话。可你也发现，自己还没有办法回应任何一句。
+旁白:这不是结局。只是所有事情，终于都摆到了桌面上。
+jumpLabel:番外结束;
+
+label:pick_one;
+
+旁白:你选择了先去找一个人。
+旁白:这不是背叛，只是诚实。
+旁白:被留在原地的两个人，会难过一阵子。但那比"都可以"要好。
+
+choose:去找Ivan:IvanPick|去找运谦:WanPick|去找小雨:YuPick;
+
+label:IvanPick;
+
+changeBg:Classroom.jpg;
+changeFigure:Ivan_Happy.png -position=center;
+旁白:你走进教室的时候，Ivan正在把那张便条重新折好。
+Ivan:我以为你不会来。
+{Name}:我来了。
+Ivan:……
+Ivan:那我想说的事，可以慢慢说了。
+setVar:Ivan_Love=Ivan_Love+20;
+setVar:Confessed=1;
+changeFigure:none;
+jumpLabel:番外结束;
+
+label:WanPick;
+
+changeBg:MusicRoom.jpg;
+changeFigure:WanHim_Smile.png -position=center;
+旁白:你推开音乐教室的门。运谦抬起头，手指停在弦上。
+运谦:我一直在等这个声音。
+{Name}:什么声音？
+运谦:门被推开的声音。
+setVar:WanHim_Love=WanHim_Love+20;
+setVar:Confessed=2;
+changeFigure:none;
+jumpLabel:番外结束;
+
+label:YuPick;
+
+changeBg:Library.jpg;
+changeFigure:yu.jpg -position=center;
+旁白:你走到图书馆的时候，闭馆铃刚好响起。
+小雨:你来得正好。我还没走。
+{Name}:那我们一起走。
+小雨:好。
+旁白:她把书抱在怀里，第一次主动走在你身边，而不是半步之后。
+setVar:Yu_Love=Yu_Love+20;
+setVar:Confessed=3;
+changeFigure:none;
+jumpLabel:番外结束;
+
+label:番外结束;
 
 changeFigure:none;
 changeScene:第十一章.txt;

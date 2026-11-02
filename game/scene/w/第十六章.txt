@@ -1,4 +1,4 @@
-changeBg:Auditorium.jpg;
+﻿changeBg:Auditorium.jpg;
 
 changeFigure:WanHim_Normal.png -position:center;
 
@@ -51,6 +51,6 @@ bgm:窗边有人在听.mp3;
 旁白:身后那首歌，还留在刚才的安静里。
 changeFigure:none;
 
-changeScene:w/高好感番外.txt -when=WanHim_Love>74;
+changeScene:w/高好感番外.txt -when=WanHim_Love>130;
 
 changeScene:w/第十七章.txt;

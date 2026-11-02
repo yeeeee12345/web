@@ -1,10 +1,10 @@
-changeBg:MusicRoom.jpg;
+﻿changeBg:MusicRoom.jpg;
 
 旁白:文化周过去两周后，音乐教室的窗台上，多了一盆不知道谁放的绿萝。
 旁白:运谦说，那是合唱团搬来的。理由是——这里"太素了"。
 
 changeFigure:WanHim_Smile.png -position=center;
-运谦:你来了。今天不弹《窗边有人在听》。
+运谦:今天不弹《窗边有人在听》。
 {Name}:为什么？
 运谦:它已经有很多听众了。今天想弹一首，只有一个听众的。
 {Name}:新歌？

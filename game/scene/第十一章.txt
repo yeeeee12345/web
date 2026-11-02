@@ -1,8 +1,8 @@
-label:第十一章;
+﻿label:第十一章;
 
 changeBg:Classroom.jpg;
 
-旁白:星期一。周末结束后，校园又恢复了平常的节奏。
+旁白:星期一。周末结束后，校园又恢复了平常的节奏。走廊的窗户开始整天开着。
 {Name}:月考，好像一场很快就过去的雨。
 changeFigure:Ivan_Normal.png -position=right;
 Ivan:感觉怎么样？
@@ -18,13 +18,13 @@ changeFigure:none;
 {Name}:文化周……感觉会有很多事发生。
 旁白:你决定今天去哪里。
 
-choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent|去图书馆找小雨:YuEvent;
+choose:想问清楚一件一直没问的事:IvanEvent|想听他把话说完:WanHimEvent|想确认一个答案:YuEvent;
 
 label:IvanEvent;
 
 changeBg:Classroom.jpg;
 changeFigure:Ivan_Normal.png -position:center;
-Ivan:你来了。
+Ivan:我在等你。
 {Name}:今天还要学习吗？
 Ivan:不是。
 {Name}:那是什么？
@@ -53,7 +53,7 @@ label:WanHimEvent;
 
 changeBg:MusicRoom.jpg;
 changeFigure:WanHim_Normal.png -position=center;
-运谦:你来了。
+运谦:你来得比我想的早。
 {Name}:今天要练习吗？
 运谦:嗯。不过在那之前——
 运谦:我想给你看一样东西。

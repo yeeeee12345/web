@@ -1,4 +1,4 @@
-label:第八章;
+﻿label:第八章;
 
 changeBg:Bedroom_Morning.jpg;
 
@@ -7,6 +7,8 @@ changeBg:Bedroom_Morning.jpg;
 
 changeBg:Classroom.jpg;
 旁白:上午的课程结束。
+{Name}:（这一个月里，我好像一直在等别人先开口。）
+{Name}:（今天我想试试，自己先说。）
 changeFigure:Teacher.webp -position:center;
 老师:从明天开始月考复习。
 老师:希望大家提前准备。
@@ -47,9 +49,11 @@ Ivan:现在呢？
 changeFigure:none;
 changeBg:Hallway.jpg;
 旁白:放学后，你站在楼梯口。
-旁白:今天准备去哪里？
+旁白:楼下传来吉他声，走廊尽头是教室的灯，图书馆的方向还亮着。
+旁白:这一次，你不想只是"去某个地方"。
+旁白:你想知道，自己到底在寻找什么。
 
-choose:去找Ivan:ivan_route|去吉他社:wanhim_route|去图书馆:yu_route;
+choose:想找一个人说说话:ivan_route|想听一点声音:wanhim_route|想安静待一会儿:yu_route;
 
 label:ivan_route;
 

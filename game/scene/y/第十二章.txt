@@ -1,8 +1,8 @@
-changeBg:Library.jpg;
+﻿changeBg:Library.jpg;
 
 changeFigure:yu.jpg -position=center;
 
-小雨:你来了。
+小雨:我留了位置。
 {Name}:今天看起来很开心。
 小雨:有吗？
 {Name}:有。比平时多笑了一点。

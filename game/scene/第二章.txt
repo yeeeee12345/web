@@ -1,8 +1,8 @@
-label:第二章;
+﻿label:第二章;
 
 changeBg:House.webp;
 
-旁白:第三天。
+旁白:第三天。樱花比第一天开得更满，风一吹，走廊的窗台上就积起一层薄薄的花瓣。
 {Name}:昨天说要降温，今天得多穿一件。
 
 changeBg:SchoolGate.jpg;
@@ -25,6 +25,8 @@ changeBg:Classroom.jpg;
 changeFigure:none;
 
 旁白:上午的课结束得很快。
+{Name}:（那首曲子，今天会不会又长了一点。）
+{Name}:（如果我还是站在门外，就永远只能听见一半。）
 
 changeBg:Hallway.jpg;
 旁白:去食堂的路上，你又听见了音乐教室的琴声。

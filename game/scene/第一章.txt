@@ -5,6 +5,8 @@ changeBg:House.webp;
 旁白:第二天早上，闹钟还没响，你就醒了。
 {Name}:昨天睡得比想象中好。
 {Name}:今天争取把教学楼的路都认全。
+旁白:你在手账上翻到昨天那一页，把三个名字又看了一遍。
+{Name}:Ivan……运谦……还有小雨。
 
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
@@ -61,6 +63,7 @@ label:留一会儿;
 {Name}:能弹一下第三小节吗？就一小段。
 运谦:会很吵。
 {Name}:走廊本来就吵。
+{Name}:而且，我想知道它卡在哪里。
 旁白:他愣了一下，还是坐到了琴架前。
 旁白:琴声很短，停在一个说不上顺耳的地方。
 运谦:就是这里。
@@ -69,6 +72,7 @@ label:留一会儿;
 运谦:……
 运谦:你听得很认真。
 setVar:WanHim_Love=WanHim_Love+10;
+setVar:MetWanHimMusic=1;
 jumpLabel:午餐;
 
 label:送到就走;
@@ -76,6 +80,7 @@ label:送到就走;
 {Name}:那我先回去了。
 运谦:嗯。谢谢你送资料。
 旁白:你走到门口，听见身后有人把资料翻开，又轻轻合上。
+旁白:琴声没有再响起来。你后来想，如果当时多站一会儿，会不会不一样。
 setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:午餐;
 

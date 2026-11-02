@@ -40,18 +40,46 @@ changeFigure:none;
 changeBg:Hallway.jpg;
 {Name}:这个学期，好像只剩下最后一件事没做。
 {Name}:有些话再不说，就会一直拖下去。
-旁白:你决定去哪里。
 
-choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent|去图书馆找小雨:YuEvent;
+旁白:三个人都在等你。你能感觉到，今天之后，有些东西会不一样。
+旁白:但你也知道——走到谁面前，并不只是今天的选择。
+旁白:那是这一个月里，你一次次抬起头、一次次走向谁的结果。
+
+setVar:TopScore=Ivan_Love;
+setVar:TopScore=WanHim_Love -when=WanHim_Love>TopScore;
+setVar:TopScore=Yu_Love -when=Yu_Love>TopScore;
+
+choose:我想走到Ivan面前:IvanEvent|我想走到运谦面前:WanHimEvent|我想走到小雨面前:YuEvent;
 
 label:IvanEvent;
 
-changeScene:i/第十二章_I.txt;
+changeScene:i/第十二章_I.txt -when=Ivan_Love>=TopScore;
+
+changeBg:Hallway.jpg;
+旁白:你朝教室的方向走了几步，又停下来。
+旁白:你想起这一个月里，和Ivan说过的话其实不算多。
+旁白:那些"谢谢""知道了"，加起来也不够支撑一句告白。
+{Name}:……还不到时候。
+旁白:你转过身。有些话，说出来反而会变成负担。
+changeScene:第十二章_未成.txt;
 
 label:WanHimEvent;
 
-changeScene:w/第十二章.txt;
+changeScene:w/第十二章.txt -when=WanHim_Love>=TopScore;
+
+changeBg:Hallway.jpg;
+旁白:你走向音乐教室，脚步却越来越慢。
+旁白:你听过他很多首没写完的曲子。可你从来没有真正问过，他为什么写。
+{Name}:如果连这个都不知道，我说喜欢，也太轻了。
+changeScene:第十二章_未成.txt;
 
 label:YuEvent;
 
-changeScene:y/第十二章.txt;
+changeScene:y/第十二章.txt -when=Yu_Love>=TopScore;
+
+changeBg:Hallway.jpg;
+旁白:你在图书馆门口停住了。
+旁白:她借给你的那本书，你还没有读完。扉页上的问题，你也还没有答案。
+{Name}:现在进去，我只能说"我很喜欢和你一起看书"。
+{Name}:可那不是我想说的话。
+changeScene:第十二章_未成.txt;

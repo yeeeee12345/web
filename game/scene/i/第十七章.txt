@@ -1,4 +1,4 @@
-changeBg:Classroom.jpg;
+﻿changeBg:Classroom.jpg;
 
 changeFigure:Ivan_Normal.png -position:center;
 
@@ -35,6 +35,7 @@ label:整理报告;
 旁白:窗外传来球鞋踩过操场的声音，隔壁班还在练合唱。
 Ivan:这部分我来讲，你负责结尾，可以吗？
 {Name}:可以。不过你别把我的发言稿也写好。
+changeFigure:Ivan_Smirk.png -position=center;
 Ivan:我只写了两个提示词。
 {Name}:这已经算进步了。
 旁白:第二天报告时，Ivan讲到一半停了下来，看向你。

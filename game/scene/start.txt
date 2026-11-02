@@ -5,6 +5,17 @@ getUserInput:Name -title=请输入你的名字 -buttonText=确认;
 setVar:Ivan_Love=0;
 setVar:WanHim_Love=0;
 setVar:Yu_Love=0;
+setVar:MetWanHimMusic=0;
+setVar:CheckedCable=0;
+setVar:FixedFailure=0;
+setVar:ResolvedMisunderstanding=0;
+setVar:Overbooked=0;
+setVar:ChoseOne=0;
+setVar:HonestRefusal=0;
+setVar:MessageTarget=0;
+setVar:Rival_Count=0;
+setVar:Confessed=0;
+setVar:TopScore=0;
 
 unlockBgm:s_Title.mp3 -name=星海高中;
 unlockBgm:窗边有人在听.mp3 -name=窗边有人在听;
