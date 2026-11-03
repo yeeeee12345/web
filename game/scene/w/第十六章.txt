@@ -1,6 +1,6 @@
-﻿changeBg:Auditorium.jpg;
+changeBg:Auditorium.jpg;
 
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 
 旁白:校园文化周最后一天下午，礼堂里摆好了几排椅子。
 旁白:运谦站在侧台，手里握着那枚陪他写完这首曲子的拨片。
@@ -15,15 +15,22 @@ choose:坐在第一排听:第一排|陪他检查音箱:侧台;
 label:第一排;
 
 旁白:你坐到第一排靠边的位置。运谦在幕布旁看见你，肩膀稍微放松了一些。
+setVar:WanStageStyle=1;
+setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:播放小样;
 
 label:侧台;
 
 旁白:你陪运谦听了一遍试音。他把音量调到清楚但不刺耳，确认旋律能传到最后一排。
 运谦:这样就好。谢谢你陪我检查。
+setVar:WanStageStyle=2;
+setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:播放小样;
 
 label:播放小样;
+
+{Name}:（第一排靠边，正好能看见幕布后面的人。） -when=WanStageStyle==1;
+{Name}:（试音的时候，他把音量调了两遍。） -when=WanStageStyle==2;
 
 运谦:这首曲子叫《窗边有人在听》。我把它做成了完整的器乐小样，今天想和大家分享。
 {Name}:准备好了。
@@ -51,6 +58,6 @@ bgm:窗边有人在听.mp3;
 旁白:身后那首歌，还留在刚才的安静里。
 changeFigure:none;
 
-changeScene:w/高好感番外.txt -when=WanHim_Love>130;
+changeScene:w/高好感番外.txt -when=WanHim_Love>74;
 
 changeScene:w/第十七章.txt;

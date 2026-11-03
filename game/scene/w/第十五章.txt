@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Smile.png -position:center;
+changeFigure:WanHim_Smile.png;
 
 旁白:校园文化周的节目表贴出来以后，运谦在放学后把你叫到音乐教室。
 旁白:窗边的桌上，放着一叠写满记号的纸。
@@ -22,6 +22,8 @@ label:检查设备;
 旁白:你们把教室的小音箱搬到桌上。运谦检查连接线，音量只调到不会盖过说话声的位置。
 {Name}:你准备得，比上次充分多了。
 运谦:上次我只担心自己会不会弹错。这次，我想让听的人也听清楚。
+setVar:WanSampleStyle=1;
+setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:完成小样;
 
 label:听旋律;
@@ -30,9 +32,14 @@ label:听旋律;
 旁白:最后一个和弦落下后，他抬头看你。
 {Name}:听起来，像是终于愿意停在这里了。
 运谦:我以前总觉得，还可以再改一点。现在我想先把它交出去。
+setVar:WanSampleStyle=2;
+setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:完成小样;
 
 label:完成小样;
+
+{Name}:（音量被调到刚好能听清的位置。） -when=WanSampleStyle==1;
+{Name}:（他只弹了新的结尾，没有放整首。） -when=WanSampleStyle==2;
 
 运谦:最终版是器乐，没有歌词。我想让旋律自己，把那天没说完的话说完。
 {Name}:你想让大家听见什么？

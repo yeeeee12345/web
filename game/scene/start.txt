@@ -1,32 +1,36 @@
-intro:春天来的时候，|整座城市像被轻轻翻过一页。|而我站在新的一页上，|手里攥着一张还没用过的学生证。;
+intro:春天来的时候，整座城市像被轻轻翻过一页。|而我站在新的一页上，|手里攥着一张还没用过的学生证。;
+
+bgm:s_Title.mp3 -volume=35;
 
 getUserInput:Name -title=请输入你的名字 -buttonText=确认;
 
 setVar:Ivan_Love=0;
 setVar:WanHim_Love=0;
-setVar:Yu_Love=0;
-setVar:MetWanHimMusic=0;
-setVar:CheckedCable=0;
-setVar:FixedFailure=0;
-setVar:ResolvedMisunderstanding=0;
-setVar:Overbooked=0;
-setVar:ChoseOne=0;
-setVar:HonestRefusal=0;
-setVar:MessageTarget=0;
-setVar:Rival_Count=0;
-setVar:Confessed=0;
-setVar:TopScore=0;
+setVar:Ink_Count=0;
+setVar:StudyStyle=0;
+setVar:ExamResult=0;
+setVar:IvanWeekStyle=0;
+setVar:IvanRainStyle=0;
+setVar:WanNameStyle=0;
+setVar:WanRecordStyle=0;
+setVar:IvanBookStyle=0;
+setVar:IvanDrinkStyle=0;
+setVar:IvanStageStyle=0;
+setVar:IvanReportStyle=0;
+setVar:WanShopStyle=0;
+setVar:WanSampleStyle=0;
+setVar:WanStageStyle=0;
+setVar:WanRadioStyle=0;
 
-unlockBgm:s_Title.mp3 -name=星海高中;
-unlockBgm:窗边有人在听.mp3 -name=窗边有人在听;
+unlockBgm:s_Title.mp3 -name:星海高中;
+unlockBgm:窗边有人在听.mp3 -name:窗边有人在听;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:转学第一天的早上，房间安静得能听见钟摆。
-{Name}:书包检查了三遍。
-{Name}:自我介绍练习了三遍。
-旁白:你对着镜子练完最后一个笑容，出门。
-{Name}:希望今天顺利一点。
+旁白:出门前，你把书包检查了三遍。
+旁白:对着镜子，你把自我介绍又练习了三遍。
+旁白:最后一个笑容，你觉得还算自然。
 
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
@@ -39,7 +43,7 @@ pixiInit;
 changeBg:Classroom.jpg;
 
 旁白:一年A班在三楼尽头。你到得不算晚，教室里已经坐了大半。
-changeFigure:Teacher.webp -position=center;
+changeFigure:Teacher_Normal.png;
 
 老师:安静一下。
 老师:今天班里来了一位转学生。
@@ -51,13 +55,12 @@ changeFigure:none;
 {Name}:以后请大家多多指教。
 
 旁白:说完最后一句，你听见自己的心跳比刚才轻了一点。
-changeFigure:Teacher.webp -position=center;
+changeFigure:Teacher_Normal.png;
 老师:好。最后一排还有一个位置。
-老师:Ivan旁边的那个。
+老师:就在班长旁边。
 
 changeFigure:none;
-changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position=right;
+changeFigure:Ivan_Normal.png -right -enter=enter-from-right;
 
 旁白:你走过去，刚把课本放上桌角，书就沿着桌边滑了下去。
 旁白:旁边的人抬手一接，把书稳稳放回你面前。
@@ -65,9 +68,9 @@ changeFigure:Ivan_Normal.png -position=right;
 Ivan:小心。
 {Name}:谢、谢谢。
 
-choose:主动打个招呼:主动打招呼|先安静地整理课本:安静整理;
+choose:主动打个招呼:打招呼|先安静地整理课本:整理;
 
-label:主动打招呼;
+label:打招呼;
 
 {Name}:那个……以后请多指教。
 Ivan:嗯。我叫Ivan。
@@ -77,7 +80,7 @@ Ivan:班上的事，找不到人就找我。
 setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:上午;
 
-label:安静整理;
+label:整理;
 
 {Name}:……
 旁白:你把课本一本本摆好，假装刚才什么都没有发生。
@@ -91,16 +94,18 @@ label:上午;
 
 旁白:上午的课一节接一节。黑板上的字比以前的学校写得快，你抄得手有点酸。
 
+changeFigure:none -right;
 changeBg:Hallway.jpg;
-
 旁白:午休的时候，你打算把学校转一圈，认认路。
-changeBg:MusicRoom.jpg;
 
+changeBg:MusicRoom.jpg;
 旁白:路过音乐教室，里面飘出一段吉他声。
 旁白:很短的一段旋律，反反复复，每次都在同一个地方停下来。
 {Name}:有人在练习吗？
 旁白:琴声停了。窗边的人抬起头。
-changeFigure:WanHim_Normal.png -position=center;
+
+changeFigure:WanHim_Normal.png -enter=enter-from-bottom;
+
 运谦:抱歉，吵到你了吗？
 {Name}:没有，很好听。
 运谦:谢谢。不过它还没写完。
@@ -131,29 +136,21 @@ jumpLabel:放学;
 
 label:放学;
 
+changeFigure:none;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 
 旁白:放学时，樱花道上的人潮慢慢散开。
-changeFigure:yu.jpg -position=center;
-小雨:{Name}同学？
-{Name}:……你认识我？
-小雨:今天全年级都在聊转学生的事。一猜就是你。
-小雨:我是隔壁班的小雨。
-{Name}:你好。
-小雨:前面那个路口，樱花开得最好。
-小雨:回家路上，记得看一眼。
-{Name}:好。谢谢你。
-小雨:明天见。
-旁白:你走出很远，回头时，她还站在原地朝你挥了挥手。
-setVar:Yu_Love=Yu_Love+5;
+旁白:你沿着樱花道往回走，花瓣被风卷起来，又落回地上。
+{Name}:樱花道的尽头，原来就是车站。
 
 pixiInit;
 changeFigure:none;
-changeBg:House.webp;
+changeFigure:none -right;
+changeBg:House.jpg;
 
 旁白:回到家，你把今天写进新买的手账。
-{Name}:Ivan，运谦，小雨。
+{Name}:Ivan，运谦。
 {Name}:还有一段没有写完的旋律。
 旁白:转学第一天，比想象中顺利。
 旁白:新学期，正式开始。

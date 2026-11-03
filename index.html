@@ -534,7 +534,19 @@
             document.head.appendChild(script);
           });
         };
+        // 先探测文件是否存在，避免在未安装 SDK 时产生 404 噪音
+        const probe = async (url) => {
+          try {
+            const res = await fetch(url, { method: 'HEAD' });
+            return res.ok;
+          } catch {
+            return false;
+          }
+        };
         const loadIifePlugin = async (pluginPath) => {
+          if (!(await probe(pluginPath))) {
+            return false;
+          }
           try {
             const info = await loadScript(pluginPath);
             console.log(info);

@@ -1,5 +1,6 @@
-﻿label:第八章;
+label:第八章;
 
+bgm:s_Title.mp3 -volume=26;
 changeBg:Bedroom_Morning.jpg;
 
 旁白:星期四。天气很好。
@@ -7,14 +8,12 @@ changeBg:Bedroom_Morning.jpg;
 
 changeBg:Classroom.jpg;
 旁白:上午的课程结束。
-{Name}:（这一个月里，我好像一直在等别人先开口。）
-{Name}:（今天我想试试，自己先说。）
-changeFigure:Teacher.webp -position:center;
+changeFigure:Teacher_Normal.png;
 老师:从明天开始月考复习。
 老师:希望大家提前准备。
 changeFigure:none;
 旁白:同学们纷纷讨论起来。
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:有不会的地方，可以来问我。
 {Name}:那我就放心了。
 Ivan:不过——
@@ -25,40 +24,37 @@ setVar:Ivan_Love=Ivan_Love+5;
 changeFigure:none;
 
 changeBg:Cafeteria.jpg;
-旁白:午餐时间，窗边那张桌子边坐着你们四个人。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+旁白:午餐时间，窗边那张桌子边坐着你、Ivan和运谦。
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
 Ivan:刚才老师说的复习范围，你记下来了吗？
 {Name}:记了一半。第三章那几道题还是不明白。
 Ivan:吃完我讲给你听。
 运谦:先让人把午饭吃完吧。复习资料又不会趁这十分钟跑掉。
-Ivan:我又没说现在讲。
-小雨:那就先吃饭。再聊下去，汤真的要凉了。
+Ivan:我也准备等你吃完再讲。
 {Name}:你们今天意见倒是很一致。
 运谦:难得有件事能达成共识。
 旁白:阳光落在桌面上。没有人真的把考试忘掉，但也没有人急着把这顿午餐变成补习课。
 {Name}:刚转来的时候，我总担心坐错位置。
 Ivan:现在呢？
 {Name}:现在知道这张桌子一直有人留位置。
-小雨:下次不用特意道谢，直接坐下就好。
 运谦:但别坐我这边。我的吉他包占着半张椅子。
 {Name}:那我下次先把它挪开。
 运谦:我会记住这句话。
 
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:Hallway.jpg;
 旁白:放学后，你站在楼梯口。
-旁白:楼下传来吉他声，走廊尽头是教室的灯，图书馆的方向还亮着。
-旁白:这一次，你不想只是"去某个地方"。
-旁白:你想知道，自己到底在寻找什么。
+旁白:今天准备去哪里？
 
-choose:想找一个人说说话:ivan_route|想听一点声音:wanhim_route|想安静待一会儿:yu_route;
+choose:去找Ivan:ivan_route|去吉他社:wanhim_route;
 
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:正准备回去。
 {Name}:一起整理教室吧。
 Ivan:好。
@@ -77,7 +73,7 @@ jumpLabel:night;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:来得正好。
 运谦:歌词终于写完了。
 {Name}:真的吗？
@@ -107,31 +103,12 @@ setVar:WanHim_Love=WanHim_Love+10;
 setVar:MessageTarget=2;
 jumpLabel:night;
 
-label:yu_route;
-
-changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
-小雨:欢迎。
-{Name}:今天有什么推荐吗？
-小雨:有。这是我最近看的一本。
-{Name}:借给我？
-小雨:嗯。希望你也会喜欢。
-{Name}:那我看完，第一个讲给你听。
-小雨:好。讲的时候，顺便说说你自己。
-{Name}:说我自己什么？
-小雨:说你觉得哪一句，像是在写你。
-setVar:Yu_Love=Yu_Love+10;
-setVar:MessageTarget=3;
-changeFigure:none;
-jumpLabel:night;
-
 label:night;
 
 changeBg:Bedroom_Night.jpg;
 旁白:回到家后，手机忽然震动了一下。
 jumpLabel:night_ivan -when=MessageTarget==1;
 jumpLabel:night_wanhim -when=MessageTarget==2;
-jumpLabel:night_yu;
 
 label:night_ivan;
 
@@ -156,19 +133,6 @@ changeBg:phone.jpg;
 {Name}:（才写一半就发给我，真的好吗。）
 旁白:你回了一句"很好听"。对面很久没有回复。
 旁白:再回复时，只有四个字："晚安，好梦。"
-jumpLabel:night_end;
-
-label:night_yu;
-
-changeBg:phone.jpg;
-旁白:是小雨发来的消息。
-小雨:今天的书，看到哪一页了？
-{Name}:一半左右。
-小雨:看到喜欢的句子，可以先折一个小角。
-小雨:等借书的人走远了，我才发现，自己也忘了最喜欢哪一句。
-{Name}:那我折。折了要还给你吗？
-小雨:不用还。那是你的那一句了。
-旁白:你对着这句话看了很久，睡意一点点变淡。
 jumpLabel:night_end;
 
 label:night_end;

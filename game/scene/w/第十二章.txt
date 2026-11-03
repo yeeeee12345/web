@@ -1,8 +1,6 @@
-label:WanHimEvent;
-
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 
 运谦:今天想听歌吗？
 {Name}:是之前那首吗？

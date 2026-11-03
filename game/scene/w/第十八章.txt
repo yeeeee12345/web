@@ -1,6 +1,6 @@
 changeBg:SchoolYard.jpg;
 
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 
 旁白:周三放学后，音乐社要为校园广播录一段"放学路上"的声音。
 旁白:运谦借来一台小录音机，叫你一起去找素材。
@@ -21,6 +21,8 @@ label:录铃声;
 旁白:学生从楼梯上下来，脚步声一阵近，一阵远。
 {Name}:同一个铃声，每天听起来都不太一样。
 运谦:因为每次等铃声的人，不一样。
+setVar:WanRecordStyle=1;
+setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:收好录音;
 
 label:听排练;
@@ -29,9 +31,14 @@ label:听排练;
 旁白:有人唱错了，大家一起笑起来，又从头来过。
 {Name}:这段比录音机里的节拍乱多了。
 运谦:但我更想留下，这种声音。
+setVar:WanRecordStyle=2;
+setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:收好录音;
 
 label:收好录音;
+
+{Name}:（铃声录了两遍，他说第二遍更近。） -when=WanRecordStyle==1;
+{Name}:（合唱团唱错又重来的那一段，他留了最长。） -when=WanRecordStyle==2;
 
 旁白:太阳落到教学楼后面时，社团活动也结束了。
 旁白:运谦把录音机递给你，问你最想保留刚才哪一段。

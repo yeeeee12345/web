@@ -1,7 +1,7 @@
-﻿changeBg:Hallway.jpg;
+changeBg:Hallway.jpg;
 pixiPerform:rain;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:周四最后一节课刚结束，窗外忽然下起了大雨。
 旁白:教室里的同学一边收拾书包，一边互相问谁带了伞。
@@ -21,6 +21,8 @@ label:一起走;
 
 {Name}:我今天想和你一起走。你问了，我就会回答。
 Ivan:那我下次会问。
+setVar:IvanRainStyle=1;
+setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:把话说开;
 
 label:问清楚;
@@ -29,10 +31,14 @@ label:问清楚;
 {Name}:我不一定每次都有空，但我想知道，你在找我。
 Ivan:我有时候把"不想打扰你"说得太多，最后什么都没说。
 {Name}:你可以先把想法告诉我，再让我自己回答。
+setVar:IvanRainStyle=2;
+setVar:Ivan_Love=Ivan_Love+5;
 jumpLabel:把话说开;
 
 label:把话说开;
 
+{Name}:（他手里那把伞，一直往身后藏。） -when=IvanRainStyle==1;
+{Name}:（他站在走廊上等了多久，我不知道。） -when=IvanRainStyle==2;
 Ivan:我很习惯先想好怎么帮你。
 Ivan:可如果你不需要帮忙，我就不知道，自己还能不能留下来。
 {Name}:你不用靠解决问题，来换我陪你。
@@ -41,7 +47,6 @@ Ivan:那我今天，只是想和你一起走到车站。
 {Name}:好。今天不用别的理由。
 旁白:你们踩着走廊尽头的积水走出教学楼。操场上已经没有人。
 旁白:篮球架下，还留着一只忘记带走的球，被雨浇得发亮。
-changeFigure:Ivan_Sad.png -position=center;
 Ivan:我以前总想成为那个"不会让人失望"的人。
 {Name}:现在呢？
 Ivan:现在我想试着，做一个会说"我想你陪我"的人。

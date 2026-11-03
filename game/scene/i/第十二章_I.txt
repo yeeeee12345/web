@@ -1,9 +1,9 @@
-﻿changeBg:Classroom.jpg;
+changeBg:Classroom.jpg;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:教室里的人已经散得差不多了。Ivan坐在最后一排，把成绩单对折，又展开。
-Ivan:我还在想你会不会来。
+Ivan:你来了。
 {Name}:我来看看你。
 Ivan:看我？
 {Name}:顺便问一下成绩。
@@ -12,6 +12,8 @@ Ivan:……
 Ivan:不是。只是比上次低了一点。
 {Name}:一点是多少？
 Ivan:足够让我把计划表重写一份。
+setAnimation:shake -target=stage-main;
+changeFigure:Ivan_Serious.png;
 旁白:他把一张新的计划表摊开。格子里已经写满了字，最上面一行写着"下周"。
 {Name}:刚考完，就开始计划下一次？
 Ivan:习惯了。
@@ -25,6 +27,7 @@ Ivan:那不一样。
 {Name}:哪里不一样？
 Ivan:那次是"顺手"。这次……
 旁白:他把计划表合上，指尖在封面停了一下。
+changeFigure:Ivan_Normal.png;
 Ivan:这次，我想认真去买一本小说。
 {Name}:那就现在去。
 Ivan:现在？
@@ -32,4 +35,5 @@ Ivan:现在？
 旁白:Ivan收拾好书包。这一次，他把计划表留在了课桌抽屉里。
 setVar:Ivan_Love=Ivan_Love+15;
 changeFigure:none;
+
 changeScene:i/第十三章.txt;

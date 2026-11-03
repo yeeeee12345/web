@@ -1,6 +1,6 @@
-﻿changeBg:SchoolYard.jpg;
+changeBg:SchoolYard.jpg;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:校园文化周当天，操场边的展位比想象中热闹。
 旁白:Ivan负责的班级展板上，贴满了同学们做的卡片。
@@ -19,6 +19,8 @@ label:接待;
 旁白:你先带那位学生看了其他展板。Ivan转身和负责卡片的同学商量，很快补好了一张新的介绍。
 Ivan:我没有一个人，把事情全做完。
 {Name}:但展位还是好好的。
+setVar:IvanStageStyle=1;
+setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:活动收尾;
 
 label:休息;
@@ -28,13 +30,18 @@ Ivan:可是那张卡还没补上。
 {Name}:同学正在处理。你可以相信他们一会儿。
 旁白:Ivan犹豫了一下，接过水杯。几分钟后，展板上的空位被一张新卡片填上了。
 Ivan:原来停下来，不会让所有人都等着我。
+setVar:IvanStageStyle=2;
+setVar:Ivan_Love=Ivan_Love+5;
 jumpLabel:活动收尾;
 
 label:活动收尾;
 
+{Name}:（他转身去商量的时候，没有回头看我一眼。） -when=IvanStageStyle==1;
+{Name}:（他接过水杯的时候，手还停在展板上。） -when=IvanStageStyle==2;
 旁白:文化周快结束时，展位上的卡片已经被来往的同学翻看了许多遍。
 旁白:Ivan把最后一卷胶带递给负责收拾的同学，没有把每项工作都留给自己。
 
+changeFigure:none;
 changeBg:Park_Evening.jpg;
 旁白:离开学校后，你们沿着公园外的小路走了一会儿。
 旁白:Ivan手里拿着一张同学送给展位的留言卡。
@@ -57,6 +64,6 @@ Ivan:下次，我也想给你留一点没计划的时间。
 旁白:路灯把两个人的影子拉在一起，像一条安静的路。
 changeFigure:none;
 
-changeScene:i/高好感番外.txt -when=Ivan_Love>130;
+changeScene:i/高好感番外.txt -when=Ivan_Love>74;
 
 changeScene:i/第十七章.txt;

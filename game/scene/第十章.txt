@@ -1,25 +1,25 @@
-﻿label:第十章;
+label:第十章;
 
+bgm:s_Title.mp3 -volume=22;
 changeBg:Bedroom_Morning.jpg;
 
-旁白:星期六。今天不用上课。窗外已经很热，蝉声比樱花更早一步宣告了季节。
+旁白:星期六。今天不用上课。
 {Name}:终于可以好好喘口气。
 
 changeBg:phone.jpg;
 旁白:手机忽然震动，接连收到几条消息。
 Ivan:今天有空吗？
 运谦:我准备去乐器店。
-小雨:图书馆今天有读书分享会。
-旁白:三条消息排在一起，像三扇同时打开的门。
+旁白:两条消息排在一起，像两扇同时打开的门。
 旁白:你决定今天和谁一起度过？
 
-choose:去见Ivan:IvanRoute|去见运谦:WanHimRoute|去见小雨:YuRoute;
+choose:去见Ivan:IvanRoute|去见运谦:WanHimRoute;
 
 label:IvanRoute;
 
 changeBg:BookStore.jpg;
-changeFigure:Ivan_Normal.png -position=center;
-Ivan:七分钟。不多不少。
+changeFigure:Ivan_Normal.png;
+Ivan:你来了。
 {Name}:久等了吗？
 Ivan:没有。我刚到七分钟。
 {Name}:……你把等待也计时了？
@@ -42,7 +42,7 @@ jumpLabel:DayEnd;
 label:WanHimRoute;
 
 changeBg:MusicShop.jpg;
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:欢迎来到我最喜欢的地方。
 {Name}:乐器店比我想象的大。
 运谦:这里什么都有。有些琴，光是听它被弹响，就值了。
@@ -62,39 +62,19 @@ setVar:WanHim_Love=WanHim_Love+15;
 changeFigure:none;
 jumpLabel:DayEnd;
 
-label:YuRoute;
-
-changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
-小雨:谢谢你愿意来。
-{Name}:我很好奇读书分享会。
-小雨:今天会介绍好几本小说。有两位是别的班的同学。
-旁白:分享会开始了。有人讲得很流畅，也有人讲到一半红了脸。
-旁白:轮到小雨的时候，她只讲了很短几句，却让全场安静了几秒。
-小雨:……我说完了。
-旁白:活动结束后，你和她一起收拾椅子。
-{Name}:你刚才讲得很好。
-小雨:我其实手心全是汗。
-小雨:但讲完以后，很轻松。
-{Name}:下次还想讲吗？
-小雨:想。如果有个位置，离你近一点的话。
-setVar:Yu_Love=Yu_Love+15;
-changeFigure:none;
-jumpLabel:DayEnd;
-
 label:DayEnd;
 
 changeBg:Sunset.jpg;
 旁白:夕阳渐渐落下，把街道染成暖橘色。
 旁白:虽然只是普通的周末，却留下了一段值得回忆的时光。
-{Name}:感觉和大家，越来越熟悉了。
+旁白:回到家，你把文具袋和准考证仔细收进书包。
+{Name}:明天就是月考，今晚要早点睡了。
 旁白:新的星期，也即将开始。
 
-setVar:Rival_Count=0;
-setVar:Rival_Count=Rival_Count+1 -when=Ivan_Love>60;
-setVar:Rival_Count=Rival_Count+1 -when=WanHim_Love>60;
-setVar:Rival_Count=Rival_Count+1 -when=Yu_Love>60;
+setVar:Ink_Count=0;
+setVar:Ink_Count=Ink_Count+1 -when=Ivan_Love>40;
+setVar:Ink_Count=Ink_Count+1 -when=WanHim_Love>40;
 
-changeScene:番外/三人暗中较劲.txt -when=Rival_Count>1;
+changeScene:番外/两人暗中较劲.txt -when=Ink_Count>1;
 
 changeScene:第十一章.txt;

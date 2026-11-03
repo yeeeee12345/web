@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Smile.png -position:center;
+changeFigure:WanHim_Smile.png;
 
 旁白:午休铃响后，广播站播放了一段新的节目片头。吉他声只有十几秒，教室里却有人认出了旋律。
 运谦:有人来问，这是不是《窗边有人在听》的开头。
@@ -18,6 +18,8 @@ label:去广播站;
 
 旁白:你们趁午休去了广播站。老师答应只在节目里播放一次，并保留曲名和作者信息。
 运谦:这样我可以接受。它会被听见，也不会被随便改掉。
+setVar:WanRadioStyle=1;
+setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:决定播放;
 
 label:听他说;
@@ -26,9 +28,14 @@ label:听他说;
 运谦:我以为，把歌交出去以后，就等于把它从我们之间拿走了。
 {Name}:分享它，不会删掉我们第一次听见它的那段记忆。
 运谦:我想通一点了。
+setVar:WanRadioStyle=2;
+setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:决定播放;
 
 label:决定播放;
+
+{Name}:（老师说只播一次的时候，他点了点头。） -when=WanRadioStyle==1;
+{Name}:（空教室里，他把担心一件件讲完。） -when=WanRadioStyle==2;
 
 运谦:那就只放一次。我想坐在你旁边听，不站在控制台后面。
 {Name}:好。铃响以后我们去食堂，顺便听广播。

@@ -1,11 +1,12 @@
 label:第十二章;
 
+bgm:s_Title.mp3 -volume=25;
 changeBg:Classroom.jpg;
 
 旁白:星期二。月考成绩公布的日子。
 {Name}:不知道成绩怎么样。
 旁白:教室里比平时更加热闹。
-changeFigure:Ivan_Normal.png -position:right;
+changeFigure:Ivan_Normal.png -right;
 Ivan:成绩出来了。
 {Name}:这么快？
 Ivan:嗯。
@@ -18,68 +19,56 @@ Ivan:差不多。
 旁白:Ivan的表情和平时一样平静。
 旁白:但你注意到，他看成绩单的时间，比看任何一张通知都久。
 changeFigure:none;
+changeFigure:none -right;
 
 旁白:午休时间。
 changeBg:Cafeteria.jpg;
-旁白:三个人坐在一起吃午饭。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
+旁白:午休时，你和Ivan、运谦坐在一起吃午饭。
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
 运谦:这次成绩怎么样？
 {Name}:还没仔细看。
-小雨:我也差不多。
+
+{Name}:（答题卡比想象中干净，能写的都写了。） -when=StudyStyle==2;
+{Name}:（最后那道大题，用上了周五画满格子的草稿纸。） -when=StudyStyle==1;
+
+jumpLabel:午餐_ivan -when=StudyStyle==1;
+jumpLabel:午餐_wanhim -when=StudyStyle==2;
+jumpLabel:午餐_平常;
+
+label:午餐_ivan;
+Ivan:基础题答得还可以，至少之前卡住的那几道都解出来了。
+{Name}:多亏某人周五画满格子的草稿纸。
+jumpLabel:午餐_平常;
+
+label:午餐_wanhim;
+运谦:反正卷面写得挺稳，慢慢写错得少。
+{Name}:借你的吉言，确实没怎么涂改。
+jumpLabel:午餐_平常;
+
+label:午餐_平常;
 Ivan:你们两个都不看的吗？
 运谦:成绩这种东西，知道结果就好了。
 {Name}:说得好。
-小雨:同意。
 Ivan:……你们两个还真是。
 旁白:三个人同时笑了起来。勺子碰到餐盘，叮的一声。
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 
 旁白:下午放学。
 changeBg:Hallway.jpg;
 {Name}:这个学期，好像只剩下最后一件事没做。
 {Name}:有些话再不说，就会一直拖下去。
+旁白:你决定去哪里。
 
-旁白:三个人都在等你。你能感觉到，今天之后，有些东西会不一样。
-旁白:但你也知道——走到谁面前，并不只是今天的选择。
-旁白:那是这一个月里，你一次次抬起头、一次次走向谁的结果。
-
-setVar:TopScore=Ivan_Love;
-setVar:TopScore=WanHim_Love -when=WanHim_Love>TopScore;
-setVar:TopScore=Yu_Love -when=Yu_Love>TopScore;
-
-choose:我想走到Ivan面前:IvanEvent|我想走到运谦面前:WanHimEvent|我想走到小雨面前:YuEvent;
+choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent;
 
 label:IvanEvent;
 
-changeScene:i/第十二章_I.txt -when=Ivan_Love>=TopScore;
-
-changeBg:Hallway.jpg;
-旁白:你朝教室的方向走了几步，又停下来。
-旁白:你想起这一个月里，和Ivan说过的话其实不算多。
-旁白:那些"谢谢""知道了"，加起来也不够支撑一句告白。
-{Name}:……还不到时候。
-旁白:你转过身。有些话，说出来反而会变成负担。
-changeScene:第十二章_未成.txt;
+changeScene:i/第十二章_I.txt;
 
 label:WanHimEvent;
 
-changeScene:w/第十二章.txt -when=WanHim_Love>=TopScore;
+changeScene:w/第十二章.txt;
 
-changeBg:Hallway.jpg;
-旁白:你走向音乐教室，脚步却越来越慢。
-旁白:你听过他很多首没写完的曲子。可你从来没有真正问过，他为什么写。
-{Name}:如果连这个都不知道，我说喜欢，也太轻了。
-changeScene:第十二章_未成.txt;
-
-label:YuEvent;
-
-changeScene:y/第十二章.txt -when=Yu_Love>=TopScore;
-
-changeBg:Hallway.jpg;
-旁白:你在图书馆门口停住了。
-旁白:她借给你的那本书，你还没有读完。扉页上的问题，你也还没有答案。
-{Name}:现在进去，我只能说"我很喜欢和你一起看书"。
-{Name}:可那不是我想说的话。
-changeScene:第十二章_未成.txt;

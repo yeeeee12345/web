@@ -1,6 +1,6 @@
 changeBg:MusicRoom.jpg;
 
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 
 旁白:运谦没有收起吉他，记事本也摊在桌上。
 运谦:刚才说到名字，我好像想到一点了。
@@ -15,6 +15,8 @@ label:有人在听;
 运谦:听起来，像在说这首歌终于有了听众。
 {Name}:你不喜欢吗？
 运谦:喜欢。我写它的时候，确实一直在想——会不会有人听见。
+setVar:WanNameStyle=1;
+setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:写下名字;
 
 label:窗边;
@@ -23,9 +25,15 @@ label:窗边;
 运谦:嗯。每天看出去的景色都不一样，旋律也会跟着变。
 {Name}:那这个名字，应该很适合它。
 运谦:被你这么一说，我也觉得是。
+setVar:WanNameStyle=2;
+setVar:WanHim_Love=WanHim_Love+5;
 jumpLabel:写下名字;
 
 label:写下名字;
+
+bgm:窗边有人在听.mp3 -volume=35;
+{Name}:（他念“有人在听”的时候，声音比平时轻。） -when=WanNameStyle==1;
+{Name}:（窗边那个位置，原来他一直坐在那里写。） -when=WanNameStyle==2;
 
 旁白:运谦看着你们刚才提到的两个词，想了一会儿，在记事本上把它们合在一起写下：窗边有人在听。
 运谦:歌名就叫《窗边有人在听》。
@@ -41,15 +49,16 @@ label:写下名字;
 {Name}:那你现在，知道了吗？
 运谦:知道一点。
 
+changeFigure:none;
 changeBg:Auditorium.jpg;
 旁白:离开音乐教室前，运谦带你绕到空着的礼堂。
-changeFigure:WanHim_Normal.png -position:center;
+changeFigure:WanHim_Normal.png;
 运谦:迎新那天，我在这里弹过歌。
 {Name}:我记得。台下的掌声很大。
 运谦:那时候我只顾着数拍子，怕弹错一个音。
 {Name}:那今天呢？
-运谦:今天，我只想知道，你有没有听见。
-{Name}:我听见了。
+运谦:今天……我手指没有发僵，只在看你坐在第几排。
+{Name}:第一排正中间。从第一个音就看着你。
 运谦:第一次在音乐教室遇见你时，我只是觉得，你愿意停下来听一会儿，很难得。
 运谦:后来我开始期待你来。你问我曲子写到哪里了，也会记得我说过的话。
 {Name}:我是真的想知道。
@@ -59,8 +68,9 @@ changeFigure:WanHim_Normal.png -position:center;
 {Name}:嗯？
 运谦:我喜欢你。不是因为你总来听我弹琴。
 运谦:是因为和你待在一起的时候，我不用先想好该说什么。
+changeFigure:none;
 changeBg:CG_WanHim.jpg;
-unlockCg:CG_WanHim.jpg -name=不用先想好;
+unlockCg:CG_WanHim.jpg -name:不用先想好;
 运谦:你愿意和我交往吗？
 {Name}:愿意。不过以后，不许只用新歌当借口约我。
 运谦:那我可以直接约你吗？

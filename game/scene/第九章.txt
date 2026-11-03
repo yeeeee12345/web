@@ -1,5 +1,6 @@
 label:第九章;
 
+bgm:s_Title.mp3 -volume=24;
 changeBg:Bedroom_Morning.jpg;
 
 旁白:星期五。
@@ -7,12 +8,12 @@ changeBg:Bedroom_Morning.jpg;
 {Name}:最近大家都开始认真起来了。
 
 changeBg:Classroom.jpg;
-changeFigure:Teacher.webp -position:center;
+changeFigure:Teacher_Normal.png;
 老师:同学们，今天放学后，学校开放自习教室。
 老师:有需要的同学可以留下来。
 changeFigure:none;
 旁白:教室里顿时热闹起来。
-changeFigure:Ivan_Normal.png -position:right;
+changeFigure:Ivan_Normal.png -right;
 Ivan:准备留下来吗？
 {Name}:应该会吧。
 Ivan:那待会见。
@@ -20,20 +21,19 @@ Ivan:给你留个位置。靠窗的，光线好。
 {Name}:你连这个都算好了。
 Ivan:这叫经验。
 changeFigure:none;
+changeFigure:none -right;
 
 旁白:一天的课程结束。
 
 changeBg:Hallway.jpg;
-旁白:放学后，走廊里的灯一盏盏亮起来。
-旁白:自习教室的门半开着，音乐教室的方向传来调弦声，图书馆的灯亮到很晚。
-旁白:你想选一种方式，度过这个傍晚。
+旁白:放学后，你决定……
 
-choose:想被人教点什么:ivan_route|想什么都不做:wanhim_route|想读几行字:yu_route;
+choose:去自习教室找Ivan:ivan_route|去吉他社找运谦:wanhim_route;
 
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:我就知道你会来。
 {Name}:一个人复习太容易分心。
 Ivan:那今天一起吧。
@@ -50,13 +50,15 @@ Ivan:因为你每次都在同一类题上皱眉。
 Ivan:以后不会的，都可以问我。
 Ivan:……不过考试的时候不行。
 {Name}:那就现在多问几道。
+setVar:StudyStyle=1;
 setVar:Ivan_Love=Ivan_Love+10;
+changeFigure:none;
 jumpLabel:chapter_end;
 
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
+changeFigure:WanHim_Normal.png;
 运谦:今天不是来听歌的。
 {Name}:嗯？
 运谦:今天想休息一下。
@@ -73,26 +75,9 @@ changeFigure:WanHim_Normal.png -position=center;
 运谦:慢慢写的人，错得少。
 旁白:他把这句当作结论，说得很认真。你差点笑出声。
 运谦:谢谢。今天轻松多了。
+setVar:StudyStyle=2;
 setVar:WanHim_Love=WanHim_Love+10;
-jumpLabel:chapter_end;
-
-label:yu_route;
-
-changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
-小雨:欢迎。
-{Name}:今天人不多。
-小雨:大家都去自习了。
-{Name}:那你呢？
-小雨:我喜欢这里安静一点。
-{Name}:你不担心考试吗？
-小雨:担心。但担心不一定要坐在最吵的地方。
-旁白:你们在窗边坐下，各自看各自的书。
-小雨:你翻页的速度，比以前慢了。
-{Name}:因为发现了几行值得多看的话。
-小雨:那就多看一会儿。
-小雨:这样也很好。
-setVar:Yu_Love=Yu_Love+10;
+changeFigure:none;
 jumpLabel:chapter_end;
 
 label:chapter_end;
@@ -102,65 +87,6 @@ changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:离开学校的时候，天已经渐渐暗了。
 {Name}:最近的每一天，好像都过得很快。
-
-旁白:你走到校门，发现三个人都在。
-changeFigure:Ivan_Normal.png -position=left;
-changeFigure:WanHim_Normal.png -position=center;
-changeFigure:yu.jpg -position=right;
-Ivan:明天开始复习，周末要不要一起？
-运谦:我周末想去乐器店。你要来的话，我可以等。
-小雨:图书馆周六有分享会。我留了位置。
-旁白:三个邀请同时摆在面前。这一次，没有人退让。
-Ivan:……你们都要问吗？
-运谦:你先问的。
-小雨:我只是说得比较晚。
-旁白:你意识到，无论选谁，都会有人被留下。
-
-choose:三个都答应，自己挤时间:all|只选一个，把话说清楚:one|三个都拒绝，说需要时间想想:refuse;
-
-label:all;
-
-旁白:你答应了所有人。
-旁白:周六上午陪Ivan复习，中午赶去乐器店，下午再跑到图书馆。
-旁白:那天你几乎没坐过。
-changeFigure:none;
-changeBg:StreetNight;
-旁白:晚上回家的时候，你在公交站台站了很久。
-{Name}:我好像谁都没有真正陪到。
-旁白:三个人都说了"没关系"。可三个"没关系"加起来，比一句责怪还重。
-setVar:Ivan_Love=Ivan_Love-5;
-setVar:WanHim_Love=WanHim_Love-5;
-setVar:Yu_Love=Yu_Love-5;
-setVar:Overbooked=1;
-jumpLabel:chapter_end2;
-
-label:one;
-
-{Name}:我只能选一个。剩下的，对不起。
-旁白:空气安静了几秒。
-Ivan:……这样反而清楚。
-运谦:嗯。至少不是"都可以"。
-小雨:谢谢你没有敷衍我们。
-旁白:被拒绝的两个人，谁都没有真的走开。他们只是退了一步，把位置让出来。
-setVar:ChoseOne=1;
-jumpLabel:chapter_end2;
-
-label:refuse;
-
-{Name}:三个我都想去。但我现在没有办法好好回应任何一个。
-{Name}:给我一点时间，好吗？
-旁白:运谦先笑了。
-运谦:这是我今天听到最诚实的一句话。
-Ivan:……我也是这么想的。
-小雨:那就等你想清楚。
-旁白:三个人各自离开。你一个人站在樱花道上，第一次觉得这条路这么长。
-旁白:但你也第一次觉得，自己没有在骗谁。
-setVar:HonestRefusal=1;
-jumpLabel:chapter_end2;
-
-label:chapter_end2;
-
-changeFigure:none;
 旁白:校门口的公告栏前，围着不少同学。
 旁白:有人正在往上贴新的海报——"初夏·校园文化周"，时间是两周以后。
 {Name}:文化周……

@@ -1,6 +1,6 @@
-﻿label:第五章;
+label:第五章;
 
-changeBg:House.webp;
+changeBg:House.jpg;
 
 旁白:迎新活动当天。
 {Name}:终于到了。
@@ -14,7 +14,7 @@ pixiPerform:cherryBlossoms;
 
 pixiInit;
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:早。
 {Name}:今天会很忙吧？
 Ivan:嗯。不过大家准备了这么久。
@@ -30,94 +30,48 @@ changeFigure:none;
 旁白:活动正式开始。广播里传来轻快的音乐。
 旁白:你准备先去哪里帮忙？
 
-choose:去礼堂帮忙:礼堂|去图书馆帮忙:图书馆|留在班级摊位:班级摊位;
+choose:去礼堂帮忙:礼堂|留在班级摊位:班级摊位;
 
 label:礼堂;
 
 changeBg:Auditorium.jpg;
-changeFigure:WanHim_Normal.png -position:center;
-运谦:来得刚好。
+changeFigure:WanHim_Normal.png;
+运谦:你来了。
 {Name}:有没有我能帮忙的？
 运谦:帮我检查一下吉他线。
 {Name}:当然。
 旁白:你蹲在台边，顺着线一点点摸过去，把接口按到最紧。
-
-choose:再多检查一遍所有接口:double_check|相信他，先到台下等:trust;
-
-label:double_check;
-
-旁白:你又从头摸了一遍。第三个接口有点松，你重新插紧，听见"咔"的一声。
-运谦:你还挺仔细。
-{Name}:因为你说过，只有你会蹲下来找。
-旁白:他笑了一下，把琴背带调整到合适的位置。
-setVar:CheckedCable=1;
-jumpLabel:演出;
-
-label:trust;
-
-{Name}:应该没问题。我在台下等你。
-运谦:好。
-旁白:他点点头。你走下台时，没有注意到第二个接口的线头，露出了一小截。
-jumpLabel:演出;
-
-label:演出;
-
+运谦:谢谢。这样我就放心了。
+bgm:窗边有人在听.mp3 -volume=45;
 旁白:演出开始。灯亮起的时候，他握琴的手指紧了一下，又慢慢松开。
 旁白:旋律响起来，比彩排那天更稳。台下响起掌声。
+旁白:他回到后台，额角有一点汗。
+运谦:怎么样？
 
-旁白:第二段进入之前，音箱里忽然传出一声短促的杂音。
-旁白:运谦的手指停在半空。那根线，还是松了。
-changeFigure:WanHim_Normal.png -position=center;
-旁白:他没有停下来。他闭了一下眼睛，把那一小节重新弹了一遍。
-旁白:杂音没有再出现。可他自己知道，刚才那里，断了半秒。
-旁白:掌声还是很响。但他下台的时候，没有抬头。
+choose:很好听:很好听|比昨天更稳:比昨天更稳;
 
-changeBg:Auditorium.jpg;
-changeFigure:WanHim_Normal.png -position=center;
-运谦:你听见了吧。
-{Name}:听见了。
-运谦:……
+label:很好听;
 
-choose:告诉他那半秒不影响什么:reassure|陪他一起把问题找出来:fix|什么也不说，先递一瓶水:water;
-
-label:reassure;
-
-{Name}:除了我，大概没人注意到。
-运谦:可我自己注意到了。
-运谦:我弹了六年琴，最怕的不是弹错，是弹错的时候装作没发生。
-{Name}:……
-运谦:对不起。我不是在怪你。
-setVar:WanHim_Love=WanHim_Love+5;
-jumpLabel:演出之后;
-
-label:fix;
-
-{Name}:我们去后台看看那根线。
-运谦:现在？
-{Name}:现在。你不想带着这个结束吧。
-旁白:你们蹲在音箱后面，把那根线拔出来重新接过。他的手一直在抖，但接得很稳。
-运谦:……是这里。我早该想到的。
-{Name}:下次我们一起检查。
-运谦:嗯。
-旁白:他抬起头的时候，眼睛有点红，但没有躲开你。
-setVar:WanHim_Love=WanHim_Love+15;
-setVar:FixedFailure=1;
-jumpLabel:演出之后;
-
-label:water;
-
-旁白:你什么也没说，只是把一瓶水递过去。
-旁白:他接过来，握了很久，没有拧开。
-运谦:……谢谢。
-旁白:过了一会儿，他自己开口了。
-运谦:我以前觉得，被人看见失败，比失败本身更难受。
-运谦:但刚才你没有安慰我。这让我好受一点。
+{Name}:真的很好听。
+运谦:谢谢。不过——
+运谦:算了。下一首再改进。
+{Name}:还有下一首？
+运谦:写歌的人，当然有下一首。
 setVar:WanHim_Love=WanHim_Love+10;
-jumpLabel:演出之后;
+jumpLabel:礼堂尾声;
 
-label:演出之后;
+label:比昨天更稳;
 
-changeFigure:WanHim_Normal.png -position:center;
+{Name}:今天发挥得比彩排更稳。
+运谦:因为台下有人在数拍子。
+{Name}:谁？
+运谦:第一排左边，第二个位置。
+旁白:他报出位置的时候，眼睛没有看你。
+setVar:WanHim_Love=WanHim_Love+15;
+jumpLabel:礼堂尾声;
+
+label:礼堂尾声;
+
 旁白:演出结束后，一个背着新书包的学生在礼堂门口停了下来。
 新生:不好意思，请问报到登记的地方在哪里？
 {Name}:在校门口。我带你过去吧。
@@ -134,35 +88,11 @@ changeBg:SchoolGate.jpg;
 旁白:运谦从礼堂出来的时候，广播正好宣布活动进入尾声。
 jumpLabel:下午;
 
-label:图书馆;
-
-changeBg:Library.jpg;
-changeFigure:yu.jpg -position:center;
-小雨:欢迎。
-{Name}:今天人好多。
-小雨:都是来看阅读角的。
-{Name}:我帮你整理书吧。
-旁白:你们一起接待新生，一个登记，一个递书。
-小雨:谢谢。今天如果没有你，我一定忙不过来。
-{Name}:以后也可以一起。
-小雨:嗯。
-旁白:刚把最后一摞书摆好，一个新生就在门口探头张望。
-新生:请问阅读角是这里吗？我想找一本轻松一点的书。
-{Name}:是这里。你平时喜欢看什么？
-新生:我还不太确定，只想先找个安静的地方坐一会儿。
-小雨:靠窗的位置空着。你可以先看看这几本短篇。
-旁白:新生选了一本书，在窗边坐下，肩膀不像刚进门时绷得那么紧了。
-小雨:你第一次来图书馆时，也在门口站了一会儿。
-{Name}:那时候还不认识这里。
-小雨:现在你已经会替别人介绍了。
-{Name}:因为你当时也帮过我。
-setVar:Yu_Love=Yu_Love+10;
-jumpLabel:下午;
-
 label:班级摊位;
 
+changeFigure:none;
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 Ivan:来得正好。
 Ivan:这里需要人登记。
 {Name}:交给我。
@@ -174,7 +104,6 @@ Ivan:不强制。可以先看看感兴趣的摊位，再决定要不要参加。
 旁白:新生在登记表上写下名字。Ivan把笔递给下一位同学。
 Ivan:你比我第一天会安慰人。
 {Name}:你第一天只提醒我小心。
-changeFigure:Ivan_Smirk.png -position=center;
 Ivan:至少我接住了你的课本。
 {Name}:这倒是。
 Ivan:辛苦了。
@@ -186,28 +115,29 @@ jumpLabel:下午;
 
 label:下午;
 
+changeFigure:none;
 changeBg:SchoolYard.jpg;
 旁白:下午，活动进入尾声。
-changeFigure:Ivan_Normal.png -position:left;
-changeFigure:WanHim_Normal.png -position:center;
-changeFigure:yu.jpg -position:right;
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png;
 Ivan:终于结束了。
 运谦:虽然累，不过很值得。
-小雨:大家今天都很努力。
 {Name}:是啊。
 {Name}:这是我来到这所学校，最开心的一天。
-旁白:三个人相视一笑。夕光照在他们身上，谁也没有急着回家。
+旁白:Ivan和运谦相视一笑。夕光照在他们身上，谁也没有急着回家。
 
 changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:学生们陆续离开校园。你站在樱花道上，脚步停了一下。
 
-choose:和Ivan一起回家:回家Ivan|和运谦一起回家:回家运谦|和小雨一起回家:回家小雨;
+choose:和Ivan一起回家:回家Ivan|和运谦一起回家:回家运谦;
 
 label:回家Ivan;
 
-changeFigure:Ivan_Happy.png -position:center;
+changeFigure:Ivan_Happy.png;
 Ivan:今天谢谢你。
 Ivan:以后也请多关照。
 {Name}:彼此彼此。
@@ -220,7 +150,7 @@ jumpLabel:结束;
 
 label:回家运谦;
 
-changeFigure:WanHim_Smile.png -position=center;
+changeFigure:WanHim_Smile.png;
 运谦:今天真的很开心。
 运谦:下次演出，希望你还能来。
 {Name}:下次一定。
@@ -231,27 +161,11 @@ changeFigure:WanHim_Smile.png -position=center;
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:结束;
 
-label:回家小雨;
-
-changeFigure:yu.jpg -position=center;
-小雨:今天辛苦了。
-小雨:谢谢你一直陪着我。
-{Name}:不用客气。
-小雨:以后放学，也一起走吧。
-{Name}:好。
-旁白:她走在你左手边。今天的步子，比昨天快了一点。
-小雨:阅读角有人留了张纸条。
-小雨:上面写着"谢谢这里的安静"。
-{Name}:那个人一定很喜欢图书馆。
-小雨:嗯。我把它夹进了书里。
-setVar:Yu_Love=Yu_Love+10;
-jumpLabel:结束;
-
 label:结束;
 
 pixiInit;
 changeFigure:none;
-changeBg:House.webp;
+changeBg:House.jpg;
 旁白:迎新活动圆满结束。
 旁白:回到家后，你把书包放在椅子旁，手机屏幕亮了起来。
 
@@ -259,7 +173,6 @@ changeBg:phone.jpg;
 旁白:班级群里接连跳出几条消息。
 Ivan:今天辛苦了。明天我把摊位的物资还回去。
 运谦:演出录了一小段，之后发给你们。
-小雨:阅读角借出去的书，都登记好了。
 {Name}:我也很开心。明天见。
 旁白:发完这句话，你忽然发现自己已经开始期待明天。
 旁白:星海高中不再只是一个需要记住路线的地方。

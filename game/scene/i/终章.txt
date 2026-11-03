@@ -4,7 +4,7 @@ pixiPerform:cherryBlossoms;
 旁白:五月的最后几天，校园里的樱花只剩下零星几片，叶子长得很密。
 旁白:文化周的彩旗已经收起来了，校园恢复成平常的样子。
 
-changeFigure:Ivan_Normal.png -position=center;
+changeFigure:Ivan_Normal.png;
 Ivan:早。
 {Name}:早。今天也提前二十分钟到？
 Ivan:嗯。
@@ -18,7 +18,7 @@ Ivan:哪里不一样？
 Ivan:带了。
 Ivan:但最后一页是空的。
 旁白:他把本子翻到最后。那页上确实什么都没有写，只有一行很小很小的字——
-旁白:"和她一起做的事，不写细则。"
+旁白:"和你一起做的事，不写细则。"
 {Name}:……你管这叫"没有写"？
 Ivan:细则没有写。
 旁白:风把树叶吹得沙沙响。花瓣快落完了，树下也一样好看。
@@ -41,6 +41,8 @@ Ivan:和你一起，走樱花道。
 Ivan:第二项——
 Ivan:还没想好。
 旁白:他说这句话的时候，眼睛在笑。
+changeBg:请和我交往吧.png -enter=enter;
+unlockCg:请和我交往吧.png -name:请和我交往吧;
 bgm:s_Title.mp3;
 pixiInit;
 旁白:夏天要来了。

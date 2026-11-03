@@ -1,48 +1,73 @@
-﻿label:第十一章;
+label:第十一章;
 
 changeBg:Classroom.jpg;
 
-旁白:星期一。周末结束后，校园又恢复了平常的节奏。走廊的窗户开始整天开着。
-{Name}:月考，好像一场很快就过去的雨。
-changeFigure:Ivan_Normal.png -position=right;
+旁白:星期一，月考日。
+旁白:黑板正中写着考试科目与作息时间，课桌全部拉开间距，每个桌角贴着考号。
+旁白:预备铃打响，监考老师拆开密封袋，试卷沙沙地从前排传下来。
+旁白:你吸了一口气，将名字写在答题卡上。
+旁白:教室里很快只剩下秒针走动的声音，和笔尖划过纸面的轻响。
+setAnimation:shake -target=stage-main;
+旁白:解到后半程的大题时，思路稍稍卡了一下。
+{Name}:（冷静一点……）
+
+jumpLabel:考场_ivan -when=StudyStyle==1;
+jumpLabel:考场_wanhim -when=StudyStyle==2;
+jumpLabel:考场_通用;
+
+label:考场_ivan;
+旁白:你忽然想起周五在自习室，Ivan用红笔在草稿纸上圈出的推导步骤。
+旁白:脑海里的思路豁然贯通，你顺着那个方向落笔，解出了卡住的关键步骤。
+setVar:ExamResult=1;
+jumpLabel:考场收卷;
+
+label:考场_wanhim;
+旁白:手心微微冒汗时，你忽然想起运谦在音乐教室窗边说的那句话——"慢慢写的人，错得少"。
+旁白:你放慢了呼吸，把握笔的手指松开一点，一行一行稳稳地把推论写完。
+setVar:ExamResult=2;
+jumpLabel:考场收卷;
+
+label:考场_通用;
+旁白:你稳住心神，按照平时练习的节奏，把每一个能写出的步骤认真落笔。
+jumpLabel:考场收卷;
+
+label:考场收卷;
+旁白:下午最后一门结束的铃声长长地划破校园。
+旁白:老师收走答题卡的一瞬间，教室里轰然爆发出拉动椅子的杂音和长舒一口气的欢呼。
+changeFigure:Ivan_Normal.png -right;
 Ivan:感觉怎么样？
-{Name}:不知道。至少能写的，我都写了。
-Ivan:这句话倒是不错。
+{Name}:比想象中沉得住气。至少能写的，我都写了。
+Ivan:这句话听起来比"考得很好"更让人放心。
 {Name}:你呢？
 Ivan:还可以。等成绩出来就知道了。
-旁白:他说"还可以"的时候，指尖在课桌上轻轻敲了两下。
+旁白:他说"还可以"的时候，指尖在课桌上轻轻敲了两下，眼底有一点淡淡的释怀。
 changeFigure:none;
+changeFigure:none -right;
 
 旁白:放学铃响起。同学们陆续离开教室。
-旁白:公告栏上，"校园文化周"的海报换成了新的一版：两周后开始，这几天征集各班展位和节目。
-{Name}:文化周……感觉会有很多事发生。
+旁白:走廊公告栏上贴出了新通知："下周起正式进入校园文化周，各班展位与舞台节目申报中"。
+{Name}:月考一过，文化周就真的近在眼前了。
 旁白:你决定今天去哪里。
 
-choose:想问清楚一件一直没问的事:IvanEvent|想听他把话说完:WanHimEvent|想确认一个答案:YuEvent;
+choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent;
 
 label:IvanEvent;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png -position:center;
-Ivan:我在等你。
-{Name}:今天还要学习吗？
-Ivan:不是。
-{Name}:那是什么？
-Ivan:我想去一趟书店。
-{Name}:又买参考书？
-Ivan:这次不是。
-{Name}:那是什么？
-Ivan:想买一本小说。
-{Name}:你也看小说？
-Ivan:偶尔。
-{Name}:完全看不出来。
-Ivan:你对我的了解，还不够。
-{Name}:那以后慢慢了解。
-旁白:Ivan愣了一下。
-Ivan:……
-Ivan:好。
-Ivan:文化周的事，你知道吗？
-{Name}:公告栏上看到了。
+changeFigure:Ivan_Normal.png;
+Ivan:你来了。
+{Name}:考完试，大家好像都跑空了。
+Ivan:正好多留一会儿，把桌椅搬回原本的位置。
+旁白:Ivan桌角边整整齐齐地放着一本书，封面上夹着一枚纸质书签。
+Ivan:周六借你的那本小说，我带过来了。
+{Name}:你已经看完了？
+Ivan:看完了一半。留下一半，等你看了再一起讨论。
+{Name}:连看书都计划得这么平均。
+Ivan:……这叫留出讨论空间。
+旁白:他把书递给你，指尖触碰到书封的质感，微凉而平整。
+{Name}:好，那我回去就读。
+Ivan:文化周的事，公告栏上看到了吗？
+{Name}:嗯，下周就开始了。
 Ivan:我们班的展位，我来负责。
 Ivan:到时候……你来帮我看看，好不好？
 setVar:Ivan_Love=Ivan_Love+10;
@@ -52,56 +77,38 @@ jumpLabel:chapter_end;
 label:WanHimEvent;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png -position=center;
-运谦:你来得比我想的早。
-{Name}:今天要练习吗？
-运谦:嗯。不过在那之前——
+changeFigure:WanHim_Normal.png;
+运谦:你来了。
+{Name}:今天不用再复习了，听着琴声找过来的。
+运谦:刚才听见走廊里在喊交卷，就猜到你会来。
+
+jumpLabel:WanHim_呼应 -when=StudyStyle==2;
+jumpLabel:WanHim_正文;
+
+label:WanHim_呼应;
+运谦:怎么样，"慢慢写"管用吗？
+{Name}:管用，答题卡特别整洁，没涂改几个字。
+运谦:那就好。看来我的理论成立。
+jumpLabel:WanHim_正文;
+
+label:WanHim_正文;
 运谦:我想给你看一样东西。
 {Name}:什么？
-运谦:之前写的曲子。
+运谦:之前写的那首曲子。
 {Name}:已经完成了吗？
-运谦:还差最后一点。
-运谦:但我想听听你的意见。
+运谦:还差最后一点收尾。但我想先听听你的感觉。
 {Name}:为什么问我？
 运谦:因为你听过最开始的版本。
-运谦:所以想知道，你的感觉。
 {Name}:那我会认真听。
-旁白:他拿起吉他。熟悉的旋律在音乐教室里响起。
+旁白:他抱起吉他，指尖在琴弦上轻快地滑过。熟悉的旋律在音乐教室里回荡，比以往多了一份笃定与开朗。
 {Name}:比之前更好听了。
 运谦:真的吗？
 {Name}:嗯。它现在像是有话要说，而不是在自言自语。
 运谦:那我就继续写下去。
 运谦:文化周，我想让它正式演出一次。
 {Name}:一定能演成。
-运谦:嗯。到时候，你要在台下。
+运谦:嗯。到时候，你要在台下第一排。
 setVar:WanHim_Love=WanHim_Love+10;
-changeFigure:none;
-jumpLabel:chapter_end;
-
-label:YuEvent;
-
-changeBg:Library.jpg;
-changeFigure:yu.jpg -position=center;
-小雨:今天来得很早。
-{Name}:你也是。
-小雨:我每天都差不多这个时间来。
-{Name}:这么喜欢图书馆？
-小雨:嗯。这里很安静。
-{Name}:除了安静以外呢？
-小雨:……还有很多故事。
-{Name}:故事？
-小雨:每一本书都有自己的故事。
-小雨:还有一本书，藏着一个问题。
-{Name}:什么问题？
-小雨:……
-小雨:以后再告诉你。
-{Name}:为什么？
-小雨:因为现在还不是时候。
-小雨:等你也想知道答案的时候。
-旁白:她看向窗边那个空着的位置，眼神停了一会儿。
-{Name}:文化周，图书馆要出展角吧？
-小雨:嗯。到那时候……我有一样东西，想请你帮忙。
-setVar:Yu_Love=Yu_Love+10;
 changeFigure:none;
 jumpLabel:chapter_end;
 
@@ -111,6 +118,8 @@ changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
 旁白:夕阳落在樱花道上。花瓣被晚风卷起来，又轻轻落回原处。
 旁白:月考结束了。文化周，正在靠近。
+{Name}:（成绩单上的数字，比上次稳了一点。） -when=ExamResult==1;
+{Name}:（写得很慢，但确实没涂改几处。） -when=ExamResult==2;
 旁白:而你隐约觉得，有些一直没说出口的东西，也在慢慢靠近。
 pixiInit;
 

@@ -1,10 +1,10 @@
-﻿changeBg:MusicRoom.jpg;
+changeBg:MusicRoom.jpg;
 
 旁白:文化周过去两周后，音乐教室的窗台上，多了一盆不知道谁放的绿萝。
 旁白:运谦说，那是合唱团搬来的。理由是——这里"太素了"。
 
-changeFigure:WanHim_Smile.png -position=center;
-运谦:今天不弹《窗边有人在听》。
+changeFigure:WanHim_Smile.png;
+运谦:你来了。今天不弹《窗边有人在听》。
 {Name}:为什么？
 运谦:它已经有很多听众了。今天想弹一首，只有一个听众的。
 {Name}:新歌？
@@ -25,6 +25,8 @@ changeFigure:WanHim_Smile.png -position=center;
 运谦:后半句，你来写。
 旁白:你在谱子上写下：请继续和我交往吧。
 旁白:他看了很久，然后把谱子小心地收好，像收好一件终于等到名字的东西。
+changeBg:请和我交往吧.png -enter=enter;
+unlockCg:请和我交往吧.png -name:请和我交往吧;
 bgm:s_Title.mp3;
 旁白:窗外的天，一点一点暗成温柔的蓝色。
 旁白:而属于两个人的下一首歌，才刚刚写下第一小节。

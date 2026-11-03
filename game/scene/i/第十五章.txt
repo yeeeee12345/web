@@ -1,6 +1,6 @@
 changeBg:Classroom.jpg;
 
-changeFigure:Ivan_Normal.png -position:center;
+changeFigure:Ivan_Normal.png;
 
 旁白:周一的班会，班主任宣布两周后要办校园文化周，每个班准备一个展位。
 旁白:教室里很快热闹起来。
@@ -26,6 +26,8 @@ Ivan:……好。
 {Name}:你把它交出去了。
 Ivan:我知道。现在有点不习惯。
 Ivan:但计划，没有因此变糟。
+setVar:IvanWeekStyle=1;
+setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:重新安排;
 
 label:午餐;
@@ -39,10 +41,14 @@ Ivan:……
 Ivan:和你在一起以后，我好像比较敢把事情放到明天。
 {Name}:这叫进步。
 Ivan:这叫冒险。
+setVar:IvanWeekStyle=2;
+setVar:Ivan_Love=Ivan_Love+5;
 jumpLabel:重新安排;
 
 label:重新安排;
 
+{Name}:（他写下别人名字的时候，落笔很轻。） -when=IvanWeekStyle==1;
+{Name}:（那顿饭，他吃到最后才发现自己没看计划表。） -when=IvanWeekStyle==2;
 旁白:午休结束前，你们把计划表重新写了一遍。每一项都有负责的人，也留出了应付变化的时间。
 Ivan:我以前总觉得，只有亲自盯着，才算认真负责。
 {Name}:现在呢？
