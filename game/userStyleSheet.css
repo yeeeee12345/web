@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "思源宋体", "Source Han Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-family: "思源宋体", "WebgalUI", "资源圆体", "Source Han Serif SC", "Noto Serif SC", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -182,6 +182,505 @@ body {
   transform: translateY(-2px) !important;
   border-color: rgba(255, 244, 248, 0.82);
   background: linear-gradient(135deg, rgba(214, 94, 126, 0.98) 0%, rgba(172, 64, 94, 0.98) 100%) !important;
+}
+
+/* ============================================================
+   二级菜单全站视觉统一：薄暮胶片 · 黑曜石玻璃 & 玫瑰天鹅绒
+   覆盖 WebGAL 默认蓝/紫/绿菜单，保持与主舞台一致的轻剧场气质
+   ============================================================ */
+
+/* ---------- 1. 共享菜单外壳与底部/顶部导航栏 (Menu & MenuPanel) ---------- */
+._Menu_main_1a7i6_1 {
+  background: radial-gradient(circle at 50% 22%, #2b2131 0%, #16111c 62%, #0e0b12 100%) !important;
+  background-image: radial-gradient(circle at 50% 22%, #2b2131 0%, #16111c 62%, #0e0b12 100%) !important;
+  color: #faf6f2 !important;
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+}
+
+._MenuPanel_main_1c9ky_1 {
+  box-sizing: border-box !important;
+  background: rgba(13, 10, 18, 0.78) !important;
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 240, 244, 0.12);
+  border-bottom: 1px solid rgba(255, 240, 244, 0.12);
+  gap: 14px;
+}
+
+._MenuPanel_button_1c9ky_10 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  padding: 0.34em 24px !important;
+  margin-right: 0 !important;
+  align-items: center !important;
+  gap: 10px;
+  border-radius: 10px !important;
+  border: 1px solid transparent;
+  color: #c8b8c0 !important;
+  background: transparent !important;
+  letter-spacing: 0.12em;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease !important;
+}
+
+._MenuPanel_button_1c9ky_10:hover {
+  background-color: rgba(255, 240, 245, 0.08) !important;
+  border-color: rgba(255, 240, 245, 0.16);
+  color: #faf6f2 !important;
+}
+
+._MenuPanel_button_hl_1c9ky_44 {
+  background: linear-gradient(135deg, rgba(196, 82, 112, 0.36) 0%, rgba(154, 54, 82, 0.42) 100%) !important;
+  border: 1px solid rgba(235, 138, 166, 0.52) !important;
+  color: #fffdf9 !important;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(132, 38, 66, 0.28);
+}
+
+._MenuPanel_button_icon_1c9ky_38 {
+  transform: translateY(0) !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+._MenuPanel_button_icon_1c9ky_38 svg [stroke]:not([stroke="none"]) {
+  stroke: currentColor !important;
+}
+
+/* ---------- 2. 存档 / 读档界面 (Save & Load) ---------- */
+._Save_Load_main_1jtts_2 {
+  color: #faf6f2;
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+}
+
+._Save_Load_title_1jtts_17 {
+  opacity: 0.14 !important;
+}
+
+._Save_title_text_1jtts_35,
+._Load_title_text_1jtts_43 {
+  background: linear-gradient(135deg, #f2c2d0 0%, #faf6f2 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  text-shadow: none !important;
+}
+
+._Save_Load_top_button_1jtts_51 {
+  color: #b4a3ac !important;
+  border-bottom: 3px solid transparent !important;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease !important;
+}
+
+._Save_Load_top_button_text_1jtts_69 {
+  border-left: 1px solid rgba(255, 240, 244, 0.14) !important;
+}
+
+._Save_Load_top_button_1jtts_51:hover,
+._Load_top_button_1jtts_93:hover {
+  color: #faf6f2 !important;
+  background-color: rgba(255, 240, 245, 0.06) !important;
+  border-bottom: 3px solid rgba(231, 150, 172, 0.72) !important;
+}
+
+._Save_Load_top_button_on_1jtts_80,
+._Load_top_button_on_1jtts_93 {
+  color: #fffdf9 !important;
+  background-color: rgba(196, 82, 112, 0.22) !important;
+  border-bottom: 3px solid #d66080 !important;
+  font-weight: 700;
+}
+
+._Save_Load_content_element_1jtts_115 {
+  background: rgba(24, 19, 31, 0.84) !important;
+  border: 1.5px solid rgba(255, 240, 244, 0.16) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.42) !important;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms ease,
+    box-shadow 180ms ease !important;
+}
+
+._Save_Load_content_element_1jtts_115:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(231, 150, 172, 0.62) !important;
+  box-shadow: 0 18px 38px rgba(132, 38, 66, 0.30) !important;
+}
+
+._Save_Load_content_element_top_index_1jtts_138,
+._Load_content_elememt_top_index_1jtts_147 {
+  background: linear-gradient(135deg, #c45270 0%, #963652 100%) !important;
+  color: #fffdf9 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+._Save_Load_content_element_top_date_1jtts_151,
+._Load_content_element_top_date_1jtts_162 {
+  background: rgba(34, 27, 43, 0.96) !important;
+  color: #e6d7df !important;
+  border-bottom: 1px solid rgba(255, 240, 244, 0.10);
+  display: flex;
+  align-items: center;
+  font-size: 86% !important;
+  letter-spacing: 0.02em !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: 0 0.55em !important;
+  box-sizing: border-box !important;
+}
+
+._Save_Load_content_miniRen_1jtts_201 {
+  background-color: rgba(14, 11, 19, 0.90) !important;
+}
+
+._Save_Load_content_text_1jtts_166,
+._Load_content_text_1jtts_197 {
+  background: rgba(18, 14, 24, 0.94) !important;
+  color: #e9dde3 !important;
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  border-top: 1px solid rgba(255, 240, 244, 0.10);
+}
+
+._Save_Load_content_speaker_1jtts_184,
+._Load_content_speaker_1jtts_193 {
+  color: #f0a4b8 !important;
+  border-bottom: 1px solid rgba(255, 240, 244, 0.12) !important;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- 3. 游戏选项 / 设置界面 (Options & Sliders) ---------- */
+._Options_main_18ca6_2 {
+  font-family: "思源宋体", "WebgalUI", "资源圆体", "Source Han Serif SC", sans-serif !important;
+  color: #faf6f2;
+}
+
+._Option_title_text_shadow_18ca6_34,
+._Option_title_text_ts_18ca6_41,
+._NormalOption_title_bef_ogzuv_19,
+._NormalOption_title_sd_ogzuv_29 {
+  display: none !important;
+}
+
+._Option_title_text_18ca6_25 {
+  font-family: "思源宋体", "WebgalUI", "资源圆体", sans-serif !important;
+  font-weight: 500 !important;
+  background: linear-gradient(135deg, #fffdf9 0%, #f3d2dc 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  letter-spacing: 0.16em;
+}
+
+._Options_page_button_18ca6_164 {
+  font-family: "思源宋体", "WebgalUI", "资源圆体", sans-serif !important;
+  font-weight: 500 !important;
+  background: linear-gradient(135deg, #e8dce2 0%, #b8a6b0 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  opacity: 0.52 !important;
+  padding: 0.18em 0.55em;
+  border-radius: 10px;
+  border-bottom: 3px solid transparent;
+  transition: opacity 180ms ease, border-color 180ms ease !important;
+}
+
+._Options_page_button_18ca6_164:hover {
+  opacity: 0.85 !important;
+}
+
+._Options_page_button_active_18ca6_176 {
+  background-image: linear-gradient(135deg, #fffdf9 0%, #f0a4b8 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  opacity: 1 !important;
+  border-bottom: 3px solid #d66080;
+}
+
+._About_title_text_18ca6_66 svg [stroke]:not([stroke="none"]) {
+  stroke: #cbbbc3 !important;
+  transition: stroke 180ms ease;
+}
+
+._About_title_text_18ca6_66:hover svg [stroke]:not([stroke="none"]) {
+  stroke: #f0a4b8 !important;
+}
+
+._About_text_18ca6_76 {
+  background: linear-gradient(135deg, #f0a4b8 0%, #faf6f2 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(240, 164, 184, 0.45);
+  padding-bottom: 2px;
+}
+
+._NormalOption_ogzuv_1 {
+  margin: 0.45em 1.2em !important;
+  padding: 0.45em 0.6em !important;
+}
+
+._NormalOption_title_ogzuv_10 {
+  font-family: "思源宋体", "WebgalUI", "资源圆体", sans-serif !important;
+  font-weight: 500 !important;
+  background: linear-gradient(135deg, #faf6f2 0%, #edd0d9 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  letter-spacing: 0.08em;
+}
+
+._NormalButton_1qk3b_1 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  background-color: rgba(255, 240, 245, 0.06) !important;
+  color: #cbbbc3 !important;
+  border: 1px solid rgba(255, 240, 244, 0.14) !important;
+  border-radius: 8px !important;
+  padding: 0.28em 1.15em !important;
+  margin: 0 0.55em 0 0 !important;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease !important;
+}
+
+._NormalButton_1qk3b_1:hover {
+  background-color: rgba(196, 82, 112, 0.22) !important;
+  border-color: rgba(235, 138, 166, 0.55) !important;
+  color: #fffdf9 !important;
+}
+
+._NormalButtonChecked_1qk3b_18 {
+  background: linear-gradient(135deg, rgba(196, 82, 112, 0.88) 0%, rgba(154, 54, 82, 0.92) 100%) !important;
+  border: 1px solid rgba(255, 228, 236, 0.52) !important;
+  color: #fffdf9 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 6px 18px rgba(132, 38, 66, 0.34);
+}
+
+._Option_select_button_18ca6_111 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  background: rgba(255, 240, 245, 0.07) !important;
+  color: #faf6f2 !important;
+  border: 1px solid rgba(255, 240, 244, 0.18) !important;
+  border-radius: 8px !important;
+  padding: 0.3em 1.1em !important;
+}
+
+._Option_select_button_18ca6_111:hover,
+._Option_select_button_18ca6_111:focus-visible,
+._Option_select_button_active_18ca6_130 {
+  border-color: rgba(235, 138, 166, 0.72) !important;
+  background: rgba(196, 82, 112, 0.24) !important;
+  color: #fffdf9 !important;
+}
+
+._Option_select_menu_18ca6_136 {
+  background: rgba(22, 17, 29, 0.97) !important;
+  border: 1px solid rgba(255, 240, 244, 0.20) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55) !important;
+  padding: 0.35em !important;
+  margin-top: 6px;
+}
+
+._Option_select_item_18ca6_112 {
+  background: transparent !important;
+  color: #d9cad2 !important;
+  border-radius: 6px !important;
+  border-bottom: 0 !important;
+}
+
+._Option_select_item_18ca6_112:hover,
+._Option_select_item_18ca6_112:focus-visible,
+._Option_select_item_active_18ca6_157 {
+  background: rgba(196, 82, 112, 0.36) !important;
+  color: #fffdf9 !important;
+}
+
+/* 设置页滑块：替换 WebGAL 森林绿轨道为玫瑰天鹅绒 */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, rgba(154, 54, 82, 0.92), rgba(214, 96, 128, 0.92)) !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.45) !important;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, rgba(176, 64, 96, 0.96), rgba(231, 136, 162, 0.96)) !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #fffdf9 !important;
+  border: 2px solid #c45270;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.48) !important;
+}
+
+input[type="range"]::-moz-range-track {
+  background: linear-gradient(90deg, rgba(154, 54, 82, 0.92), rgba(214, 96, 128, 0.92)) !important;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #fffdf9 !important;
+  border: 2px solid #c45270;
+}
+
+/* ---------- 4. 剧情回想 (Backlog) ---------- */
+._Backlog_main_1mift_2,
+._Backlog_main_out_1mift_15 {
+  background: rgba(13, 10, 18, 0.90) !important;
+  backdrop-filter: blur(18px);
+}
+
+._backlog_title_1mift_62 {
+  background: linear-gradient(150deg, #fffdf9 0%, #f5dce4 55%, #e796ac 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  letter-spacing: 0.14em;
+}
+
+._backlog_content_1mift_72 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+}
+
+._backlog_item_1mift_85 {
+  padding-bottom: 1.1em;
+  border-bottom: 1px solid rgba(255, 240, 244, 0.08);
+}
+
+._backlog_item_content_name_1mift_114 {
+  background: linear-gradient(150deg, #fffdf9 0%, #f0a4b8 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+._backlog_item_content_text_1mift_158 {
+  color: #efe7ec !important;
+  line-height: 1.7;
+}
+
+._backlog_item_button_element_1mift_145 {
+  background: rgba(255, 240, 245, 0.08) !important;
+  border: 1px solid rgba(255, 240, 244, 0.14);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+._backlog_item_button_element_1mift_145:hover {
+  background: rgba(196, 82, 112, 0.36) !important;
+  border-color: rgba(235, 138, 166, 0.55);
+}
+
+/* ---------- 5. CG 与原声鉴赏室 (Appreciation Gallery / Extra) ---------- */
+._extra_16jj3_2 {
+  background: radial-gradient(circle at 50% 18%, #2b2131 0%, #15111b 64%, #0d0a12 100%) !important;
+  background-image: radial-gradient(circle at 50% 18%, #2b2131 0%, #15111b 64%, #0d0a12 100%) !important;
+  font-family: "思源宋体", "WebgalUI", "资源圆体", "Source Han Serif SC", sans-serif !important;
+}
+
+._extra_title_16jj3_40 {
+  font-family: "思源宋体", "WebgalUI", "资源圆体", sans-serif !important;
+  font-weight: 500 !important;
+  background: linear-gradient(150deg, #fffdf9 0%, #f5dce4 60%, #e796ac 100%) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  letter-spacing: 0.16em;
+}
+
+._extra_top_icon_16jj3_20:hover {
+  background: rgba(196, 82, 112, 0.32) !important;
+}
+
+._bgmContainer_16jj3_59 {
+  background: rgba(20, 16, 28, 0.92) !important;
+  background-image: none !important;
+  backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(255, 240, 244, 0.18) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.52);
+  padding: 1.15em 2em !important;
+}
+
+._bgmName_16jj3_110 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  color: #faf6f2 !important;
+  letter-spacing: 0.08em;
+}
+
+._bgmControlButton_16jj3_95 {
+  background: rgba(255, 240, 245, 0.08) !important;
+  border: 1px solid rgba(255, 240, 244, 0.24) !important;
+  border-radius: 8px !important;
+  transition: background-color 180ms ease, border-color 180ms ease !important;
+}
+
+._bgmControlButton_16jj3_95:hover {
+  background: rgba(196, 82, 112, 0.38) !important;
+  border-color: rgba(235, 138, 166, 0.70) !important;
+  box-shadow: none !important;
+}
+
+._bgmElement_16jj3_118 {
+  font-family: "思源宋体", "Source Han Serif SC", serif !important;
+  background-color: rgba(255, 240, 245, 0.07) !important;
+  border: 1px solid rgba(255, 240, 244, 0.12);
+  border-radius: 8px !important;
+  color: #e6d8df !important;
+  letter-spacing: 0.06em;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease !important;
+}
+
+._bgmElement_16jj3_118:hover {
+  background-color: rgba(196, 82, 112, 0.28) !important;
+  border-color: rgba(235, 138, 166, 0.52);
+  color: #fffdf9 !important;
+}
+
+._bgmElement_active_16jj3_148 {
+  background: linear-gradient(135deg, rgba(196, 82, 112, 0.92) 0%, rgba(154, 54, 82, 0.96) 100%) !important;
+  border-color: rgba(255, 228, 236, 0.55) !important;
+  color: #fffdf9 !important;
+  font-weight: 600;
+}
+
+._cgElement_16jj3_170,
+._cgStackItem_16jj3_190 {
+  background-color: rgba(28, 22, 36, 0.88) !important;
+  border: 1.5px solid rgba(255, 240, 244, 0.20);
+  border-radius: 10px !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.48) !important;
+}
+
+._cgElementStack_16jj3_185 {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+._cgNav_16jj3_239 {
+  background-color: rgba(255, 240, 245, 0.08) !important;
+  border: 1px solid rgba(255, 240, 244, 0.16);
+  color: #cbbbc3 !important;
+  border-radius: 8px !important;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease !important;
+}
+
+._cgNav_16jj3_239:hover {
+  background-color: rgba(196, 82, 112, 0.28) !important;
+  border-color: rgba(235, 138, 166, 0.52);
+  color: #fffdf9 !important;
+}
+
+._cgNav_active_16jj3_260 {
+  background: linear-gradient(135deg, rgba(196, 82, 112, 0.92) 0%, rgba(154, 54, 82, 0.96) 100%) !important;
+  border-color: rgba(255, 228, 236, 0.55) !important;
+  color: #fffdf9 !important;
+  font-weight: 600;
+}
+
+._showFullContainer_16jj3_270 {
+  background: rgba(8, 6, 12, 0.84) !important;
+  backdrop-filter: blur(12px);
+}
+
+._showFullCgMain_16jj3_283 {
+  background: rgba(22, 17, 29, 0.96) !important;
+  border: 1.5px solid rgba(255, 240, 244, 0.22);
+  border-radius: 14px !important;
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.65);
 }
 
 /* ---------- 黑屏章节序幕文字（intro:）润色 ---------- */

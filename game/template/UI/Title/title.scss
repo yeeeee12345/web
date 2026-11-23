@@ -16,8 +16,8 @@
   justify-content: center;
   align-items: flex-end;
   flex-flow: row nowrap;
-  gap: 22px;
-  padding: 0 96px 76px;
+  gap: 18px;
+  padding: 0 72px 72px;
   box-sizing: border-box;
   background: linear-gradient(
     to top,
@@ -33,9 +33,9 @@
   text-align: center;
   flex: 0 0 auto;
   white-space: nowrap;
-  min-width: 248px;
+  min-width: 215px;
   cursor: pointer;
-  padding: 0.72em 1.9em;
+  padding: 0.68em 1.55em;
   margin: 0;
   border-radius: 10px;
   border: 1.5px solid rgba(255, 245, 242, 0.24);
@@ -70,11 +70,25 @@
 
 .Title_button_text {
   color: #faf6f2;
-  padding: 0 0.2em;
-  font-size: 185%;
+  padding: 0 0.18em;
+  font-size: 175%;
   font-family: "思源宋体", "Source Han Serif SC", WebgalUI, serif;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   white-space: nowrap;
+}
+
+.Title_button_disabled {
+  opacity: 0.46;
+  cursor: not-allowed;
+  background: rgba(20, 16, 26, 0.52);
+  border-color: rgba(255, 245, 242, 0.14);
+
+  &:hover {
+    transform: none;
+    background: rgba(20, 16, 26, 0.52);
+    border-color: rgba(255, 245, 242, 0.14);
+    box-shadow: 0 10px 28px rgba(10, 7, 14, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
 }
 
 .Title_backup_background {

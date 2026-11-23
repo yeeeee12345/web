@@ -3,3 +3,5 @@ Game_key:cf74d9b274f4098;
 Title_img:请和我交往吧.png;
 Title_bgm:s_Title.mp3;
 Default_Language:zh_CN;
+Enable_Appreciation:true;
+Description:樱花落满星海高中校门的那天，转学而来的你遇见了把心事折进方格纸的班长Ivan，与把未完旋律留在窗边的运谦。;

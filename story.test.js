@@ -132,6 +132,12 @@ test('all 32 WebGAL scene files have valid syntax, labels, assets, animations, a
             initializedVars.add(varName);
           }
         } else if (head === 'changeBg' || head === 'unlockCg') {
+          if (head === 'unlockCg') {
+            assert.ok(
+              !bodyNoSemi.includes('-name:'),
+              `${rel}:${lineNo} unlockCg must use '-name=' instead of '-name:' -> ${line}`,
+            );
+          }
           const file = stripParams(bodyNoSemi);
           if (file !== 'none') {
             assert.ok(bgFiles.has(file), `${rel}:${lineNo} missing background '${file}'`);
@@ -142,6 +148,12 @@ test('all 32 WebGAL scene files have valid syntax, labels, assets, animations, a
             assert.ok(figureFiles.has(file), `${rel}:${lineNo} missing figure '${file}'`);
           }
         } else if (head === 'bgm' || head === 'unlockBgm') {
+          if (head === 'unlockBgm') {
+            assert.ok(
+              !bodyNoSemi.includes('-name:'),
+              `${rel}:${lineNo} unlockBgm must use '-name=' instead of '-name:' -> ${line}`,
+            );
+          }
           const file = stripParams(bodyNoSemi);
           if (file !== 'none') {
             assert.ok(bgmFiles.has(file), `${rel}:${lineNo} missing bgm '${file}'`);
@@ -243,6 +255,12 @@ test('complete 7-track soundtrack exists, is valid MP3 audio, is unlocked in sta
   const allSceneText = listSceneFiles(SCENE_DIR)
     .map((rel) => fs.readFileSync(path.join(SCENE_DIR, rel), 'utf-8'))
     .join('\n');
+
+  const configText = fs.readFileSync(path.join(GAME_DIR, 'config.txt'), 'utf-8');
+  assert.ok(
+    configText.includes('Enable_Appreciation:true;'),
+    'game/config.txt must enable Appreciation Gallery (Enable_Appreciation:true;)',
+  );
 
   for (const track of expectedTracks) {
     const fullPath = path.join(BGM_DIR, track);
