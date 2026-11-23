@@ -1,46 +1,51 @@
 label:第七章;
 
-bgm:s_Title.mp3 -volume=26;
-changeBg:House.jpg;
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
+changeBg:Bedroom_Morning.jpg;
 
-旁白:星期三。
-旁白:最近的校园生活，渐渐步入正轨。
-{Name}:今天放学之后……去哪里好呢？
+旁白:星期三。清晨的阳光穿过窗帘缝隙，在书桌一角洒下一道细长的光斑。
+旁白:转学以来的紧张感早已消散，校园里的每一条路都变得熟悉起来。
+{Name}:今天下午没有额外排班……放学之后去哪里好呢？
 
 changeBg:Classroom.jpg;
-旁白:上午的课很快结束。
-changeFigure:Ivan_Normal.png -right;
-Ivan:今天下午没有值日。
-Ivan:难得可以轻松一点。
-{Name}:那你准备做什么？
-Ivan:把下周活动的材料先整理出来。
-{Name}:这叫轻松？
-Ivan:这比上课轻松。
-changeFigure:none;
+旁白:上午的四节课节奏明快，黑板上的月考倒计时被值日生改成了“5天”。
+changeFigure:Ivan_Normal.png -right -enter=enter-from-right;
+Ivan:今天下午我没有值日，班务表也清空了。
+Ivan:难得可以稍微松一口气。
+{Name}:哦？那班长大人难得的轻松下午打算怎么过？
+Ivan:把下周班会要用的统计材料提前整理归档。
+{Name}:……你管整理材料叫“轻松”吗？
+changeFigure:Ivan_Happy.png -right;
+Ivan:至少不用听见粉笔敲黑板的声音，比连上三节数学课轻松得多。
 changeFigure:none -right;
-旁白:放学铃响起。
-旁白:你决定……
+旁白:最后一节课的下课铃清脆响起，教室里很快响起一片拉动椅子和收拾书包的声音。
+旁白:夕阳斜斜照进走廊，你背起书包，决定放学后的去处。
 
-choose:去找Ivan:ivan_route|去吉他社:wanhim_route;
+choose:留下来找Ivan:ivan_route|去吉他社找运谦:wanhim_route;
 
 label:ivan_route;
 
 changeBg:Classroom.jpg;
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+旁白:教室里的人差不多散尽了，只有Ivan还在讲台旁清点一摞刚收上来的练习卷。看见你折回来，他微微一愣。
+Ivan:我还以为你已经跟着大家去车站了。
+{Name}:反正今天不赶时间，想留下来陪你一会儿。
+Ivan:……那正好，帮我分担一半练习卷，一起送到教研室去吧。
+{Name}:诶，这就是班长理解的“陪你”吗？
+changeFigure:Ivan_Happy.png;
+Ivan:因为这是我刚才脑子里唯一想好该怎么开口的版本。
+旁白:他说得一本正经，耳朵却悄悄泛起一点不明显的红意，反倒逗得你笑出了声。
+changeBg:Hallway.jpg;
 changeFigure:Ivan_Normal.png;
-Ivan:我还以为你已经回家了。
-{Name}:今天想陪陪你。
-Ivan:那正好。帮我把这些练习卷送去办公室吧。
-{Name}:这就是"陪你"？
-Ivan:……这是我唯一想好该怎么开口的版本。
-旁白:他说得认真，你反而笑了。
-旁白:两个人一起把试卷送到办公室。走廊的灯一盏盏亮起来。
-Ivan:谢谢。
-Ivan:其实这些事情，一个人做还挺无聊的。
-{Name}:以后可以叫我一起。
+旁白:你们各自抱着半摞试卷走在傍晚的走廊上。天色微暗，声控灯随着脚步声一盏接一盏温柔亮起。
+Ivan:谢谢你刚才留下来。
+Ivan:其实像这样收发整理，平时一个人走这一趟，走廊确实挺安静的……安静得有点无聊。
+{Name}:那以后这种无聊的活儿，都可以顺口叫我一起呀。
+changeFigure:Ivan_Happy.png;
 Ivan:好。
-Ivan:……这句话我会记下来。
-{Name}:记在哪里？
-Ivan:不用记的地方。
+Ivan:……这句话，我会好好记下来的。
+{Name}:又要写进你的计划表里吗？
+Ivan:不用。有些事，记在不用翻本子的地方就行。
 setVar:Ivan_Love=Ivan_Love+10;
 changeFigure:none;
 jumpLabel:chapter_end;
@@ -48,53 +53,59 @@ jumpLabel:chapter_end;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
+bgm:窗边有人在听.mp3 -volume=45 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-left;
+旁白:推开音乐教室的门，运谦正趴在谱架边转着铅笔。听见脚步声，他立刻抬起头来。
+运谦:果然来了。
+{Name}:今天在练哪一首？
 changeFigure:WanHim_Normal.png;
-运谦:你来了。
-{Name}:今天练什么？
-运谦:准备写一首新歌。
-{Name}:不是还差一点的那首？
-运谦:那首是给活动写的。这首，是给我自己的。
-{Name}:已经有灵感了吗？
-运谦:还差一点。
-{Name}:差什么？
-运谦:差一个"放学后的校园"是什么感觉。
-旁白:他停下拨弦的手，认真看着你。
+运谦:打算起头写一首全新的歌。
+{Name}:不是之前停在半路的那首吗？
+运谦:之前那首已经快找到出口了。这一首，我想写给自己。
+{Name}:听起来很棒呀，已经有灵感了吗？
+运谦:差一点点，像是旋律就在嘴边，却还缺一个落脚的词。
+{Name}:缺什么词？
+运谦:缺一个能准确形容“放学后的校园”的感觉。
+旁白:他停下轻搭在琴弦上的手，转过身认真望着你，目光在夕阳里显得格外清澈。
 
 choose:很安静:quiet|很温暖:warm;
 
 label:quiet;
 
-{Name}:很安静。
-{Name}:安静到能听见自己翻书包的声音。
-运谦:和我想的一样。
-运谦:那你觉得，安静属于谁？
-{Name}:属于愿意留下来的人。
-旁白:他把这句话写进本子，字迹比平时大了一号。
+{Name}:我觉得……是很安静。
+{Name}:安静得连自己翻书包拉链的声音、还有远处操场的风声，都能听得一清二楚。
+changeFigure:WanHim_Smile.png;
+运谦:和我想的几乎一模一样。
+运谦:那你觉得，这样的安静，最后会属于谁呢？
+{Name}:属于明明可以早走，却还是愿意多留一会儿的人吧。
+旁白:他微微怔住，随即拿起铅笔把这句话写进记事本，字迹比平时工整也大了一号。
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:wan_end;
 
 label:warm;
 
-{Name}:夕阳照进教室的时候，总觉得特别温暖。
-运谦:……就是这种感觉。
-运谦:我一直在找一个词，原来这么简单。
-旁白:他把"温暖"两个字写进本子，笔尖停了一下，又添了一小笔。
+{Name}:夕阳斜斜照进教室的时候，桌椅都镀着一层橘色的光，总让人觉得特别温暖。
+changeFigure:WanHim_Smile.png;
+运谦:……对了，就是这种感觉。
+运谦:我对着空白谱纸苦想了半个下午，原来答案这么简单。
+旁白:他低头在纸页最上方写下“温暖”两个字，笔尖顿了顿，又在旁边轻轻画了个小小的休止符。
 setVar:WanHim_Love=WanHim_Love+15;
 jumpLabel:wan_end;
 
 label:wan_end;
 
-旁白:临走时，他轻声弹了那句新旋律。很短，但已经有了体温。
+旁白:临走前，他抱着吉他轻轻拨出刚刚诞生的那句新旋律。虽然只有短短几拍，却像刚晒过太阳的棉布一样，有了温柔的体温。
 changeFigure:none;
 jumpLabel:chapter_end;
 
 label:chapter_end;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-旁白:夕阳缓缓落下。樱花道上，越来越多人开始谈论下周的月考。
-旁白:今天也过了充实的一天。
-旁白:你和重要的人之间，又拉近了一点距离。
+旁白:落日缓缓沉到教学楼后面。樱花道上三三两两的同学都在低声聊着下周的月考范围。
+旁白:明明只是平凡的周三傍晚，心里却觉得充实而踏实。
+旁白:你和重要的人之间，又在不经意间靠近了小小一步。
 pixiInit;
 
 changeScene:第八章.txt;

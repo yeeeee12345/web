@@ -1,54 +1,58 @@
 label:第四章;
 
-bgm:s_Title.mp3 -volume=28;
+bgm:樱花与晨光.mp3 -volume=30 -enter=1200;
 changeBg:House.jpg;
 
-旁白:第五天。今天下午开始准备迎新活动。
+旁白:第五天。一想到下午就要开始筹备迎新活动，连出门时的脚步都轻快了不少。
 
 changeBg:Classroom.jpg;
-旁白:教室里的气氛比平时松，也比平时乱。
-changeFigure:Ivan_Normal.png;
+旁白:教室里的气氛比前几天松快了许多，黑板角落已经画上了迎新活动的倒计时。
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
 Ivan:早。
-{Name}:早。今天是不是要忙一下午？
-Ivan:嗯。班主任说最后一节不上，大家自由分组。
-Ivan:不过，自由分组的意思通常是——最后总有人落单。
-{Name}:你有办法？
-Ivan:我列了一张表，把容易落单的人先安排进组里。
-{Name}:……这张表，别被别人看见。
-Ivan:放心。收在这里。
-旁白:他拍了拍胸口的口袋。那里鼓鼓囊囊，装着一整个班的安排。
+{Name}:早呀，今天下午是不是要一口气忙到放学？
+Ivan:嗯，班主任说最后一节课改自由分组筹备。
+Ivan:不过按以往的经验，“自由分组”往往意味着——最后总会有一两个人不好意思开口，悄悄落单。
+{Name}:那班长大人有对策吗？
+changeFigure:Ivan_Happy.png;
+Ivan:我已经提前拟好了一张调配单，把性格比较安静的同学优先编进熟人的组里。
+{Name}:……这张单子可千万别被别人看见，不然大家都要感动坏了。
+Ivan:放心，藏得很严实。
+旁白:他轻轻拍了拍校服胸前的口袋。那只看似平整的口袋里，仿佛揣着一整个班的安稳。
 setVar:Ivan_Love=Ivan_Love+5;
 
 changeFigure:none;
-旁白:上午的课结束。
+旁白:上午的课程一转眼结束。
 
 changeBg:Hallway.jpg;
-changeFigure:Teacher_Normal.png;
-老师:下午自由分组，可以去协助各个部门。
-老师:做得多的人，活动当天可以少站半小时。
-旁白:走廊里立刻有人欢呼。
+changeFigure:Teacher_Normal.png -enter=enter-from-left;
+老师:下午进入自由筹备时间，大家可以去协助各个小组和社团。
+老师:出力最多的同学，活动当天可以少轮半小时的值班。
+旁白:话音刚落，走廊里立刻爆发出一阵雀跃的欢呼。
 changeFigure:none;
-{Name}:（这也算奖励吗。）
-旁白:你准备先去哪里？
+{Name}:（少站半小时也能当终极奖励，大家果然都很实在呀。）
+旁白:你整理了一下袖口，决定先去哪里搭把手。
 
 choose:去吉他社帮忙:去吉他社|留在教室帮忙:留在教室;
 
 label:去吉他社;
 
 changeBg:MusicRoom.jpg;
+changeFigure:WanHim_Smile.png -enter=enter-from-bottom;
+运谦:来得太及时了，正缺一个帮手。
+运谦:礼堂那台老音箱接触不太稳，得把音乐教室这台备用音箱先搬过去试音。
+{Name}:没问题，我来抬这边！
+旁白:可刚一发力，音箱的分量就比想象中沉了一截。走了没几步，你托着的那一侧便微微往下坠。
 changeFigure:WanHim_Normal.png;
-运谦:来得正好。
-运谦:帮我搬一下音箱。礼堂那台太旧了，今天要试。
-{Name}:没问题。
-旁白:音箱比想象中沉。你抱着的那一头，不时往下坠。
-运谦:换一下。重的那头给我。
-{Name}:我还没说重。
-运谦:你的手臂说了。
-旁白:两个人把音箱抬进礼堂。他在前面走得很稳，会提前说"上台阶"。
-旁白:试音的时候，线头接触不良，声音断断续续。他蹲在地上找了十分钟。
-运谦:找到了，是这里。
-{Name}:你连这个都会修？
-运谦:不会。但只有我会蹲下来找。
+运谦:停一下，换个方向。重的那头交给我就行。
+{Name}:我还没喊重呢。
+运谦:你的手腕刚才抖了一下，它替你喊了。
+旁白:他坚持把带电源模块那头换到自己手里。走在前面时步子放得很稳，每逢转弯和门槛都会提前轻声提醒一句“小心台阶”。
+changeBg:Auditorium.jpg;
+旁白:进了礼堂插上电源，音箱却发出断断续续的电流杂音。运谦二话不说蹲在舞台边，顺着缠在一起的音频线一根根排查了整整十分钟。
+changeFigure:WanHim_Smile.png;
+运谦:找到了，是这截转接头松了。
+{Name}:哇，你连音箱线路都会修？
+运谦:其实也不会，只是我比较有耐心蹲下来一点点找而已。
 setVar:WanHim_Love=WanHim_Love+10;
 changeFigure:none;
 jumpLabel:下午集合;
@@ -56,18 +60,20 @@ jumpLabel:下午集合;
 label:留在教室;
 
 changeBg:Classroom.jpg;
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+Ivan:来得正好，这些迎新指引海报得在四点前贴满整栋教学楼。
+{Name}:交给我们吧，分工合作肯定快！
+旁白:厚厚一卷海报抱在怀里沉甸甸的。你们一人负责扯胶带，一人负责对齐贴平，顺着楼梯从一楼一路忙到四楼。
+changeBg:Hallway.jpg;
 changeFigure:Ivan_Normal.png;
-Ivan:来得正好。
-Ivan:帮我把这些海报贴到教学楼去。
-{Name}:交给我。
-旁白:海报比想象中多。你们一人拿胶带，一人拿海报，从一楼贴到四楼。
-旁白:在二楼走廊，一阵风把刚贴好的海报掀起来了一角。
-Ivan:我来按着，你来粘。
-{Name}:好，你按着，我来粘。
-旁白:风一遍遍地吹，你们一遍遍地压。等到贴完，两个人都笑了。
-Ivan:效率比我一个人高多了。
-{Name}:合作愉快。
-Ivan:嗯。合作愉快。
+旁白:贴到二楼风口时，一阵穿堂风猛地卷过来，刚压好的海报哗啦一声掀起了半边。
+Ivan:别松手！我按住上角，你贴下面。
+{Name}:好，一二三——贴！
+旁白:风一次次来捣乱，你们就一次次互相配合着按住边角。等最后一张海报稳稳落位，两人都忍不住靠着墙笑了起来。
+changeFigure:Ivan_Happy.png;
+Ivan:比我一个人贴，效率高了不止一倍。
+{Name}:那叫合作愉快，班长。
+Ivan:嗯，合作愉快。
 setVar:Ivan_Love=Ivan_Love+10;
 changeFigure:none;
 jumpLabel:下午集合;
@@ -75,38 +81,41 @@ jumpLabel:下午集合;
 label:下午集合;
 
 changeBg:Auditorium.jpg;
-旁白:下午四点，各个组在礼堂前集合。
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png;
-Ivan:海报全部贴完了。
-运谦:音箱也调好了，明天再试一次。
-{Name}:大家都很厉害。
-changeFigure:Teacher_Normal.png;
-老师:很好。今天是准备的第一天，进度已经比往年快了。
-老师:明天还有一天，活动就开始了。
-老师:希望一切顺利。
-changeFigure:none;
+旁白:下午四点整，各组同学陆续回到礼堂前汇总进度。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+Ivan:教学楼四个楼层的指引海报和摊位牌都已经全部到位。
+运谦:礼堂的音箱和吉他线路也调稳了，明早再最后过一遍音就行。
+{Name}:大家今天效率都好高呀。
 changeFigure:none -left;
 changeFigure:none -right;
-旁白:老师们散开后，礼堂里安静下来，只剩几个人还在收拾。
+changeFigure:Teacher_Normal.png;
+老师:辛苦各位了，今天的筹备进度比往年都要利落。
+老师:大家早点回去休息，明天的迎新活动，就看你们的了。
+changeFigure:none;
+旁白:人群渐渐散去，空旷的礼堂只剩下几缕穿过高窗的金色斜阳。
 
 changeBg:SchoolGate.jpg;
-changeFigure:WanHim_Normal.png;
-旁白:你准备回家的时候，运谦追了上来。
-运谦:明天……能早点来吗？
-{Name}:当然。怎么了？
-运谦:活动开场的那首曲子，我想先弹给一个人听。
-运谦:就当是彩排。
-{Name}:那我几点到？
-运谦:七点半。音乐教室。
-{Name}:七点半？学校七点五十才开门。
-运谦:我有钥匙。
-运谦:吉他社的特权。
+pixiPerform:cherryBlossoms;
+changeFigure:WanHim_Normal.png -enter=enter-from-right;
+旁白:你背好书包准备出校门时，身后传来一阵轻快的脚步声，运谦小跑着追了上来。
+运谦:{Name}，明天……能麻烦你早点来学校吗？
+{Name}:可以呀，发生什么事了吗？
+运谦:迎新开场要弹的那首曲子，在正式上台之前，我想先单独弹给一个人听。
+运谦:就当是我的私人彩排。
+{Name}:没问题！那我明天几点到？
+运谦:七点半，音乐教室。
+{Name}:七点半？学校不是七点五十才正式开教学楼大门吗？
+changeFigure:WanHim_Smile.png;
+运谦:嘘——我有侧门和音乐教室的备用钥匙。
+运谦:吉他社社员的独家特权。
 setVar:WanHim_Love=WanHim_Love+5;
 
+pixiInit;
 changeFigure:none;
-changeBg:House.jpg;
-旁白:回到家，你在手账上写：明天七点半，音乐教室。
-旁白:写完才发现，"七点半"这三个字，你写得很用力。
+changeBg:Bedroom_Night.jpg;
+bgm:雨声与心事.mp3 -volume=26 -enter=1500;
+旁白:回到家，你在台灯下打开手账，在明天的日程第一行写下：七点半，音乐教室。
+旁白:落笔收尾时你才发现，“七点半”三个字写得格外清晰有力，连明天早起的闹钟都特意提前调好了十分钟。
 
 changeScene:第五章.txt;

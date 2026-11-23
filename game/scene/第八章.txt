@@ -1,70 +1,73 @@
 label:第八章;
 
-bgm:s_Title.mp3 -volume=26;
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeBg:Bedroom_Morning.jpg;
 
-旁白:星期四。天气很好。
-{Name}:今天好像会是平静的一天。
+旁白:星期四，晴空万里。清晨的微风带着初春特有的暖意，吹动窗台上的纱帘。
+{Name}:天气这么好，今天大概会是平静又顺心的一天吧。
 
 changeBg:Classroom.jpg;
-旁白:上午的课程结束。
-changeFigure:Teacher_Normal.png;
-老师:从明天开始月考复习。
-老师:希望大家提前准备。
+旁白:上午的课程结束时，班主任站在讲台前轻轻敲了敲黑板。
+changeFigure:Teacher_Normal.png -enter=enter-from-left;
+老师:同学们注意一下，从明天起全班进入月考集中复习阶段。
+老师:各自把错题本和资料整理好，提前进入状态。
 changeFigure:none;
-旁白:同学们纷纷讨论起来。
-changeFigure:Ivan_Normal.png;
-Ivan:有不会的地方，可以来问我。
-{Name}:那我就放心了。
+旁白:教室里立刻响起一片轻声哀嚎和翻找练习册的哗啦声。
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+Ivan:复习的时候如果遇到卡壳的题，随时可以拿来问我。
+{Name}:有班长这句话，我心里踏实一半了！
 Ivan:不过——
-Ivan:还是要先自己努力。
-{Name}:知道啦。
-Ivan:知道和做到之间，隔着好几道错题。
+Ivan:前提还是得先自己动笔试过一遍。
+{Name}:知道啦，绝对不偷懒。
+changeFigure:Ivan_Happy.png;
+Ivan:从“知道啦”到“做出来”之间，通常还隔着好几道粗心错题。
 setVar:Ivan_Love=Ivan_Love+5;
 changeFigure:none;
 
 changeBg:Cafeteria.jpg;
-旁白:午餐时间，窗边那张桌子边坐着你、Ivan和运谦。
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png;
-Ivan:刚才老师说的复习范围，你记下来了吗？
-{Name}:记了一半。第三章那几道题还是不明白。
-Ivan:吃完我讲给你听。
-运谦:先让人把午饭吃完吧。复习资料又不会趁这十分钟跑掉。
-Ivan:我也准备等你吃完再讲。
-{Name}:你们今天意见倒是很一致。
-运谦:难得有件事能达成共识。
-旁白:阳光落在桌面上。没有人真的把考试忘掉，但也没有人急着把这顿午餐变成补习课。
-{Name}:刚转来的时候，我总担心坐错位置。
+旁白:午休时，靠窗那张长桌旁依旧默契地聚齐了你、Ivan和运谦三个人。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+Ivan:刚才老师在黑板上划的数学复习范围，你都记全了吗？
+{Name}:记了大半，就是第三章函数那几道变式题还是不太转得过弯。
+Ivan:行，吃完午饭我拿草稿纸一步步拆给你看。
+changeFigure:WanHim_Smile.png -right;
+运谦:班长，好歹先让人安安心心把午饭吃完吧。复习资料又不会趁这十分钟长腿跑掉。
+Ivan:我本来也打算等吃完再讲。
+{Name}:难得看见你们俩意见这么一致呀。
+运谦:确实，值得在日历上画个圈纪念一下。
+旁白:明朗的日光落在餐盘边缘。谁也没有忘记下周的考试，却也没有谁急着把这顿轻松的午饭变成紧张的补习课。
+{Name}:说起来，刚转来那天，我还一直担心自己在食堂坐错位置呢。
 Ivan:现在呢？
-{Name}:现在知道这张桌子一直有人留位置。
-运谦:但别坐我这边。我的吉他包占着半张椅子。
-{Name}:那我下次先把它挪开。
-运谦:我会记住这句话。
+{Name}:现在知道，靠窗这张桌子永远都会替我留一个位子。
+运谦:不过可别抢我右手边，我的吉他包每天都霸占着半张椅子。
+{Name}:那下次我提前五分钟来，先把你的吉他包抱到旁边去。
+运谦:行，这句话我可记牢了。
 
 changeFigure:none;
 changeFigure:none -left;
 changeFigure:none -right;
 changeBg:Hallway.jpg;
-旁白:放学后，你站在楼梯口。
-旁白:今天准备去哪里？
+旁白:下午放学铃响起，人潮顺着楼梯往下涌去。你站在楼梯口停了停脚步。
+旁白:距离月考只剩最后几天，今天放学想去哪里？
 
-choose:去找Ivan:ivan_route|去吉他社:wanhim_route;
+choose:回教室帮Ivan整理:ivan_route|去吉他社找运谦:wanhim_route;
 
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png;
-Ivan:正准备回去。
-{Name}:一起整理教室吧。
-Ivan:好。
-旁白:你们把桌椅摆整齐，把黑板擦到没有水痕。
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+Ivan:还没走？我正准备把教室最后收拾一下。
+{Name}:我看值日生走得匆忙，留下来陪你一起弄吧。
+Ivan:好，那麻烦你帮我把窗扣检查一下。
+旁白:你们默契地把歪斜的桌椅一排排拉齐，又拧干抹布把黑板上的粉笔印擦得干干净净，连一点水痕都没留。
+changeFigure:Ivan_Happy.png;
 Ivan:谢谢。
 Ivan:其实……
-Ivan:和你一起做事，比一个人轻松。
-{Name}:那就一直一起做。
-Ivan:嗯。……嗯。
-旁白:他连着点了两次头，像是怕第一次点得不够。
+Ivan:有你在旁边一起做这些琐事，好像真的比一个人轻松很多。
+{Name}:既然轻松，那以后就一直一起做呀。
+Ivan:嗯……嗯。
+旁白:他认真地连着点了两次头，像怕一次不够郑重，耳尖在夕阳下透着淡淡的红。
 setVar:Ivan_Love=Ivan_Love+10;
 setVar:MessageTarget=1;
 changeFigure:none;
@@ -73,73 +76,86 @@ jumpLabel:night;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png;
-运谦:来得正好。
-运谦:歌词终于写完了。
-{Name}:真的吗？
-运谦:想听第一段吗？
+bgm:窗边有人在听.mp3 -volume=45 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-left;
+运谦:来得正好，我正打算收拾东西呢。
+运谦:前几天起头的那首新歌，第一段歌词刚刚终于写顺了。
+{Name}:真的吗？进度好快！
+运谦:要不要现在先听听看第一段？
 
-choose:想听:listen|留到完成再听:later;
+choose:想听，现在就弹吧:listen|留到彻底写完再听:later;
 
 label:listen;
 
-旁白:他轻轻弹起吉他。旋律温柔而平静。
-运谦:这一段，写的是有人愿意留下来的傍晚。
-{Name}:我在里面吗？
-运谦:你觉得呢。
-旁白:他没有正面回答，却把最后一句又弹了一遍。
+旁白:他抱起吉他，指尖轻柔地落在琴弦上。温柔而平稳的旋律顺着晚风在教室里慢慢散开。
+运谦:这一段写的，是放学后有人愿意留下来陪伴的傍晚。
+{Name}:那……我也在里面吗？
+changeFigure:WanHim_Smile.png;
+运谦:你猜呢？
+旁白:他没有正面回答，眼里却漾开温和的笑意，把最后那句尾音轻轻又重弹了一遍。
 setVar:WanHim_Love=WanHim_Love+15;
 setVar:MessageTarget=2;
+changeFigure:none;
 jumpLabel:night;
 
 label:later;
 
-{Name}:我想等它完全写完再听。
-运谦:那就约好了。
-运谦:完成以后，第一个唱给你。
-{Name}:为什么是第一个？
-运谦:因为从头到尾，你听的都是坏的那几版。
+{Name}:我想忍一忍，等它彻彻底底写完那天再一口气听个痛快。
+changeFigure:WanHim_Smile.png;
+运谦:好，那就这么约好了。
+运谦:等它完工那天，第一个完整弹给你听。
+{Name}:为什么非要让我当第一个呀？
+运谦:因为从最初磕磕绊绊的草稿开始，你一直都在耐心听那些还不完美的版本啊。
 setVar:WanHim_Love=WanHim_Love+10;
 setVar:MessageTarget=2;
+changeFigure:none;
 jumpLabel:night;
 
 label:night;
 
+bgm:雨声与心事.mp3 -volume=26 -enter=1500;
+changeFigure:none;
+changeFigure:none -left;
+changeFigure:none -right;
 changeBg:Bedroom_Night.jpg;
-旁白:回到家后，手机忽然震动了一下。
+旁白:夜深人静，洗漱完刚靠在床头，放在枕边的手机屏幕忽然轻轻震动了一下。
 jumpLabel:night_ivan -when=MessageTarget==1;
 jumpLabel:night_wanhim -when=MessageTarget==2;
+jumpLabel:night_end;
 
 label:night_ivan;
 
 changeBg:phone.jpg;
-旁白:是Ivan发来的消息。
-Ivan:今天那句话，当我没说。
-{Name}:哪句？
-Ivan:"和你一起做事比较轻松"那句。
-Ivan:发出来以后，觉得太随便了。
-{Name}:不随便。我也是这么想的。
+旁白:亮起的聊天框里，是Ivan发来的一条新消息。
+Ivan:今天放学时说的那句话，就当我没说。
+{Name}:哪一句呀？
+Ivan:“和你一起做事比较轻松”那句。
+Ivan:刚才回家复盘了一下，觉得说得太随便，不够正式。
+{Name}:一点也不随便呀。因为我心里也是这么想的。
 Ivan:……
-Ivan:那我不收回了。晚安。
-旁白:你看着屏幕，忍不住笑了出来。
+旁白:屏幕顶端显示“对方正在输入”停顿了好一会儿，才跳出下一条回复。
+Ivan:既然你也这么想，那我不收回了。早点休息，晚安。
+旁白:你捧着微微发烫的手机屏幕，忍不住弯起嘴角笑了出来。
 jumpLabel:night_end;
 
 label:night_wanhim;
 
 changeBg:phone.jpg;
-旁白:是运谦发来的一段语音。
-旁白:你点开。里面很安静，只有一段吉他声。
-旁白:旋律停在半路。紧接着，是他很轻的一句："先听到这里。"
-{Name}:（才写一半就发给我，真的好吗。）
-旁白:你回了一句"很好听"。对面很久没有回复。
-旁白:再回复时，只有四个字："晚安，好梦。"
+bgm:窗边有人在听.mp3 -volume=42 -enter=1000;
+旁白:亮起的对话框里，是运谦发来的一条二十多秒的语音。
+旁白:你戴上耳机点开播放。背景安静极了，只能听见指尖拨动琴弦时温柔的共鸣。
+旁白:旋律照例在半路轻轻收住，紧接着传来他放得很轻的嗓音：“今天先听到这里。”
+{Name}:（明明还没写完，却特意录下来发给我，真的好犯规呀。）
+旁白:你笑着敲下一句“很好听，我很喜欢”。对面安静了足足半分钟。
+旁白:再亮起屏幕时，只有简短却温柔的四个字：“晚安，好梦。”
 jumpLabel:night_end;
 
 label:night_end;
 
+bgm:雨声与心事.mp3 -volume=24 -enter=1400;
 changeBg:Bedroom_Night.jpg;
-旁白:深夜，你把手机放回枕边。
-{Name}:明天，又会发生什么呢？
-旁白:窗外的樱花静静开着，像什么都知道，又什么都不说。
+旁白:关掉床头灯，你把手机轻轻放回枕边。
+{Name}:明天，又会是什么样的一天呢？
+旁白:窗外的樱花在夜色里静静舒展，像把所有没说破的心事都温柔藏在了风里。
 
 changeScene:第九章.txt;

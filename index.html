@@ -60,7 +60,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        background: radial-gradient(circle at 50% 42%, #fffcf9 0%, #f8ebf0 55%, #edd9e2 100%);
         top: 0;
         opacity: 1;
         transition: opacity 1s;
@@ -74,9 +74,9 @@
         opacity: 0;
         background: linear-gradient(
           165deg,
-          rgba(255, 255, 255, 0.25) 0%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0.25) 100%
+          rgba(255, 250, 248, 0.35) 0%,
+          rgba(255, 252, 250, 1) 50%,
+          rgba(255, 246, 249, 0.35) 100%
         );
         transition: opacity 1s;
       }
@@ -90,7 +90,7 @@
         font-size: 175%;
         transition: opacity 1s;
         z-index: 15;
-        font-family: '思源宋体', Georgia, serif;
+        font-family: '思源宋体', 'Source Han Serif SC', Georgia, serif;
       }
 
       .title-enter-container__center-text {
@@ -99,12 +99,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
       }
 
       .title-enter-container__center-text > div {
         letter-spacing: 0.25em;
-        padding: 2em 2em 2em 2em;
-        text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        padding: 2em 2.4em;
+        text-align: center;
+        text-shadow: 0 2px 24px rgba(134, 56, 80, 0.16);
         transition: text-shadow 1s;
         font-size: 175%;
         animation: title-enter-container__center-text--blink 4s infinite;
@@ -113,23 +115,32 @@
       .title-enter-container__center-text:focus-visible > div {
         outline: 4px solid rgba(142, 53, 74, 0.8);
         outline-offset: 16px;
-        border-radius: 8px;
+        border-radius: 12px;
       }
 
       .title-enter__game-title {
         display: block;
-        color: #503b47;
-        font-size: 100%;
+        color: #4b2636;
+        font-size: 108%;
         font-weight: 600;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.24em;
+      }
+
+      .title-enter__game-title::after {
+        content: '';
+        display: block;
+        width: 3.6em;
+        height: 2px;
+        margin: 0.72em auto 0;
+        background: linear-gradient(90deg, transparent, rgba(184, 92, 116, 0.72), transparent);
       }
 
       .title-enter__start-hint {
         display: block;
-        margin-top: 1.25em;
-        color: #725e68;
-        font-size: 50%;
-        letter-spacing: 0.12em;
+        margin-top: 1.05em;
+        color: #7c5667;
+        font-size: 48%;
+        letter-spacing: 0.18em;
         text-shadow: none;
         animation: none;
       }

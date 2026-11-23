@@ -1,34 +1,34 @@
 label:第三章;
 
-bgm:s_Title.mp3 -volume=28;
-changeBg:House.jpg;
+bgm:樱花与晨光.mp3 -volume=30 -enter=1200;
+changeBg:Bedroom_Morning.jpg;
 
-旁白:第四天。
-{Name}:今天班会好像要宣布大事。
+旁白:第四天清晨，阳光把窗帘照得透亮。
+{Name}:昨天听前排同学说，今天班会好像要宣布一件大事。
 
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-旁白:樱花道两旁的树，已经开始落第二茬花。
+旁白:校门外的樱花已经落了第二茬，微风拂过时，整条大道像下起一场轻悄悄的雪。
 pixiInit;
 changeBg:Classroom.jpg;
 
-旁白:刚走进教室，就听见同学们在传什么。
-changeFigure:Ivan_Normal.png;
-Ivan:来了。
-{Name}:怎么了？
-Ivan:下周，学校要办春季迎新活动。
-Ivan:每个班负责一个摊位，还要出人去礼堂和图书馆帮忙。
-{Name}:听起来很热闹。
-Ivan:热闹的意思，通常是"事情很多"。
-旁白:他把通知单折好，压在自己的课本下面。
+旁白:刚踏进一年A班，教室里的议论声便扑面而来，连平时最安静的前排都在低头传纸条。
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+Ivan:早。你来了正好。
+{Name}:大家在聊什么呀，这么热闹？
+Ivan:学生会刚发的通知，下周学校要办春季迎新活动。
+Ivan:每个班都要负责一个互动摊位，另外还要抽人去礼堂舞台和图书馆帮忙维持秩序。
+{Name}:听起来好热闹，像校园祭一样！
+Ivan:在班长的词典里，“热闹”通常翻译成“突发状况很多”。
+旁白:他嘴上这么说着，手上却已经把活动通知整整齐齐折成四等份，稳稳压在课本最上面。
 setVar:Ivan_Love=Ivan_Love+5;
 
 changeFigure:none;
-旁白:上午的课照常上完。
+旁白:上午的课程在大家隐隐的期待里很快过去。
 
 changeBg:Hallway.jpg;
-旁白:午休时，你在走廊上站了一会儿。
-旁白:音乐教室的琴声，和教室里的安静，好像都在等你。
+旁白:午休的走廊阳光很好。一头飘来音乐教室若有似无的吉他声，另一头是安静得只剩沙沙写字声的教室。
+旁白:两边都像是藏着一段还没讲完的话，你站在走廊中央犹豫了一会儿。
 
 choose:去音乐教室:去音乐教室|留在教室:留在教室;
 
@@ -36,17 +36,20 @@ label:去音乐教室;
 
 changeFigure:none;
 changeBg:MusicRoom.jpg;
+bgm:窗边有人在听.mp3 -volume=45 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-left;
+运谦:今天来得比昨天还早。
+{Name}:想来听听你练琴，顺便沾点音乐教室的清静。
+运谦:那坐里面那张椅子吧，靠窗这边风有点大，吹久了会着凉。
+旁白:他低头拨响琴弦，流淌出来的是一段明快许多的新曲子，比前两天听见的那首完整得多。
+{Name}:这首是新写的吗？
 changeFigure:WanHim_Normal.png;
-运谦:今天来得比昨天早。
-{Name}:想听你练琴。
-运谦:那你坐那边。窗帘会漏风。
-旁白:他弹的是迎新活动要用的曲子，比之前那首完整得多。
-{Name}:这首是新的？
-运谦:嗯。为活动写的。
-运谦:不过……总觉得还少了点什么。
-{Name}:少了什么？
-运谦:一个能让它停下来的人。
-旁白:他说完自己先笑了，像是知道这句话有点奇怪。
+运谦:嗯，下周迎新活动礼堂开场要用的曲子。
+运谦:只是弹来弹去，总觉得还缺了一点东西。
+{Name}:缺什么呀？我觉得已经很动听了。
+运谦:缺一个……听见它时，愿意停下脚步的人。
+changeFigure:WanHim_Smile.png;
+旁白:说完他自己先轻轻笑了一声，像是不好意思承认这句话说得太认真。
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:班会准备;
 
@@ -54,51 +57,56 @@ label:留在教室;
 
 changeFigure:none;
 changeBg:Classroom.jpg;
+changeFigure:Ivan_Serious.png -enter=enter-from-right;
+Ivan:怎么没去食堂？
+{Name}:还不算太饿，打算过会儿错开高峰再去。你在忙什么？
 changeFigure:Ivan_Normal.png;
-Ivan:没去吃饭？
-{Name}:待会儿再去。
-Ivan:那帮我看一下这份名单。
-Ivan:迎新活动的人员分组，我排了三版，都不太满意。
-{Name}:哪里不满意？
-Ivan:第三版里，有人要连续站两个小时。我觉得不合理。
-{Name}:那可以换着来。
-Ivan:嗯。我再改改。
-旁白:他把名单让给你一半，你们一起把不合理的地方一个个圈出来。
-{Name}:你连别人站多久都算？
-Ivan:站到最后会很累。这个我知道。
+Ivan:正好，帮我看看这份迎新活动的排班表。
+Ivan:我已经改到第三版了，怎么排都觉得不够顺手。
+{Name}:哪里不满意呀？
+Ivan:你看第三版，下午两点那组同学要连续站满两个小时，中途连轮换喝水的时间都没有，太累了。
+{Name}:那把两小时拆成两班，中间让摊位和引导组的同学互换一下呢？
+changeFigure:Ivan_Happy.png;
+Ivan:……有道理。把两条线交叉排，就能空出半小时的缓冲。
+旁白:他把名单往你这边摊开一半，两人凑在一起用红笔把不合理的时间段一个个圈出来重排。
+{Name}:你连别人站久了脚酸都算得这么细。
+Ivan:站到后半场真的很累，这个我试过。
 setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:班会准备;
 
 label:班会准备;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeFigure:none;
 changeBg:Classroom.jpg;
-旁白:下午最后一节课，班主任把迎新活动的报名表贴到了黑板上。
-changeFigure:Teacher_Normal.png;
-老师:迎新活动在下周。摊位、礼堂、图书馆，都需要人。
-老师:现在是报名时间。
+旁白:下午最后一节班会课，班主任把春季迎新活动的分工表贴上了黑板正中。
+changeFigure:Teacher_Normal.png -enter=enter-from-left;
+老师:下周就是春季迎新活动了。班级摊位、礼堂舞台协助和图书馆引导都需要人手。
+老师:大家按自己的兴趣来报，重在参与。
 changeFigure:none;
+旁白:全班顿时响起一阵兴奋的讨论声。你也拿起了笔，决定写下自己的名字。
 
 choose:报名帮忙班级摊位:Ivan路线|报名礼堂舞台协助:Wan路线;
 
 label:Ivan路线;
 
-changeFigure:Ivan_Happy.png;
-Ivan:谢谢。
-Ivan:有你在，分组表至少不用改第四版了。
-{Name}:第四版多半还是要改的。
-Ivan:……你说得对。
-旁白:他认输得很快，快到让人差点没发现他在笑。
+changeFigure:Ivan_Happy.png -enter=enter-from-right;
+Ivan:谢谢你报了班级摊位。
+Ivan:有你加入，这份排班表总算不用熬夜改第四版了。
+{Name}:照你精益求精的性格，第四版多半还是会冒出来的吧。
+changeFigure:Ivan_Normal.png;
+Ivan:……被你看穿了。
+旁白:他认输得干脆利落，眼底掠过一丝极轻的笑意，快得几乎让人以为是错觉。
 setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:放学;
 
 label:Wan路线;
 
-changeFigure:WanHim_Smile.png;
-运谦:太好了。
-运谦:到时候要有人帮我调设备。台上看不到观众席，我总觉得不安。
-{Name}:交给我。我在台下第一排。
-运谦:……那就没有不安的理由了。
+changeFigure:WanHim_Smile.png -enter=enter-from-left;
+运谦:太好了，我还正愁找不到靠谱的搭档。
+运谦:演出那天舞台灯光一打，台上基本看不清台下，我一个人调设备心里总发虚。
+{Name}:放心交给我吧，设备我帮你盯着，演出时我就坐在台下第一排。
+运谦:……有你这句话，那我就真的没什么好慌的了。
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:放学;
 
@@ -107,23 +115,24 @@ label:放学;
 changeFigure:none;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png;
-旁白:放学的时候，你和Ivan、运谦在校门口凑到了一起，像是约好了一样。
-Ivan:明天见。
-运谦:别忘了你答应我的事。
-{Name}:你们今天怎么都怪怪的。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+旁白:放学铃响起时，你在校门口的樱花树下竟然同时撞见了Ivan和运谦，三人并肩往外走，像提前约好了一样。
+Ivan:明天开始就要正式筹备了，别忘了带记事本。
+运谦:也别忘了你刚才答应过我的事。
+{Name}:诶，你们俩今天怎么一唱一和的，怪怪的？
 Ivan:没有。
 运谦:没有。
-旁白:他们否认得整整齐齐。
-{Name}:好吧。明天见。
+旁白:两道声音齐刷刷落下来，否认得像排练过合声。
+{Name}:好好好，没有就没有。明天见啦！
 pixiInit;
 changeFigure:none;
 changeFigure:none -left;
 changeFigure:none -right;
-changeBg:House.jpg;
+changeBg:Bedroom_Night.jpg;
+bgm:雨声与心事.mp3 -volume=26 -enter=1500;
 
-旁白:回到家，你在手账上写下新的一行字：下周，迎新活动。
-旁白:不知道为什么，已经开始期待了。
+旁白:夜里回到家，你在手账上用彩笔重重画了个框：下周，春季迎新活动。
+旁白:原本只是普通的一行日程，不知为什么，看着看着就生出了几分藏不住的期待。
 
 changeScene:第四章.txt;

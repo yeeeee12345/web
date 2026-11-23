@@ -1,68 +1,74 @@
 label:第十二章;
 
-bgm:s_Title.mp3 -volume=25;
+bgm:考场钟声.mp3 -volume=26 -enter=1000;
 changeBg:Classroom.jpg;
 
-旁白:星期二。月考成绩公布的日子。
-{Name}:不知道成绩怎么样。
-旁白:教室里比平时更加热闹。
-changeFigure:Ivan_Normal.png -right;
-Ivan:成绩出来了。
-{Name}:这么快？
-Ivan:嗯。
-{Name}:你考得怎么样？
+旁白:星期二，月考成绩正式公布的日子。
+{Name}:嘴上说着平常心，真到发成绩单这天，心跳还是忍不住快了两拍。
+旁白:早读还没结束，教室里就比平时热闹了不少，几个人已经围着课代表打听分数线。
+changeFigure:Ivan_Normal.png -right -enter=enter-from-right;
+Ivan:各科成绩单刚刚发下来了。
+{Name}:这么快？老师们批卷速度也太神速了吧。
+Ivan:嗯，年级组昨晚连夜汇总出来的。
+{Name}:你这次考得怎么样？
 Ivan:还可以。
-{Name}:又是第一名吗？
+{Name}:又是稳居年级第一吗？
 Ivan:……
-Ivan:差不多。
-{Name}:果然。
-旁白:Ivan的表情和平时一样平静。
-旁白:但你注意到，他看成绩单的时间，比看任何一张通知都久。
-changeFigure:none;
+Ivan:差不多吧。
+{Name}:果然，班长大人稳得让人毫无悬念。
+旁白:Ivan的语气一如既往地平静。可你敏锐地注意到，他垂眼盯着那张对折的成绩单的时间，比看任何一张班级通知都要长上几秒。
 changeFigure:none -right;
 
-旁白:午休时间。
+旁白:熬过几节讲评课，午休铃终于敲响。
 changeBg:Cafeteria.jpg;
-旁白:午休时，你和Ivan、运谦坐在一起吃午饭。
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png;
-运谦:这次成绩怎么样？
-{Name}:还没仔细看。
+bgm:樱花与晨光.mp3 -volume=30 -enter=1400;
+旁白:靠窗的老位置上，你、Ivan和运谦照例凑在一起吃午饭。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+运谦:怎么样，大考官，这次成绩单看得还满意吗？
+{Name}:其实刚才一直忙着听讲评，还没来得及把总分细算一遍呢。
 
-{Name}:（答题卡比想象中干净，能写的都写了。） -when=StudyStyle==2;
-{Name}:（最后那道大题，用上了周五画满格子的草稿纸。） -when=StudyStyle==1;
+{Name}:（不过数学答题卡比平时干净了好多，能拿的分基本都稳稳拿到了。） -when=StudyStyle==2;
+{Name}:（尤其最后那道大题，全靠周五那张画满方格的草稿纸才把步骤写全。） -when=StudyStyle==1;
 
 jumpLabel:午餐_ivan -when=StudyStyle==1;
 jumpLabel:午餐_wanhim -when=StudyStyle==2;
 jumpLabel:午餐_平常;
 
 label:午餐_ivan;
-Ivan:基础题答得还可以，至少之前卡住的那几道都解出来了。
-{Name}:多亏某人周五画满格子的草稿纸。
+changeFigure:Ivan_Happy.png -left;
+Ivan:基础题和压轴步骤都答得很扎实，之前卡住的那几类变式题这次一道没丢。
+{Name}:多亏了某位班长周五晚上画满红笔的方格草稿纸呀。
 jumpLabel:午餐_平常;
 
 label:午餐_wanhim;
-运谦:反正卷面写得挺稳，慢慢写错得少。
-{Name}:借你的吉言，确实没怎么涂改。
+changeFigure:WanHim_Smile.png -right;
+运谦:你看吧，卷面写得稳，节奏不乱，错的地方自然就少。
+{Name}:借你吉言，这次真的几乎没怎么涂改，看着特别舒心。
 jumpLabel:午餐_平常;
 
 label:午餐_平常;
-Ivan:你们两个都不看的吗？
-运谦:成绩这种东西，知道结果就好了。
-{Name}:说得好。
-Ivan:……你们两个还真是。
-旁白:三个人同时笑了起来。勺子碰到餐盘，叮的一声。
+changeFigure:Ivan_Normal.png -left;
+changeFigure:WanHim_Normal.png -right;
+Ivan:你们两个，难道平时出成绩都不第一时间核对排名的吗？
+changeFigure:WanHim_Smile.png -right;
+运谦:成绩这种东西，尽力写完了，知道个大概结果就够啦。
+{Name}:说得太有道理了，举双手赞成。
+changeFigure:Ivan_Happy.png -left;
+Ivan:……真是拿你们两个没办法。
+旁白:三个人同时忍不住笑出声，金属勺子轻轻碰在餐盘边，发出一声清脆欢快的轻响。
 changeFigure:none;
 changeFigure:none -left;
 changeFigure:none -right;
 
-旁白:下午放学。
+旁白:下午的最后一节课在讲评声中结束，夕阳斜斜洒进空下来的教学楼。
 changeBg:Hallway.jpg;
-{Name}:这个学期，好像只剩下最后一件事没做。
-{Name}:有些话再不说，就会一直拖下去。
-旁白:你决定去哪里。
+旁白:站在熟悉的走廊窗边，风从半开的玻璃窗吹进来，带着初夏将至的微温。
+{Name}:不知不觉间，这个春天里，好像还剩下一件最重要的心事没有着落。
+{Name}:有些话如果一直留在心里不说，大概就会这样一天天拖下去吧。
+旁白:望着走廊两头各自通往的方向，你心里终于有了清晰的答案。此刻，你最想走向谁的身边？
 
-choose:去找Ivan:IvanEvent|去吉他社找运谦:WanHimEvent;
+choose:回教室去找Ivan:IvanEvent|去音乐教室找运谦:WanHimEvent;
 
 label:IvanEvent;
 
@@ -71,4 +77,3 @@ changeScene:i/第十二章_I.txt;
 label:WanHimEvent;
 
 changeScene:w/第十二章.txt;
-

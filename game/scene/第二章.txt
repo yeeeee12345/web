@@ -1,130 +1,141 @@
 label:第二章;
 
-bgm:s_Title.mp3 -volume=28;
-changeBg:House.jpg;
+bgm:樱花与晨光.mp3 -volume=30 -enter=1200;
+changeBg:Bedroom_Morning.jpg;
 
-旁白:第三天。
-{Name}:昨天说要降温，今天得多穿一件。
+旁白:转学第三天。窗外飘着微凉的晨风，天色清亮得像刚洗过。
+{Name}:天气预报说今天会降温，还是多套一件针织衫再出门吧。
 
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-旁白:刚到校门口，就看见Ivan站在樱树下。
-changeFigure:Ivan_Normal.png;
+旁白:刚走到校门口的樱花树下，你就看见一个熟悉的身影正低头翻着文件夹。
+changeFigure:Ivan_Normal.png -enter=enter-from-left;
 Ivan:早。
-{Name}:早，你在等人吗？
+{Name}:早呀，Ivan。你今天站在校门口，是在等人吗？
 Ivan:嗯。
-{Name}:等我？
-Ivan:昨天老师说，今天要收班级资料。
-Ivan:怕你忘了。
-{Name}:还好有你。不然我肯定要挨说。
-Ivan:所以我在等。
-旁白:他说得像一件理所当然的事，然后把手里的名单分了一半给你。
+{Name}:等谁呀？
+Ivan:等你。
+{Name}:诶？等我？
+Ivan:昨天放学时班主任临时通知，今天早读前要交转学档案的补充表。我怕你没听清，或者忘了带。
+{Name}:天哪，我还真忘了夹进书包里……还好有你在！
+changeFigure:Ivan_Happy.png;
+Ivan:我多带了一张空白表，进教室前填好来得及。
+旁白:他说得云淡风轻，仿佛早早站在风口等一个人只是份内小事，顺手把手里整理好的班级名单分了一半给你。
 setVar:Ivan_Love=Ivan_Love+5;
 
 pixiInit;
 changeFigure:none;
 changeBg:Classroom.jpg;
-changeFigure:none;
 
-旁白:上午的课结束得很快。
+旁白:补交完表格，上午的课程在一片翻书声中很快溜走。
 
 changeBg:Hallway.jpg;
-旁白:去食堂的路上，你又听见了音乐教室的琴声。
-旁白:还是那首没写完的曲子，但今天多走了两个小节。
+旁白:午休往食堂走的路上，经过楼梯拐角时，隐约又飘来音乐教室里的吉他声。
+旁白:还是那段熟悉的旋律，可你停下脚步细听了两秒——今天它竟然顺顺当当地多走了两个小节。
 
 choose:进去看看:进去看看|先去食堂:去食堂;
 
 label:进去看看;
 
 changeBg:MusicRoom.jpg;
+bgm:窗边有人在听.mp3 -volume=44 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-bottom;
+运谦:来了？我听见门口的脚步声停了一下。
+{Name}:今天那段旋律，好像比昨天走得更远了！
+运谦:这么小的改动，你居然一下子就听出来了？
+{Name}:当然啦，昨天明明在这里就停住了，今天后面多出了一小串很轻的爬音。
 changeFigure:WanHim_Normal.png;
-运谦:来了？
-{Name}:今天好像比昨天长了一点。
-运谦:你怎么听出来的？
-{Name}:昨天停在这里，今天停得更远了。
-运谦:……你连这个都记得。
-{Name}:因为很好听。
-旁白:他低头笑了一下，把谱子往你这边推了推。
-运谦:这是刚加的。还不太确定。
-{Name}:不确定也可以先留着。
-运谦:嗯。留着。
+运谦:……你连停在哪里都记得这么清楚。
+{Name}:因为很好听呀，听完总会想接下来会怎么接。
+旁白:他低头笑了一下，耳尖微微泛暖，把摊开的五线谱往你面前推了半寸。
+changeFigure:WanHim_Smile.png;
+运谦:这就是昨晚刚添上的两小节。其实还不太确定留不留。
+{Name}:不确定也没关系，先留着吧，说不定明天听又会喜欢上。
+运谦:嗯……听你的，先留着。
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:午餐;
 
 label:去食堂;
 
-旁白:你顺着人潮往前走。琴声在身后越来越远，又在拐角处忽然清楚了一秒。
-旁白:像是有人把窗户开大了一点。
-旁白:你到得早，顺手替Ivan占了靠窗的位置。
+旁白:你没有推门打扰，顺着去食堂的人潮往前走。身后的琴声渐渐淡下去，却在走廊拐角处忽然清晰了一秒，像是窗边的人把玻璃又推开了一寸。
+旁白:因为来得早，食堂里还空着不少位置。你打完饭，顺手在靠窗的长桌旁替Ivan留了个空座。
 setVar:Ivan_Love=Ivan_Love+5;
 jumpLabel:午餐;
 
 label:午餐;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeFigure:none;
 changeBg:Cafeteria.jpg;
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png -right;
-Ivan:数学作业最后一道，你会吗？
-运谦:你一见到新同学就聊作业。
-Ivan:这周要交。
-运谦:这周还有三天。
-旁白:两个人隔着你的餐盘说话，谁也没有先让谁。
+旁白:午餐桌旁，刚坐定没多久，Ivan和运谦便一左一右聊起了截然不同的话题。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+Ivan:对了，昨天数学作业的最后一道附加题，你写出来了吗？
+运谦:班长，你一见到新同学怎么张口闭口都是作业。
+Ivan:这周五就要统一收齐。
+运谦:离周五还有整整三天呢，先让人安安静静吃口饭吧。
+旁白:两个人隔着你的餐盘你一言我一语，谁也没先让步，却又默契地同时看向你。
 
 choose:和Ivan一起研究题目:和Ivan一起|和运谦聊聊音乐:和运谦聊;
 
 label:和Ivan一起;
 
-changeFigure:WanHim_Normal.png -right;
-运谦:那我先去找吉他社的人。
+运谦:好吧好吧，看来今天是作业赢了。我先去吉他社借调音器，回见。
+changeFigure:none -right;
 changeFigure:Ivan_Happy.png -left;
-Ivan:最后一道是有点绕。吃完我给你画个图。
-{Name}:你随身带草稿纸？
-Ivan:教室里的用完就补。习惯了。
-旁白:他讲题很有耐心。画到第三张图的时候，你终于看懂了。
-{Name}:原来是这样！
-Ivan:嗯。以后不会的，先自己想十分钟，再来问我。
-{Name}:十分钟会不会太短？
-Ivan:那就五分钟。
+Ivan:那道题的辅助线确实有点绕。吃完饭别急着走，我直接画张图给你看。
+{Name}:你连去食堂吃饭都随身带着草稿纸吗？
+changeFigure:Ivan_Normal.png -left;
+Ivan:书包侧袋一直放着，用完就补，习惯了。
+旁白:吃完午饭，他摊开一张工整的白纸，笔尖稳稳落下。讲到第三张示意图时，原本缠成一团的思路忽然豁然开朗。
+{Name}:哇，原来转个角就通了！
+Ivan:嗯，你反应很快。以后再遇到卡住的题，先自己想十分钟，想不通就直接问我。
+{Name}:十分钟会不会有点短呀？
+changeFigure:Ivan_Happy.png -left;
+Ivan:那就五分钟。省得你一个人对着草稿纸发愁。
 setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:放学;
 
 label:和运谦聊;
 
-changeFigure:Ivan_Normal.png -left;
-Ivan:那我先回教室。
+Ivan:既然有安排，那我先回教室整理笔记了。
+changeFigure:none -left;
 changeFigure:WanHim_Smile.png -right;
-运谦:他这人，一紧张就想讲题。
-{Name}:紧张？
-运谦:快到班级评比的时候就这样。他不说，但看得出来。
-运谦:对了，你平时听歌吗？
-{Name}:听一点。
-运谦:那下次借你一副耳机，听听我的歌单。
-{Name}:歌单里都是吉他吗？
-运谦:大部分是。剩下的是我还没写完的。
-旁白:你们聊了很久，从乐队聊到校园广播的片头曲。临走前，他给你看了一眼缠得很整齐的耳机线。
+运谦:其实他这人就这样，一到快要班级评比或者事情多的时候，就会下意识想拉着人讲题。
+{Name}:他也会紧张吗？看起来明明稳重得很。
+运谦:嘴上从来不说，但计划表写得越密，就说明心里绷得越紧。
+运谦:不说他了。你平时上下学路上，会听歌吗？
+{Name}:会听一点，轻音乐或者民谣都喜欢。
+运谦:那下次借你一副耳机，听听我存了很久的私藏歌单。
+{Name}:里面全都是吉他曲吗？
+运谦:大半是，剩下几首……是我自己录下来、还没写完的小样。
+旁白:你们从校园广播的片头曲一直聊到喜欢的乐队。临起身前，他从口袋里掏出一副缠得整整齐齐的耳机，朝你晃了晃。
 setVar:WanHim_Love=WanHim_Love+10;
 jumpLabel:放学;
 
 label:放学;
 
-changeFigure:none -left;
-changeFigure:none -right;
-changeBg:Library.jpg;
 changeFigure:none;
 changeFigure:none -left;
 changeFigure:none -right;
-旁白:放学后，你打算借一本书。图书馆比想象中安静。
-旁白:放学后，你在校门口停了一会儿。今天认识的人和没解开的题，都留在手账里。
+changeBg:Library.jpg;
+bgm:午后书页.mp3 -volume=30 -enter=1400;
+旁白:放学后，你没有立刻回家，而是顺着指示牌找到了教学楼侧翼的图书馆。
+旁白:午后的斜阳穿过高大的玻璃窗，在木质书架间落下一道道安静的光柱，空气里是旧纸张和木头混合的气息。
+旁白:你在文学区的最下层抽出一本封面素净的散文集，封底的借阅卡上还盖着一排褪色的蓝墨日期。
+{Name}:上一次被借出去，居然已经是两年前了。
+旁白:你在登记台办好借阅手续，抱着书走出安静的大厅。夕阳把回家的路拉得很长，书包比早上沉了一点，心里却觉得满当当的。
+
 label:章节结束;
 
 changeFigure:none;
 changeBg:Bedroom_Night.jpg;
+bgm:雨声与心事.mp3 -volume=26 -enter=1500;
 
-旁白:晚上，你翻开借来的书。
-旁白:书末的借阅卡上，盖着一排旧日期。上一本被借出去，是两年前了。
-{Name}:这本书在架子上，等了很久。
-旁白:有人把它留在这里，今天等到了你。
-旁白:第三天，结束了。
+旁白:晚上洗漱完，你在台灯下翻开刚借回来的旧书。
+旁白:扉页夹着一枚早已被压平的干樱花瓣，不知是两年前哪位同学不小心遗落在这里的。
+{Name}:原来这本书在架子上，安安静静等了这么久。
+旁白:有人把它留在这里，而在今天，它恰好等到了你。
+旁白:转学第三天，在淡淡的纸墨香气中结束了。
 
 changeScene:第三章.txt;

@@ -1,55 +1,58 @@
 label:第九章;
 
-bgm:s_Title.mp3 -volume=24;
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeBg:Bedroom_Morning.jpg;
 
-旁白:星期五。
-旁白:距离月考，只剩下几天。
-{Name}:最近大家都开始认真起来了。
+旁白:星期五。一转眼，距离月考只剩下最后这个周末。
+{Name}:最近班里每个人都在闷头刷题，连走廊里的笑声都小了不少。
 
 changeBg:Classroom.jpg;
-changeFigure:Teacher_Normal.png;
-老师:同学们，今天放学后，学校开放自习教室。
-老师:有需要的同学可以留下来。
+changeFigure:Teacher_Normal.png -enter=enter-from-left;
+老师:同学们，今天放学后学校开放三楼自习教室，一直到晚上六点半。
+老师:需要安静复习或者互相讲题的同学可以留下来。
 changeFigure:none;
-旁白:教室里顿时热闹起来。
-changeFigure:Ivan_Normal.png -right;
-Ivan:准备留下来吗？
-{Name}:应该会吧。
-Ivan:那待会见。
-Ivan:给你留个位置。靠窗的，光线好。
-{Name}:你连这个都算好了。
-Ivan:这叫经验。
-changeFigure:none;
+旁白:教室里立刻响起几声低低的商量声，不少人已经开始约起晚上的自习搭档。
+changeFigure:Ivan_Normal.png -right -enter=enter-from-right;
+Ivan:你今天放学准备留下来吗？
+{Name}:应该会留一会儿吧，回家一个人容易拖延。
+changeFigure:Ivan_Happy.png -right;
+Ivan:那待会儿自习教室见。
+Ivan:我会提前去占靠窗那排的位置，傍晚自然光线最好，不费眼睛。
+{Name}:你连这个细节都算好啦？
+Ivan:这叫考前实操经验。
 changeFigure:none -right;
 
-旁白:一天的课程结束。
+旁白:一天的课程在满黑板的复习提纲中画上句号。
 
 changeBg:Hallway.jpg;
-旁白:放学后，你决定……
+旁白:放学铃声响起，夕阳把长长的走廊染成温暖的琥珀色。
+旁白:你抱着书本站在走廊岔口，思考着今天的考前时光该怎么度过。
 
 choose:去自习教室找Ivan:ivan_route|去吉他社找运谦:wanhim_route;
 
 label:ivan_route;
 
 changeBg:Classroom.jpg;
-changeFigure:Ivan_Normal.png;
+changeFigure:Ivan_Happy.png -enter=enter-from-right;
+旁白:推开自习教室的门，Ivan果然已经坐在靠窗的桌边，对面那张桌子上提前替你摆好了一叠空白草稿纸。
 Ivan:我就知道你会来。
-{Name}:一个人复习太容易分心。
-Ivan:那今天一起吧。
-旁白:你们面对面坐着复习。他做题很快，落笔却很轻。
-{Name}:这题不会。
-Ivan:我看看。
-旁白:他讲题的时候，会把草稿纸转向你那边，用笔尖点着每一步。
-{Name}:你讲得比老师清楚。
-Ivan:因为我知道你哪一步会卡住。
-{Name}:你怎么知道？
-Ivan:因为你每次都在同一类题上皱眉。
-旁白:你忽然意识到，他注视的，不只是题目。
-{Name}:谢谢。
-Ivan:以后不会的，都可以问我。
-Ivan:……不过考试的时候不行。
-{Name}:那就现在多问几道。
+{Name}:一个人对着习题册太容易走神了，还是跟你一起踏实。
+changeFigure:Ivan_Normal.png;
+Ivan:那今天按科目轮着过一遍，有卡壳随时喊我。
+旁白:你们隔着桌子面对面坐下。他做题的速度极快，落笔却很轻，生怕笔尖敲桌的声音打断你的思路。
+{Name}:呜……这道压轴大题的第二问，我怎么列式都绕回原点了。
+Ivan:给我看看。
+旁白:他接过习题册，熟练地把画满方格的草稿纸转向你这边，用红笔一笔一画把关键的隐含条件圈了出来。
+{Name}:哇，听你拆开讲，比上课听得清楚多了！
+Ivan:因为我很清楚你在哪一步最容易卡住。
+{Name}:诶？你怎么会知道得这么准？
+Ivan:因为每次遇到同类型的题，你都会在读到第三行时微微皱起眉头。
+旁白:空气安静了一瞬。你忽然意识到，埋头刷题的这段时间里，他放在心上的，从来不只是试卷和题型。
+{Name}:……谢谢你，Ivan。
+changeFigure:Ivan_Happy.png;
+Ivan:以后只要不会，随时都能来问我。
+Ivan:……当然，下周一进考场以后不行。
+{Name}:那趁现在，我可得抓紧多问你两道！
 setVar:StudyStyle=1;
 setVar:Ivan_Love=Ivan_Love+10;
 changeFigure:none;
@@ -58,23 +61,25 @@ jumpLabel:chapter_end;
 label:wanhim_route;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png;
-运谦:今天不是来听歌的。
-{Name}:嗯？
-运谦:今天想休息一下。
-{Name}:发生什么事了吗？
-运谦:最近一直在练琴。
-运谦:手指记住了旋律，人却有点跟不上了。
-{Name}:那就今天不弹。
-运谦:好。
-旁白:你们并排坐在窗边，看着夕阳一点点沉下去。
-运谦:你考试紧张吗？
-{Name}:紧张。紧张的时候，我写字会变慢。
-运谦:那正好。
-{Name}:怎么正好了？
-运谦:慢慢写的人，错得少。
-旁白:他把这句当作结论，说得很认真。你差点笑出声。
-运谦:谢谢。今天轻松多了。
+bgm:窗边有人在听.mp3 -volume=42 -enter=1000;
+changeFigure:WanHim_Normal.png -enter=enter-from-left;
+旁白:走进音乐教室，琴袋安安静静靠在墙角，运谦正撑着下巴望向窗外的晚霞。
+运谦:今天不是叫你来听歌的。
+{Name}:嗯？今天不练琴了吗？
+运谦:想借你的时间，一起发会儿呆、喘口气。
+{Name}:怎么啦，看起来有点累？
+运谦:这几天一有空就在死磕编曲。手指早就把旋律背得滚瓜烂熟了，人反倒有点跟不上节拍。
+{Name}:那就听身体的，今天彻底放假，一下琴弦都不碰。
+changeFigure:WanHim_Smile.png;
+运谦:好，听你的。
+旁白:你们并排坐在窗边，看着橙红色的落日一点点沉进远处楼群的剪影里，晚风吹得窗帘轻轻晃动。
+运谦:说起来，马上就要月考了，你会紧张吗？
+{Name}:还是有点紧张的。我一紧张，下笔写字就会变得特别慢。
+运谦:那不是正好吗？
+{Name}:诶？写字慢怎么还“正好”了？
+运谦:你想啊，慢慢写的人，每一步都想得稳，反倒最不容易出错。
+旁白:他把这句歪理当成真理一样说得诚恳极了，你忍不住“噗嗤”笑出了声，心里绷着的那根弦也跟着松了下来。
+运谦:谢谢你陪我坐这半小时。感觉脑子一下子透亮多了。
 setVar:StudyStyle=2;
 setVar:WanHim_Love=WanHim_Love+10;
 changeFigure:none;
@@ -82,15 +87,16 @@ jumpLabel:chapter_end;
 
 label:chapter_end;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeFigure:none;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-旁白:离开学校的时候，天已经渐渐暗了。
-{Name}:最近的每一天，好像都过得很快。
-旁白:校门口的公告栏前，围着不少同学。
-旁白:有人正在往上贴新的海报——"初夏·校园文化周"，时间是两周以后。
-{Name}:文化周……
-旁白:你停下脚步，把海报上的日期记进了心里。
+旁白:走出教学楼时，天色已经沉成了温柔的靛青色。
+{Name}:不知不觉间，来星海高中的每一天都过得这么快。
+旁白:路过校门口的公告栏时，几个学生会成员正踮着脚往玻璃窗里贴一张崭新的宣传海报。
+旁白:明快的字体在路灯下格外醒目——“初夏·校园文化周”，落款时间就在两周之后。
+{Name}:校园文化周……月考结束以后，马上就要轮到这个了呀。
+旁白:你站在灯下多看了一会儿，悄悄把那个日期记进了心里。
 pixiInit;
 
 changeScene:第十章.txt;

@@ -1,110 +1,135 @@
 label:第六章;
 
-bgm:s_Title.mp3 -volume=26;
-changeBg:House.jpg;
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
+changeBg:Bedroom_Morning.jpg;
 
-旁白:迎新结束后的星期二。
-{Name}:校园安静下来，日子开始有了节奏。
+旁白:迎新活动结束后的星期二，校园褪去了节日般的热闹，空气里重新弥漫起熟悉的粉笔味与书页声。
+{Name}:活动结束了，日子也慢慢找到了自己的节奏。
 
 changeBg:Classroom.jpg;
-旁白:刚坐下，Ivan就走了过来。
+旁白:你刚把书包挂在桌侧，旁边的Ivan便转过身来。
+changeFigure:Ivan_Normal.png -enter=enter-from-right;
+Ivan:早。昨晚睡得好吗？
+{Name}:睡得特别沉，连梦都没做一个。
+Ivan:看来迎新期间大家都没白累，收尾也很顺利。
+changeFigure:Ivan_Serious.png;
+Ivan:不过，放松的时间到此为止了——
+Ivan:下周一，就是本学期第一次月考。
+{Name}:诶？这么快就月考了吗？
+Ivan:老师今早刚确定了考试范围，全科都要进进度。
+{Name}:你看起来怎么一点都不慌呀。
 changeFigure:Ivan_Normal.png;
-Ivan:昨天休息好了吗？
-{Name}:睡得特别好。
-Ivan:看来前期准备没有白忙。
-Ivan:不过——
-Ivan:接下来就是月考了。
-{Name}:这么快？
-Ivan:老师说下周。复习范围已经定了。
-{Name}:你看起来一点都不慌。
-Ivan:慌没有用，计划有用。
-旁白:他从文件夹里抽出一张写满格子的复习表。格子几乎填满了。
+Ivan:慌乱解决不了错题，计划表可以。
+旁白:他从透明文件夹里抽出一张画满方格的复习进度表，从今天一直排到考前一晚，密密麻麻几乎不留空隙。
 setVar:Ivan_Love=Ivan_Love+5;
 
 changeFigure:none;
-旁白:上午的课结束。
+旁白:上午的几节课里，每位任课老师都不约而同提到了月考重点，教室里的气氛瞬间绷紧了半分。
 
 changeBg:Hallway.jpg;
-changeFigure:Teacher_Normal.png;
-老师:{Name}同学。
-{Name}:老师？
-老师:这份资料送去音乐教室，社团那边急着用。
-{Name}:好的。
+changeFigure:Teacher_Normal.png -enter=enter-from-left;
+老师:{Name}同学，等一下。
+{Name}:老师，有什么需要帮忙的吗？
+老师:帮我把这份演出反馈单送到音乐教室吧，吉他社那边急着归档。
+{Name}:好的，我正好顺路。
 changeFigure:none;
-{Name}:（看来午休要去一趟音乐教室了。）
+{Name}:（看来午休又能去一趟音乐教室了。）
 
 label:音乐教室;
 
 changeBg:MusicRoom.jpg;
-changeFigure:WanHim_Normal.png;
-旁白:音乐教室里传来熟悉的旋律。
+bgm:窗边有人在听.mp3 -volume=44 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-left;
+旁白:推开门，熟悉而清亮的拨弦声立刻迎面漫过来。窗边的运谦停下手，朝你眨了眨眼。
 运谦:来了？
-{Name}:老师让我送资料。
-运谦:放这里吧。
-{Name}:今天没有练新曲？
-运谦:今天在改以前写的歌。
-{Name}:是你自己写的吗？
-运谦:嗯。写了一半的那种。
-{Name}:一共有几首？
-运谦:……七首。
-{Name}:全都写了一半？
-运谦:写完的，不敢给别人听。写一半的，反而敢。
-{Name}:那今天这首，给我听一半就好。
-运谦:好。
-旁白:他把一小段旋律弹完。停下来的地方，比往常都安定。
+{Name}:老师托我把迎新的演出反馈单送过来。
+运谦:放谱架旁边就行，谢啦。
+{Name}:今天怎么没练新的演出曲？
+changeFigure:WanHim_Normal.png;
+运谦:今天在翻修以前写下的老草稿。
+{Name}:都是你自己作曲的吗？
+运谦:嗯，全都是写到一半就停下的那种。
+{Name}:你抽屉里到底攒了几首这样的半成品呀？
+运谦:……仔细算算，大概七首吧。
+{Name}:整整七首，全都只写了一半？
+运谦:因为写完的歌，总觉得像交出去的答卷，反而不好意思给人听。写了一半的，倒是敢放心拿出来。
+{Name}:那今天这首，就只给我听写好的这一半吧。
+changeFigure:WanHim_Smile.png;
+运谦:一言为定。
+旁白:他低头拨动琴弦。那段轻缓的旋律流淌在午后的教室里，虽然仍旧没有结尾，停顿的瞬间却比从前安定了许多。
 setVar:WanHim_Love=WanHim_Love+10;
 changeFigure:none;
 jumpLabel:午餐事件;
 
 label:午餐事件;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeBg:Cafeteria.jpg;
-旁白:午休时间，靠窗的桌子边坐着你、Ivan和运谦。
-changeFigure:Ivan_Normal.png -left;
-changeFigure:WanHim_Normal.png;
-Ivan:复习计划你们看了吗？
-运谦:看了。然后合上了。
-{Name}:我还没打开。
-Ivan:至少有人诚实。
-运谦:至少有人没有。
-旁白:你坐在他们中间，被两股视线夹着。
-choose:和Ivan坐:Ivan午餐|和运谦坐:运谦午餐;
+旁白:午休的食堂里，靠窗那张熟悉的餐桌旁坐着你、Ivan和运谦。
+changeFigure:Ivan_Normal.png -left -enter=enter-from-left;
+changeFigure:WanHim_Normal.png -right -enter=enter-from-right;
+Ivan:早读发下来的月考复习提纲，你们俩都看完了吗？
+运谦:看了一眼，然后心平气和地合上了。
+{Name}:呃……我还没来得及打开文件夹。
+Ivan:至少还有一个人愿意诚实坦白。
+运谦:至少还有一个人懂得劳逸结合。
+旁白:你坐在他们中间，夹在两道截然不同却同样认真的目光里，忍不住低头憋笑。
+
+choose:和Ivan聊复习笔记:Ivan午餐|和运谦聊刚才的曲子:运谦午餐;
+
 label:Ivan午餐;
 
-changeFigure:WanHim_Normal.png;
-Ivan:昨天的数学笔记，我给你复印一份。
-{Name}:谢谢。你又提前看了后面的内容？
-Ivan:嗯。提前一点，比较安心。
-{Name}:你有不安心的时候吗？
+changeFigure:none -right;
+changeFigure:Ivan_Normal.png -left;
+Ivan:昨天数学课的专题笔记，我多复印了一份，下午上课前给你。
+{Name}:太感谢了！你是不是又提前把后面的单元也预习完了？
+Ivan:嗯。进度走在前面一点，心里比较踏实。
+{Name}:班长大人平时也会有不踏实的时候吗？
 Ivan:……
-Ivan:复习表第十天那一格，我到现在还不知道填什么。
-{Name}:十天以后的事，谁都不知道。
-Ivan:所以我才想把它填满。
+旁白:他微微顿了一下，握着筷子的手指收紧了半分。
+Ivan:那张复习计划表的最后一天，我到现在还不知道该往格子里填什么。
+{Name}:考前最后一天的事，谁都没法提前算准呀，留着空位不好吗？
+Ivan:就是因为算不准，才总想早点把它填满。
 setVar:Ivan_Love=Ivan_Love+10;
+changeFigure:none -left;
+旁白:下午放学后，Ivan按约定把复印得整整齐齐的数学笔记递到你手里，边角甚至还细心地用夹子别好了。
 jumpLabel:结尾;
 
 label:运谦午餐;
 
-changeFigure:Ivan_Normal.png -left;
-运谦:今天放学来音乐教室吗？
-{Name}:今天？有什么事吗？
-运谦:想让你听一下完整版。
-{Name}:那首写了一半的？
-运谦:嗯。昨天晚上，忽然知道后面该怎么写了。
-{Name}:去。一定去。
+changeFigure:none -left;
+changeFigure:WanHim_Smile.png -right;
+运谦:对了，今天放学之后，有空来一趟音乐教室吗？
+{Name}:今天放学？怎么突然这么正式？
+运谦:想让你听听看，那首曲子刚刚长出来的新段落。
+{Name}:就是一直停在第三小节的那首吗？
+运谦:嗯。昨晚睡前不知怎么的，忽然想通后面该怎么接了。
+{Name}:去！放学铃一响我就过去。
 setVar:WanHim_Love=WanHim_Love+10;
+changeFigure:none -right;
+
+changeBg:MusicRoom.jpg;
+bgm:窗边有人在听.mp3 -volume=48 -enter=1000;
+changeFigure:WanHim_Smile.png -enter=enter-from-bottom;
+旁白:放学后的音乐教室浸在淡金色的夕阳里。运谦坐在窗边，为你轻轻弹完了连贯的新段落。
+旁白:这一次，旋律温柔地越过了曾经卡住无数次的第三小节，朝着一片明亮的远方舒展开来。
+{Name}:它真的往前走了，而且听起来特别自在。
+运谦:嗯……虽然离真正写完还差一点收尾，但这次我知道它要去哪儿了。
+旁白:收起吉他时，走廊的夕阳正巧落满地面，你们一路聊着天走出教学楼。
+changeFigure:none;
 jumpLabel:结尾;
 
 label:结尾;
 
+bgm:樱花与晨光.mp3 -volume=28 -enter=1200;
 changeFigure:none;
 changeFigure:none -left;
 changeFigure:none -right;
 changeBg:SchoolGate.jpg;
 pixiPerform:cherryBlossoms;
-旁白:放学后，樱花道上的夕阳把影子拉得很长。
-旁白:迎新活动已经结束，校园生活渐渐回到日常。
-旁白:而你与Ivan、运谦之间的距离，也在不知不觉间，变了形状。
+旁白:傍晚的樱花道上，斜阳把行人的影子拉得细长。
+旁白:迎新活动的热闹渐渐沉淀为日常，校园里的步伐也随着月考临近而悄然加快。
+旁白:可你心里却很清楚，你与Ivan、与运谦之间的距离，早已在这几天里悄悄换了模样。
 pixiInit;
 
 changeScene:第七章.txt;
