@@ -38,6 +38,9 @@ const BLOCKED_TOP_LEVEL_ENTRIES = new Set([
   'package.json',
   'package-lock.json',
   'serve.py',
+  'public',
+  'scripts',
+  'vercel.json',
 ]);
 
 export function isBlockedRequestPath(reqPath) {

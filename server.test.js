@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import http from 'node:http';
+import os from 'node:os';
+import path from 'node:path';
 import { createApp, isBlockedRequestPath } from './server.js';
+import { buildStaticSite } from './scripts/build-static.js';
 
 function startTestServer() {
   const app = createApp();
@@ -14,15 +18,40 @@ function startTestServer() {
   });
 }
 
-test('isBlockedRequestPath blocks server metadata and hidden paths', () => {
+test('isBlockedRequestPath blocks server metadata, build config, and hidden paths', () => {
   assert.equal(isBlockedRequestPath('/server.js'), true);
   assert.equal(isBlockedRequestPath('/package.json'), true);
+  assert.equal(isBlockedRequestPath('/vercel.json'), true);
+  assert.equal(isBlockedRequestPath('/scripts/build-static.js'), true);
+  assert.equal(isBlockedRequestPath('/public/index.html'), true);
   assert.equal(isBlockedRequestPath('/node_modules/express/index.js'), true);
   assert.equal(isBlockedRequestPath('/.git/HEAD'), true);
   assert.equal(isBlockedRequestPath('/game/.hidden'), true);
   assert.equal(isBlockedRequestPath('/'), false);
   assert.equal(isBlockedRequestPath('/index.html'), false);
   assert.equal(isBlockedRequestPath('/game/config.txt'), false);
+});
+
+test('vercel.json and buildStaticSite produce a clean public/ output directory', () => {
+  const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
+  assert.equal(vercelConfig.outputDirectory, 'public');
+  assert.equal(vercelConfig.buildCommand, 'npm run build');
+
+  const tmpOut = fs.mkdtempSync(path.join(os.tmpdir(), 'webgal-public-'));
+  try {
+    const result = buildStaticSite(process.cwd(), tmpOut);
+    assert.ok(result.copied.includes('index.html'));
+    assert.ok(result.copied.includes('game'));
+    assert.equal(fs.existsSync(path.join(tmpOut, 'index.html')), true);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'game/config.txt')), true);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'assets')), true);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'icons')), true);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'server.js')), false);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'package.json')), false);
+    assert.equal(fs.existsSync(path.join(tmpOut, 'vercel.json')), false);
+  } finally {
+    fs.rmSync(tmpOut, { recursive: true, force: true });
+  }
 });
 
 test('server serves index, game scripts, Chinese filenames, and handles webgalsync', async () => {
